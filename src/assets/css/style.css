@@ -1960,8 +1960,8 @@ TABLE OF CONTENTS:
 
 .bixol-footer .footer-copyright p {
 	font-family: "Poppins", sans-serif;
-	color: #ffffff;
-	font-size: 14px;
+	color: #ffffff87;
+	font-size: 12px
 }
 
 .bixol-footer .footer-copyright p a {
@@ -3156,7 +3156,7 @@ TABLE OF CONTENTS:
 	left: -5px;
 	width: 19px;
 	height: 19px;
-	border: 3px solid #000;
+	border: 2px solid #000;
 	-webkit-border-radius: 19px;
 	-khtml-border-radius: 19px;
 	-moz-border-radius: 19px;
@@ -3179,7 +3179,7 @@ TABLE OF CONTENTS:
 }
 
 .revslider-initialised .bixol-bullet-round-two .tp-bullet.selected {
-	background-color: #FA8A3E !important;
+	background-color: #267FF9 !important
 }
 
 .revslider-initialised .bixol-bullet-round-two .tp-bullet.selected:before {
@@ -5581,7 +5581,6 @@ i {
 	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	padding: 35px 35px 35px 50px;
-	margin-left: -50px;
 	position: relative;
 	z-index: 1;
 }
