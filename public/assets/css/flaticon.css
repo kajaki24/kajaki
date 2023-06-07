@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Flaticon";
-  src: url("../fonts/flaticon-v1.eot");
-  src: url("../fonts/flaticon-v1d41d.eot?#iefix") format("embedded-opentype"),
+  src: url("../fonts/flaticon-v1.html");
+  src: url("../fonts/flaticon-v1d41d.html?#iefix") format("embedded-opentype"),
        url("../fonts/flaticon-v1.woff2") format("woff2"),
        url("../fonts/flaticon-v1.woff") format("woff"),
        url("../fonts/flaticon-v1.ttf") format("truetype"),
@@ -63,8 +63,8 @@
 
 @font-face {
   font-family: "Flaticon-V2";
-  src: url("../fonts/flaticon-v2.eot");
-  src: url("../fonts/flaticon-v2d41d.eot?#iefix") format("embedded-opentype"),
+  src: url("../fonts/flaticon-v2.html");
+  src: url("../fonts/flaticon-v2d41d.html?#iefix") format("embedded-opentype"),
        url("../fonts/flaticon-v2.woff2") format("woff2"),
        url("../fonts/flaticon-v2.woff") format("woff"),
        url("../fonts/flaticon-v2.ttf") format("truetype"),
