@@ -48,6 +48,27 @@ TABLE OF CONTENTS:
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap");
 
+.k-list {
+	padding-left: 25px;
+}
+
+.k-list li {
+	position: relative;
+	margin-bottom: .65em;
+}
+
+.k-list li::before {
+	position: absolute;
+	content: "";
+	top: 0.35em;
+	left: -25px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #267ff9
+}
+
+
 /* Navbar */
 
 
@@ -16844,4 +16865,11 @@ i {
 	aspect-ratio: 4/3;
 	object-fit: cover;
 	object-position: center;
+}
+
+
+.section-weather {
+	position: relative;
+	margin-top: -40px;
+	z-index: 999
 }
