@@ -1245,6 +1245,10 @@ TABLE OF CONTENTS:
 	text-align: right;
 }
 
+.header-style-5 .info-top .info-right a {
+	color: #3a4268
+}
+
 .header-style-5 .info-top .info-right div {
 	display: inline-block;
 	position: relative;
@@ -2051,8 +2055,12 @@ TABLE OF CONTENTS:
 /************ Home6 Footer ***************/
 
 .h6-footer {
-	background-color: #0a1957;
+	position: relative;
+	background-image: url("/assets/images/footer.jpg");
+	background-size: cover;
+	background-position: center;
 	padding-top: 120px;
+	z-index: 9
 }
 
 .h6-footer .bixol-footer-widget .footer-logo {
@@ -4056,7 +4064,7 @@ TABLE OF CONTENTS:
 	z-index: 10;
 	width: 40px;
 	height: 40px;
-	background-color: #0431b8;
+	background-color: #ffd532;
 	color: #ffffff;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
@@ -14889,7 +14897,7 @@ i {
 
 .home6-pricing-table .home6-pricing .home6-pricing-column {
 	background-color: #ffffff;
-	padding: 30px 50px;
+	padding: 30px 50px 60px;
 	border-radius: 6px;
 	text-align: center;
 	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.06);

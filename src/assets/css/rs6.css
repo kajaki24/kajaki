@@ -384,7 +384,7 @@ rs-cbg-mask-wrap
 }
 
 
-rs-mask-wrap { overflow: hidden }
+rs-mask-wrap { overflow: hidden; }
 rs-fullwidth-wrap { position:relative;width:100%;height:auto;display: block; overflow:visible;max-width:none !important;}
 
 .rev_row_zone_top 				{	top:0px;}
