@@ -16901,7 +16901,12 @@ i {
 	position: relative;
 	margin-top: -70px;
 	min-height: 176px;
+	pointer-events: none;
 	z-index: 999
+}
+.section-weather a img {
+	opacity: 0;
+	pointer-events: none;
 }
 
 @media(min-width:767px) {
