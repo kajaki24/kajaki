@@ -2215,8 +2215,20 @@ TABLE OF CONTENTS:
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(3, 0, 20, 0.3);
+	background-color: rgba(0, 19, 48, 0.327);
 	z-index: -1;
+}
+
+.bixol-breadcrumb::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(32, 126, 255, 0.59);
+	z-index: -1;
+	mix-blend-mode: color
 }
 
 .bixol-breadcrumb .breadcrumb-object {
@@ -9510,7 +9522,7 @@ i {
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
-	background-color: #FA8A3E;
+	background-color: #267FF9;
 	border: 0;
 	border-radius: 3px;
 	color: #ffffff;
@@ -14933,6 +14945,11 @@ i {
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .price-area h2 {
 	display: inline-block;
+}
+
+.home6-pricing-table .home6-pricing .home6-pricing-column .price-area h2 span {
+	display: block;
+	font-size: 12px;
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .price-area span {
