@@ -2083,7 +2083,7 @@ TABLE OF CONTENTS:
 	-webkit-box-align: start;
 	-ms-flex-align: start;
 	align-items: flex-start;
-	border-bottom: 1px solid #ffffff3e;
+	border-bottom: 1px solid #ffffff1f;
 	padding-bottom: 1.2em;
 	margin-bottom: 1.2em;
 }
@@ -2224,6 +2224,8 @@ TABLE OF CONTENTS:
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 19, 48, 0.327);
+	background: rgb(0,20,54);
+	background: linear-gradient(90deg, rgba(0,20,54,0.5998600123643207) 0%, rgba(255,255,255,0) 100%); 
 	z-index: -1;
 }
 
@@ -2244,10 +2246,6 @@ TABLE OF CONTENTS:
 	top: 30px;
 	right: 160px;
 	width: 100px;
-}
-
-.bixol-breadcrumb .breadcrumb-content {
-	text-align: center;
 }
 
 .bixol-breadcrumb .breadcrumb-content h1 {
@@ -4495,9 +4493,9 @@ h4,
 h5,
 h6 {
 	font-family: "Poppins", sans-serif;
-	font-weight: 700;
-	line-height: 1.2;
-	margin-bottom: 0;
+	font-weight: 600;
+	line-height: 1.25;
+	margin-bottom: 10px;
 }
 
 p {
@@ -16836,4 +16834,10 @@ i {
 .home7-brands .brand-wrapper .img-wrapper img {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
+}
+
+.gallery-item {
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	object-position: center;
 }
