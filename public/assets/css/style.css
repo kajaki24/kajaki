@@ -14517,6 +14517,10 @@ i {
 
 /*************** Booking Area *****************/
 
+.home6-booking-area {
+	background: url("/assets/images/booking-bg.jpg");
+}
+
 .home6-booking-area .title h3 {
 	color: #ffffff;
 	font-weight: 600;
