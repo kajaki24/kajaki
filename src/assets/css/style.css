@@ -4024,6 +4024,9 @@ TABLE OF CONTENTS:
 	margin-bottom: 100px;
 }
 
+.mb-200 {
+	margin-bottom: 200px;
+}
 
 /************ Container ***************/
 
@@ -4198,18 +4201,6 @@ TABLE OF CONTENTS:
 	font-weight: 500;
 	font-size: 18px;
 	position: relative;
-	margin-left: 35px;
-}
-
-.bixol-title-area span.bixol-subtitle::before {
-	content: '';
-	width: 25px;
-	height: 25px;
-	background-image: url(../images/home1/star-object.png);
-	position: absolute;
-	left: -35px;
-	background-size: 25px;
-	background-repeat: no-repeat;
 }
 
 .bixol-title-area h3 {
@@ -4234,7 +4225,7 @@ TABLE OF CONTENTS:
 	}
 }
 
-.title-style-2 span.bixol-subtitle {
+span.bixol-subtitle {
 	font-weight: 500;
 	font-size: 18px;
 	position: relative;
@@ -4489,7 +4480,6 @@ h5,
 h6 {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
-	text-transform: capitalize;
 	line-height: 1.2;
 	margin-bottom: 0;
 }
@@ -6961,6 +6951,7 @@ i {
 	-ms-flex-align: center;
 	align-items: center;
 	border: 1px solid #eaeaea;
+	background: #fff;
 	padding: 30px;
 	-webkit-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
@@ -14512,7 +14503,7 @@ i {
 
 /*************** Booking Area *****************/
 
-.home6-booking-area .title h2 {
+.home6-booking-area .title h3 {
 	color: #ffffff;
 	font-weight: 600;
 }
