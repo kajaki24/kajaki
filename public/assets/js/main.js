@@ -75,17 +75,6 @@ Last change:    00/00/00
 				});
 			},
 
-			HeaderSticky: function (){
-				$(window).on("scroll", function(){
-					var ScrollBar = $(this).scrollTop();
-					if (ScrollBar > 150 ) {
-						$(".bixol-header").addClass("header-sticky"); 
-					} else {
-						$(".bixol-header").removeClass("header-sticky");
-					}
-				});
-			},
-
 			MobileMenu: function (){
 
 				$(".bixol-mobile-hamburger").on("click", function(){
