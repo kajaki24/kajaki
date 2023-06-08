@@ -1889,12 +1889,7 @@ TABLE OF CONTENTS:
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 12px;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	color: #c2d5e7;
-	font-size: 14px;
+	gap: 12px
 }
 
 .bixol-footer .bixol-footer-widget .bixol-footer-address ul li i {
@@ -2075,11 +2070,14 @@ TABLE OF CONTENTS:
 	color: #ffffff;
 }
 
-.h6-footer .bixol-footer-widget .bixol-footer-address ul li {
+.h6-footer .bixol-footer-widget ul li {
 	color: #f4f4f4;
 	-webkit-box-align: start;
 	-ms-flex-align: start;
 	align-items: flex-start;
+	border-bottom: 1px solid #ffffff3e;
+	padding-bottom: 1.2em;
+	margin-bottom: 1.2em;
 }
 
 .h6-footer .bixol-footer-widget .bixol-footer-address ul li i {
@@ -4293,8 +4291,7 @@ TABLE OF CONTENTS:
 	font-size: 18px;
 	position: relative;
 	display: inline-block;
-	color: #628dfb;
-	text-transform: uppercase;
+	color: #007cfb;
 }
 
 .title-style-4 span.bixol-subtitle::after {
@@ -12661,6 +12658,7 @@ i {
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 20px 0px rgba(12, 12, 12, 0.16);
 	padding: 0 15px 15px 0;
+	margin-top: 30px;
 }
 
 .h4-about-section .about-bottom .about-yr-ex .icon-wrapper {
@@ -12694,7 +12692,6 @@ i {
 	display: block;
 	font-weight: 700;
 	color: #000000;
-	text-transform: capitalize;
 	margin-top: 6px;
 	margin-left: 15px;
 }
@@ -14888,7 +14885,7 @@ i {
 
 .home6-pricing-table .home6-pricing {
 	margin-top: 60px;
-	padding: 0 70px;
+	margin-bottom: 60px
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column {
@@ -14896,8 +14893,8 @@ i {
 	padding: 30px 50px;
 	border-radius: 6px;
 	text-align: center;
-	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
-	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
+	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.06);
+	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.06);
 	margin-bottom: 30px;
 }
 
