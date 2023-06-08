@@ -24,13 +24,11 @@ Last change:    00/00/00
 				this.HeaderSticky(); 
 				this.MobileMenu();
                 this.Carousel();
-                this.CustomCompareSlider();
 				this.PortfolioFilter(); 
 				this.Accordion(); 
 				this.CircleProgress(); 
 				this.H4HeaderSearch();
 				this.ServicesHover(); 
-				this.BixolPopup();
 				this.BixolCounterUp(); 
 				this.GridMassonry();
 				this.CountDown();
@@ -522,10 +520,6 @@ Last change:    00/00/00
 					]
 				});
 
-            }, 
-
-            CustomCompareSlider: function (){
-                $('.before-after').beforeAfter();
             }, 
 
 			PortfolioFilter: function (){
