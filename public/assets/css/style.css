@@ -1789,6 +1789,15 @@ TABLE OF CONTENTS:
 	margin-bottom: 60px;
 }
 
+.bixol-footer-address a {
+	transition: .3s ease-in-out;
+	color: #fff;
+}
+
+.bixol-footer-address a:hover {
+	color: #257ef8;
+}
+
 .bixol-footer .bixol-footer-widget h4 {
 	color: #ffffff;
 	text-transform: initial;
@@ -4398,10 +4407,10 @@ span.bixol-subtitle {
 	left: -38px;
 	width: 30px;
 	height: 100%;
-	background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
-	background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-	background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(#FA8A3E), to(#ff954f));
+	background-image: -webkit-linear-gradient(left, #FA8A3E 0%, #fb904a 100%);
+	background-image: -o-linear-gradient(left, #FA8A3E 0%, #fd9550 100%);
+	background-image: linear-gradient(to right, #FA8A3E 0%, #fd9651 100%);
 	-webkit-transform: skew(-10deg);
 	-ms-transform: skew(-10deg);
 	transform: skew(-10deg);
@@ -4416,8 +4425,8 @@ span.bixol-subtitle {
 }
 
 .home5-primary-btn:hover {
-	color: #ffffff;
-	background-color: #494949;
+	color: #101c39;
+	background-color: #ffd532;
 }
 
 .home5-primary-btn:hover::before {
@@ -4520,7 +4529,7 @@ h4,
 h5,
 h6 {
 	font-family: "Poppins", sans-serif;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.25;
 	margin-bottom: 10px;
 }
@@ -16874,6 +16883,15 @@ i {
 	.home7-feedback-area .feedback-right .home7-feedback-slider .slick-dots li button {
 		width: 10px;
 		height: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.text-md-end {
+		text-align: end;
+	}
+	.text-md-start {
+		text-align: left;
 	}
 }
 
