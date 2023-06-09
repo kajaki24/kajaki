@@ -1350,7 +1350,10 @@ TABLE OF CONTENTS:
 
 @media (max-width: 991.98px) {
 	.header-style-5 {
-		padding: 10px 0;
+		padding: 20px 0;
+	}
+	.logo-wrapper {
+		margin-top: 5px;
 	}
 	.header-style-5 .info-top {
 		display: none;
@@ -4481,17 +4484,17 @@ body {
 
 h1 {
 	color: #13182a;
-	font-size: 44px;
+	font-size: 38px;
 }
 
 h2 {
 	color: #13182a;
-	font-size: 38px;
+	font-size: 34px;
 }
 
 h3 {
 	color: #13182a;
-	font-size: 32px;
+	font-size: 29px;
 }
 
 h4 {
@@ -14629,8 +14632,8 @@ i {
 	margin-bottom: 20px;
 }
 
-.home6-booking-area .booking-form .submit-btn button {
-	width: 100%;
+.submit-btn {
+	width: 180px;
 	height: 60px;
 	border: 0;
 	background-color: #ffd532;
@@ -14648,9 +14651,10 @@ i {
 	-webkit-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
+	cursor: pointer;
 }
 
-.home6-booking-area .booking-form .submit-btn button::before {
+.submit-btn::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -14666,11 +14670,11 @@ i {
 	transform: skew(-10deg);
 }
 
-.home6-booking-area .booking-form .submit-btn button:hover {
+.submit-btn:hover {
 	background-color: #ffd632e1;
 }
 
-.home6-booking-area .booking-form .submit-btn button:hover::before {
+.submit-btn:hover::before {
 	-webkit-animation: 800ms shine;
 	animation: 800ms shine;
 }
