@@ -31,4 +31,3 @@ collections:
       - { label: "Czas spływu", name: "rafting_time", widget: "string" }
       - { label: "Długość trasy", name: "route_length", widget: "string" }
       - { label: "Cena", name: "price", widget: "string" }
-      - {label: "Body", name: "body", widget: "markdown"}
