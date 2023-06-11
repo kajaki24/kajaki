@@ -4,9 +4,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("src/static/img");
   eleventyConfig.addPassthroughCopy("src/admin");
 
-  // Collections blog
+  // Collections 
 eleventyConfig.addCollection('cennik', function(collectionApi) {
   const cennikPosts = collectionApi.getFilteredByGlob('src/cennik/**/*.md').reverse();
 
@@ -24,6 +25,11 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
 
   return cennikCategories;
 });
+
+  // Settings
+  eleventyConfig.addCollection('settings', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/settings/**/*.md').reverse();
+  });  
 
 
     return {
