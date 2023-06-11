@@ -14982,10 +14982,11 @@ i {
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .h6-headline {
 	margin-top: 30px;
+	min-height: 65px;
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .feature-list {
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .feature-list ul li {
@@ -16942,5 +16943,10 @@ i {
 	height: 100%;
 	mix-blend-mode: luminosity;
 	z-index: -1;
+}
+.liquid-price {
+	padding: 0 20px;
+	min-height: 70px;
+	text-align: center;
 }
 }
