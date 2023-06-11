@@ -12,6 +12,8 @@ collections:
     name: "settings"
     folder: "src/settings"
     create: false
+    editor:
+      preview: false
     fields:
       - { label: "Logo", name: "logo", widget: "image" }
 # Cennik
