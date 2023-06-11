@@ -8,7 +8,7 @@ local_backend: true
 
 # Ustawienia
 collections:
- - label: "Ustawienia"
+  - label: "Ustawienia"
     name: "settings"
     folder: "src/settings"
     create: false

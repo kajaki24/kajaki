@@ -95,11 +95,6 @@ TABLE OF CONTENTS:
 	padding-left: 25px;
 }
 
-.page {
-	opacity: 0;
-	animation: fade-in .1s normal forwards;
-}
-
 .k-list li {
 	position: relative;
 	margin-bottom: .65em;
