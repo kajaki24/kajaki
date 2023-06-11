@@ -7,9 +7,24 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
 
   // Collections blog
-  eleventyConfig.addCollection('cennik', function(collectionApi) {
-      return collectionApi.getFilteredByGlob('src/cennik/**/*.md').reverse();
+eleventyConfig.addCollection('cennik', function(collectionApi) {
+  const cennikPosts = collectionApi.getFilteredByGlob('src/cennik/**/*.md').reverse();
+
+  // Grupowanie postów "Cennik" według kategorii
+  const cennikCategories = {};
+  cennikPosts.forEach(post => {
+    const category = post.data.category;
+
+    if (!cennikCategories[category]) {
+      cennikCategories[category] = [];
+    }
+
+    cennikCategories[category].push(post);
   });
+
+  return cennikCategories;
+});
+
 
     return {
       dir: {
