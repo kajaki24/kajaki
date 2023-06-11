@@ -28,13 +28,55 @@
         <link rel="stylesheet" href="/assets/css/glightbox.min.css">
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+            function fadeInPage() {
+                if (!window.AnimationEvent) {
+                    return;
+                }
+                var fader = document.getElementById('fader');
+                fader.classList.add('fade-out-f');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                if (!window.AnimationEvent) {
+                    return;
+                }
+                var anchors = document.querySelectorAll('a:not(.glightbox)');
+                for (var idx = 0; idx < anchors.length; idx += 1) {
+                    if (anchors[idx].hostname !== window.location.hostname ||
+                        anchors[idx].pathname === window.location.pathname) {
+                        continue;
+                    }
+                    anchors[idx].addEventListener('click', function (event) {
+                        var fader = document.getElementById('fader'),
+                            anchor = event.currentTarget;
+                        var listener = function () {
+                            window.location = anchor.href;
+                            fader.removeEventListener('animationend', listener);
+                        };
+                        fader.addEventListener('animationend', listener);
+                        event.preventDefault();
+                        fader.classList.add('fade-in-f');
+                    });
+                }
+            });
+            window.addEventListener('pageshow', function (event) {
+                if (!event.persisted) {
+                    return;
+                }
+                var fader = document.getElementById('fader');
+                fader.classList.remove('fade-in-f');
+            });
+        </script>
     </head>
 
     <body>
-
+        <div class="page">
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+        </script>
         <!-- ScrollTop Button -->
-        <a href="#" class="scrolltop-btn"><span><i class="flaticon-arrow"></i></span></a>
-
+        <a href="#" class="scrolltop-btn" title="Przewiń w górę"><span><i class="flaticon-arrow"></i></span></a>
         <!-- Header Area -->
         <header class="bixol-header header-style-5">
             <div class="info-top sticky-info">

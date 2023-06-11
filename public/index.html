@@ -28,13 +28,55 @@
         <link rel="stylesheet" href="/assets/css/glightbox.min.css">
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+            function fadeInPage() {
+                if (!window.AnimationEvent) {
+                    return;
+                }
+                var fader = document.getElementById('fader');
+                fader.classList.add('fade-out-f');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                if (!window.AnimationEvent) {
+                    return;
+                }
+                var anchors = document.querySelectorAll('a:not(.glightbox)');
+                for (var idx = 0; idx < anchors.length; idx += 1) {
+                    if (anchors[idx].hostname !== window.location.hostname ||
+                        anchors[idx].pathname === window.location.pathname) {
+                        continue;
+                    }
+                    anchors[idx].addEventListener('click', function (event) {
+                        var fader = document.getElementById('fader'),
+                            anchor = event.currentTarget;
+                        var listener = function () {
+                            window.location = anchor.href;
+                            fader.removeEventListener('animationend', listener);
+                        };
+                        fader.addEventListener('animationend', listener);
+                        event.preventDefault();
+                        fader.classList.add('fade-in-f');
+                    });
+                }
+            });
+            window.addEventListener('pageshow', function (event) {
+                if (!event.persisted) {
+                    return;
+                }
+                var fader = document.getElementById('fader');
+                fader.classList.remove('fade-in-f');
+            });
+        </script>
     </head>
 
     <body>
-
+        <div class="page">
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+        </script>
         <!-- ScrollTop Button -->
-        <a href="#" class="scrolltop-btn"><span><i class="flaticon-arrow"></i></span></a>
-
+        <a href="#" class="scrolltop-btn" title="Przewiń w górę"><span><i class="flaticon-arrow"></i></span></a>
         <!-- Header Area -->
         <header class="bixol-header header-style-5">
             <div class="info-top sticky-info">
@@ -142,17 +184,19 @@
 <section class="section-hero pt-120 pb-200 p-relative">
     <div class="container">
         <div class="col-md-6">
-            <span class="bixol-subtitle">Kajaki24 Warka</span>
-            <h1 class="mt-10">
+            <span class="bixol-subtitle split-text-lines">Kajaki24 Warka</span>
+            <h1 class="mt-10 split-text-lines-load">
                 <span class="thin-text">Spływy kajakowe </span> <br />pilicą -  Warka
             </h1>
-            <p class="mt-20 mb-30">
+            <p class="mt-20 mb-30 split-text-lines-load">
                 Przygotuj się na niezapomnianą przygodę na wodzie, pełną pięknych krajobrazów i ekscytujących doświadczeń.      
             </p>
-            <a href="tel:+48733240024" class="home5-primary-btn" title="Zadzwoń">
-                Zadzwoń
-                <span><i class="fas fa-long-arrow-alt-right"></i></span>
-            </a>
+            <div class="fade-in">
+                <a href="tel:+48733240024" class="home5-primary-btn" title="Zadzwoń">
+                    Zadzwoń
+                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                </a>
+            </div>
         </div>
     </div>
         <div class="big-text-wrap">
@@ -161,7 +205,7 @@
             </div>
         </div>
 </section>
-<section class="section-weather">
+<section class="section-weather fade-in">
     <div class="container">
 <script async defer>
         (function(d, s, id) {
@@ -199,26 +243,26 @@
             <div class="col-lg-6 order-2 order-lg-1">
                 <div class="about-left">
                     <div class="title-style-2">
-                        <span class="bixol-subtitle">Kajaki24 Warka</span>
-                        <h3>Spływy kajakowe Pilicą </h3>
-                        <p>Spływy kajakowe stają się coraz bardziej popularną formą turystyki i rekreacji, nie tylko
+                        <span class="bixol-subtitle fade-in">Kajaki24 Warka</span>
+                        <h3 class="split-text-lines">Spływy kajakowe Pilicą </h3>
+                        <p class="split-text-lines">Spływy kajakowe stają się coraz bardziej popularną formą turystyki i rekreacji, nie tylko
                             wśród młodzieży, ale także wśród rodzin z dziećmi, które w ten sposób chcą razem spędzić
                             wakacje czy też wolne weekendy. </p>
                     </div>
                     <div class="h4-pera-txt mt-30">
-                        <p>Równie chętnie firmy organizują swoje imprezy integracyjne, sięgając po ten rodzaj turystyki,
+                        <p class="split-text-lines">Równie chętnie firmy organizują swoje imprezy integracyjne, sięgając po ten rodzaj turystyki,
                             który sprzyja pełnemu relaksowi i odprężeniu tak fizycznemu jak i psychicznemu po miesiącach
                             ciężkiej pracy. Zapraszamy!</p>
                     </div>
                     <div class="about-bottom">
                         <div class="about-list">
-                            <ul>
+                            <ul class="split-text-lines">
                                 <li><span><i class="fas fa-check"></i></span>Wypoczynek i integracja</li>
                                 <li><span><i class="fas fa-check"></i></span>Rodzinna atmosfera</li>
                                 <li><span><i class="fas fa-check"></i></span>Świeże powietrze</li>
                             </ul>
                         </div>
-                        <div class="about-yr-ex">
+                        <div class="about-yr-ex fade-in">
                             <span class="icon-wrapper"><i class="flaticon flaticon-trophy"></i></span>
                             <span class="title">10+</span>
                             <span class="subtitle">Lat doświadczenia</span>
@@ -228,7 +272,7 @@
             </div>
             <div class="col-lg-6 order-1 order-lg-2">
                 <div class="about-right">
-                    <div class="img-wrapper">
+                    <div class="img-wrapper fade-in">
                         <img src="assets/images/about.png" alt="">
                         <div class="ab-right-content">
                             <div class="dark-bg">
@@ -243,7 +287,7 @@
     </div>
 </section>
 <!-- About Section End -->
-<section class="home6-booking-area pt-50 pb-40">
+<section class="home6-booking-area pt-50 pb-40 fade-in">
     <div class="container">
         <div class="row align-items-center">
                 <div class="col-sm-6 col-md-7 col-lg-9 text-center text-md-start">
@@ -265,8 +309,8 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="title-style-4 text-center">
-                    <span class="bixol-subtitle before-line">Kajaki24 Warka</span>
-                    <h2>Sprawdź cennik</h2>
+                    <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
+                    <h2 class="split-text-lines">Sprawdź cennik</h2>
                 </div>
             </div>
         </div>
@@ -274,87 +318,7 @@
             <div class="row justify-content-center">
                 
                 <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
-                        <div class="h6-headline">
-                            <h4>Budy Michałowskie - Mniszew</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 5 - 6h</li>
-                                <li>Długość trasy: 31,6km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>150zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
-                        <div class="h6-headline">
-                            <h4>Biejków - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 5 - 6h</li>
-                                <li>Długość trasy: 21km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>130zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
-                        <div class="h6-headline">
-                            <h4>Białobrzegi - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 8 - 9h</li>
-                                <li>Długość trasy: 28,7km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>150zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
-                        <div class="h6-headline">
-                            <h4>Budy Michałowskie - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 3,5h</li>
-                                <li>Długość trasy: 16km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>120zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
+                    <div class="home6-pricing-column fade-in">
                         <div class="h6-headline">
                             <h4>Warka - Mniszew</h4>
                         </div>
@@ -374,7 +338,7 @@
                 </div>
                 
                 <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
+                    <div class="home6-pricing-column fade-in">
                         <div class="h6-headline">
                             <h4>Lechanice - Warka</h4>
                         </div>
@@ -393,9 +357,89 @@
                     </div>
                 </div>
                 
+                <div class="col-lg-4 col-md-6">
+                    <div class="home6-pricing-column fade-in">
+                        <div class="h6-headline">
+                            <h4>Budy Michałowskie - Warka</h4>
+                        </div>
+                        <div class="feature-list">
+                            <ul>
+                                <li>Czas spływu: 3,5h</li>
+                                <li>Długość trasy: 16km</li>
+                            </ul>
+                        </div>
+                        <div class="price-area">
+                            <h2>120zł</h2>
+                        </div>
+                        <div class="price-btn">
+                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="home6-pricing-column fade-in">
+                        <div class="h6-headline">
+                            <h4>Budy Michałowskie - Mniszew</h4>
+                        </div>
+                        <div class="feature-list">
+                            <ul>
+                                <li>Czas spływu: 5 - 6h</li>
+                                <li>Długość trasy: 31,6km</li>
+                            </ul>
+                        </div>
+                        <div class="price-area">
+                            <h2>150zł</h2>
+                        </div>
+                        <div class="price-btn">
+                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="home6-pricing-column fade-in">
+                        <div class="h6-headline">
+                            <h4>Biejków - Warka</h4>
+                        </div>
+                        <div class="feature-list">
+                            <ul>
+                                <li>Czas spływu: 5 - 6h</li>
+                                <li>Długość trasy: 21km</li>
+                            </ul>
+                        </div>
+                        <div class="price-area">
+                            <h2>130zł</h2>
+                        </div>
+                        <div class="price-btn">
+                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="home6-pricing-column fade-in">
+                        <div class="h6-headline">
+                            <h4>Białobrzegi - Warka</h4>
+                        </div>
+                        <div class="feature-list">
+                            <ul>
+                                <li>Czas spływu: 8 - 9h</li>
+                                <li>Długość trasy: 28,7km</li>
+                            </ul>
+                        </div>
+                        <div class="price-area">
+                            <h2>150zł</h2>
+                        </div>
+                        <div class="price-btn">
+                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center fade-in">
             <a href="/cennik" class="home5-primary-btn">
                 Zobacz wszystko
                 <span><i class="fas fa-long-arrow-alt-right"></i></span>
@@ -404,22 +448,21 @@
     </div>
 </section>
 <!-- Pricing Plan End -->
-<!-- Process Section -->
         <section class="home6-process-section pt-100 pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3 pb-60">
                         <div class="title-style-4 text-center">
-                            <span class="bixol-subtitle before-line">Kajaki24 Warka</span>
-                            <h2>Harmonogram spływu</h2>
-                            <p>Tu znajdziesz wszystkie istotne informacje dotyczące organizacji spływu. </p>
+                            <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
+                            <h2 class="split-text-lines">Harmonogram spływu</h2>
+                            <p class="split-text-lines">Tu znajdziesz wszystkie istotne informacje dotyczące organizacji spływu. </p>
                         </div>
                     </div>
                 </div>
                 <div class="home6-process-bottom" data-background="assets/images/home6/line-bg.jpg">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
-                            <div class="process-column">
+                            <div class="process-column fade-in">
                                 <div class="icon-wrapper">
                                     <span><i class="flaticonv2 flaticonv2-recruitment"></i></span>
                                     <span class="count">1</span>
@@ -435,7 +478,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="process-column">
+                            <div class="process-column fade-in">
                                 <div class="icon-wrapper">
                                     <span><i class="flaticonv2 flaticonv2-settings"></i></span>
                                     <span class="count">2</span>
@@ -451,7 +494,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="process-column">
+                            <div class="process-column fade-in">
                                 <div class="icon-wrapper">
                                     <span><i class="flaticonv2 flaticonv2-appointment"></i></span>
                                     <span class="count">3</span>
@@ -470,7 +513,6 @@
                 </div>
             </div>
         </section>
-        <!-- Process Section End -->
 
         <!-- Feedback Area -->
         <section class="home6-feedback-area pt-100 pb-100" data-background="/assets/images/feedback/feedback-bg.jpg">
@@ -478,14 +520,14 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="title-style-4 text-center">
-                            <span class="bixol-subtitle before-line">Kajaki24 Warka</span>
-                            <h2>Opinie klientów</h2>
-                            <p>W tej sekcji zebraliśmy opinie klientów, którzy mieli okazję skorzystać z naszych spływów kajakowych Pilicą. Wierzymy w transparentność i wartość autentycznych opinii, dlatego udostępniamy je tutaj, abyście mogli je poznać.</p>
+                            <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
+                            <h2 class="split-text-lines">Opinie klientów</h2>
+                            <p class="split-text-lines">W tej sekcji zebraliśmy opinie klientów, którzy mieli okazję skorzystać z naszych spływów kajakowych Pilicą. Wierzymy w transparentność i wartość autentycznych opinii, dlatego udostępniamy je tutaj, abyście mogli je poznać.</p>
                         </div>
                     </div>
                 </div>
                 <div class="home6-feedback-bottom">
-                    <div class="clients-thumbs">
+                    <div class="clients-thumbs fade-in">
                         <span><img src="/assets/images/feedback/client-thumb-1.png" alt=""></span>
                         <span><img src="/assets/images/feedback/client-thumb-2.png" alt=""></span>
                         <span><img src="/assets/images/feedback/client-thumb-3.png" alt=""></span>
@@ -496,7 +538,7 @@
                         <span><img src="/assets/images/feedback/client-thumb-8.html" alt=""></span>
                         <span><img src="/assets/images/feedback/client-thumb-9.html" alt=""></span>
                     </div>
-                    <div class="home6-feedback-slider">
+                    <div class="home6-feedback-slider fade-in">
                         <div class="feedback-wrapper">
                             <div class="feedback-single">
                                 <div class="img-wrapper">
@@ -544,89 +586,75 @@
 
 
 
-  <!-- Footer -->
   <footer class="bixol-footer h6-footer">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="bixol-footer-widget">
-                    <a href="index.html" class="footer-logo"><img src="/assets/images/logo/kajaki-logo-biel.png" alt=""></a>
-                    <p>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
-                </div>
-            </div>
-            <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-6">
-                <div class="bixol-footer-widget">
-                    <h4>Adres</h4>
-                    <div class="bixol-footer-address">
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> ul. Nowy Zjazd 4a, 05-660 Warka</li>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+48733240024">
-                                    +48 733 240 024
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:kajaki24warka@gmail.com">
-                                    kajaki24warka@gmail.com
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="bixol-footer-widget">
-                    <h4>Godziny pracy</h4>
-                    <div class="footer-office-time">
-                        <ul>
-                            <li>Pon - Pt: 10.00 - 19.00</li>
-                            <li>Sob - Nd: 10.00 - 19.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
         <div class="container">
-            <p>2023 &copy; Wszelkie prawa zastrzeżone </p>
+            <div class="row gx-5">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="bixol-footer-widget">
+                        <a href="index.html" class="footer-logo"><img src="/assets/images/logo/kajaki-logo-biel.png" alt=""></a>
+                        <p>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-6">
+                    <div class="bixol-footer-widget">
+                        <h4>Adres</h4>
+                        <div class="bixol-footer-address">
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> ul. Nowy Zjazd 4a, 05-660 Warka</li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+48733240024">
+                                        +48 733 240 024
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:kajaki24warka@gmail.com">
+                                        kajaki24warka@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="bixol-footer-widget">
+                        <h4>Godziny pracy</h4>
+                        <div class="footer-office-time">
+                            <ul>
+                                <li>Pon - Pt: 10.00 - 19.00</li>
+                                <li>Sob - Nd: 10.00 - 19.00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p>2023 &copy; Wszelkie prawa zastrzeżone </p>
+            </div>
+        </div>
 </footer>
-<!-- Footer Area End -->
+</div>
 
-<!-- Javascript Files -->
 <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <script src="assets/js/vendor/slick.min.js"></script>
-<!--
-<script src="assets/js/vendor/easing.min.js"></script>
-<script src="assets/js/vendor/wow.min.js"></script>
-<script src="assets/js/vendor/before-after.js"></script>
-
-<script src="assets/js/vendor/odometer.min.js"></script>
-<script src="assets/js/vendor/isotope.pkgd.js"></script>
-<script src="assets/js/vendor/piechart.js"></script>
-
-<script src="assets/js/vendor/appear.js"></script>
-<script src="assets/js/vendor/rbtools.min.js"></script>
-<script src="assets/js/vendor/rs6.min.js"></script>
--->
+<script src="assets/js/vendor/split.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
 
-        <script src="/assets/js/glightbox.min.js"></script>
-
-        <script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script>
    const lightbox = GLightbox({
    touchNavigation: true,
    loop: false,
    autoplayVideos: true
 });
 </script>
-
 </body>
-
 </html>

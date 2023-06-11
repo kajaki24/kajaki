@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="title-style-4 text-center">
-                    <span class="bixol-subtitle before-line">Kajaki24 Warka</span>
-                    <h2>Sprawdź cennik</h2>
+                    <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
+                    <h2 class="split-text-lines">Sprawdź cennik</h2>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="row justify-content-center">
                 {% for post in collections.cennik['Trasy jednodniowe'] %}
                 <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
+                    <div class="home6-pricing-column fade-in">
                         <div class="h6-headline">
                             <h4>{{ post.data.title }}</h4>
                         </div>
@@ -34,7 +34,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center fade-in">
             <a href="/cennik" class="home5-primary-btn">
                 Zobacz wszystko
                 <span><i class="fas fa-long-arrow-alt-right"></i></span>

@@ -44,8 +44,60 @@ TABLE OF CONTENTS:
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap");
 
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#fader.fade-out-f {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#fader.fade-in-f {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
 .k-list {
 	padding-left: 25px;
+}
+
+.page {
+	opacity: 0;
+	animation: fade-in .1s normal forwards;
 }
 
 .k-list li {
@@ -16950,3 +17002,5 @@ i {
 	text-align: center;
 }
 }
+
+
