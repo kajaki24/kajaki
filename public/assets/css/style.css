@@ -43,7 +43,7 @@ TABLE OF CONTENTS:
 --------------------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap');
 
 #fader {
     position: fixed;
@@ -2132,11 +2132,14 @@ TABLE OF CONTENTS:
 
 .h6-footer {
 	position: relative;
-	background-image: url("/assets/images/footer.jpg");
+	background-color: #0022413b;
+	background-image: url("/assets/images/splyw-mini.jpg");
 	background-size: cover;
 	background-position: center;
 	padding-top: 120px;
-	z-index: 9
+	background-blend-mode: overlay;
+	border-radius: 8px;
+	z-index: 9;
 }
 
 .h6-footer .bixol-footer-widget .footer-logo {
@@ -4329,9 +4332,10 @@ TABLE OF CONTENTS:
 
 span.bixol-subtitle {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 28px;
 	position: relative;
 	color: #007cfb;
+	font-family: "Kalam";
 }
 
 .title-style-2 h3 {
@@ -4379,10 +4383,10 @@ span.bixol-subtitle {
 
 .title-style-4 span.bixol-subtitle {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 28px;
 	position: relative;
-	display: inline-block;
 	color: #007cfb;
+	font-family: "Kalam";
 }
 
 .title-style-4 span.bixol-subtitle::after {
@@ -4538,6 +4542,18 @@ body {
 	font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-bottom: 10px;
+}
+
 h1 {
 	color: #13182a;
 	font-size: 38px;
@@ -4556,29 +4572,20 @@ h3 {
 h4 {
 	color: #13182a;
 	font-size: 25px;
+	font-weight: 600;
 }
 
 h5 {
 	color: #13182a;
 	font-size: 22px;
+	font-weight: 600;
 }
 
 h6 {
 	color: #13182a;
 	font-size: 18px;
 	margin-bottom: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Poppins", sans-serif;
-	font-weight: 700;
-	line-height: 1.25;
-	margin-bottom: 10px;
+	font-weight: 600;
 }
 
 p {
@@ -5678,6 +5685,7 @@ i {
 }
 
 .bixol-service-section .bixol-services .bixol-service-item .bixol-service-content {
+	width: 100%;
 	background-color: #ffffff;
 	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
@@ -12736,8 +12744,7 @@ i {
 	-ms-flex-align: center;
 	align-items: center;
 	gap: 6px;
-	color: #000000;
-	text-transform: capitalize;
+	color: #002245
 }
 
 .h4-about-section .about-bottom .about-list ul li+li {
@@ -12755,7 +12762,7 @@ i {
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 20px 0px rgba(12, 12, 12, 0.16);
 	padding: 0 15px 15px 0;
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
 .h4-about-section .about-bottom .about-yr-ex .icon-wrapper {
@@ -14610,7 +14617,7 @@ i {
 /*************** Booking Area *****************/
 
 .home6-booking-area {
-	background: url("/assets/images/booking-bg.jpg");
+	background: url("/assets/images/splyw-mini2.jpg");
 }
 
 .home6-booking-area .title h3 {
@@ -14982,7 +14989,23 @@ i {
 /*************** Pricing Table ***************/
 
 .home6-pricing-table {
+	position: relative;
 	background-color: #f6f7fa;
+}
+
+.home6-pricing-table::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("/assets/images/splyw.jpg");
+	background-size: cover
+}
+
+.pricing-title {
+	color: #fff
 }
 
 .home6-pricing-table .home6-pricing {
@@ -14991,13 +15014,25 @@ i {
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column {
-	background-color: #ffffff;
+	position: relative;
 	padding: 30px 50px 60px;
 	border-radius: 6px;
 	text-align: center;
-	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.06);
-	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.06);
 	margin-bottom: 30px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.home6-pricing-table .home6-pricing .home6-pricing-column::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffffb5;
+	filter: blur(130px);
+	z-index: -1;
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .icon-wrapper span {
@@ -15065,8 +15100,7 @@ i {
 .home6-pricing-table .home6-pricing .home6-pricing-column .price-btn a {
 	width: 170px;
 	height: 50px;
-	background-color: transparent;
-	border: 1px solid #001c8f;
+	background-color: #ffd532;
 	display: inline-block;
 	text-align: center;
 	line-height: 50px;
@@ -15080,8 +15114,8 @@ i {
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .price-btn a:hover {
-	background-color: #ffd532;
-	border: 1px solid #ffd532;
+	background-color: #001c8f;
+	color: #fff;
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column.selected {

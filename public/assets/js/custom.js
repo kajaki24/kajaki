@@ -17,7 +17,10 @@ splitTextChars.forEach(element =>{
    })
 });
 
+document.addEventListener("DOMContentLoaded", function(event) {
+
 // Handwrite --------------------------------------------------------------
+
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
 splitTextLetters.forEach(element =>{
@@ -62,7 +65,7 @@ splitTextLines.forEach(element =>{
      linesClass: "line-parent",
    });
 
-   gsap.set(".line-parent", {overflow: "hidden"});
+   gsap.set(".line-parent", {overflow: "hidden"}),
    
     gsap.from(mySplitText.lines, {
         duration: 0.6,
@@ -90,7 +93,7 @@ splitTextLinesLoad.forEach(element =>{
      linesClass: "line-parent",
    });
 
-   gsap.set(".line-parent", {overflow: "hidden"});
+   gsap.set(".line-parent", {overflow: "hidden"}),
    
     gsap.from(mySplitText.lines, {
         duration: 0.6,
@@ -102,6 +105,8 @@ splitTextLinesLoad.forEach(element =>{
           //toggleActions: 'restart pause reverse pause',
         },
     })
+});
+
 });
 
 // Reveal image --------------------------------------------------------------
