@@ -91,12 +91,12 @@
                             <div class="info-right">
                                 <div class="phone-call">
                                     <span><i class="flaticon-telephone"></i>Zadzwoń: <strong>
-                                        <a href="tel:+48733240024" title="Zadzwoń">+48 733 240 024</a>
+                                        <a href="tel:{{ collections.settings[0].data.site_phone }}" title="Zadzwoń">{{ collections.settings[0].data.site_phone }}</a>
                                     </strong></span>
                                 </div>
                                 <div class="mail-info">
                                     <span><i class="fas fa-envelope"></i>Napisz: <strong>
-                                        <a href="mailto:kajaki24warka@gmail.com" title="Wyślij wiadomość">kajaki24warka@gmail.com</a>
+                                        <a href="mailto:{{ collections.settings[0].data.site_mail }}" title="Wyślij wiadomość">{{ collections.settings[0].data.site_mail }}</a>
                                     </strong></span>
                                 </div>
                                 <div class="info-social">
@@ -115,7 +115,7 @@
                         <div class="col-lg-3 col-sm-7 col-9">
                             <div class="logo-wrapper">
                                 <a href="/" title="Strona główna">
-                                    <img src="{{ collections.settings[0].data.logo | url }}" alt="Kajaki24 Warka - Logo">
+                                    <img src="{{ collections.settings[0].data.site_logo | url }}" alt="Kajaki24 Warka - Logo">
                                 </a>
                             </div>
                         </div>
