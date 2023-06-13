@@ -15,7 +15,9 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Logo", name: "site_logo", widget: "image" }
+      - { label: "Numer telefonu", name: "site_phone", widget: "image" }
+      - { label: "Adres email", name: "site_mail", widget: "image" }
 # Cennik
   - label: "Cennik" 
     name: "cennik"
