@@ -17,7 +17,7 @@ splitTextChars.forEach(element =>{
    })
 });
 
-document.addEventListener("DOMContentLoaded", function(event) {
+window.addEventListener("DOMContentLoaded", (event) => {
 
 // Handwrite --------------------------------------------------------------
 
