@@ -14993,7 +14993,7 @@ i {
 	background-color: #f6f7fa;
 }
 
-.home .home6-pricing-table::before {
+.page-home .home6-pricing-table::before {
 	position: absolute;
 	content: "";
 	top: 0;
