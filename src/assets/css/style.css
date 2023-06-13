@@ -14993,7 +14993,7 @@ i {
 	background-color: #f6f7fa;
 }
 
-.home6-pricing-table::before {
+.home .home6-pricing-table::before {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -15020,6 +15020,7 @@ i {
 	text-align: center;
 	margin-bottom: 30px;
 	overflow: hidden;
+	box-shadow: 0 0 40px #1111;
 	z-index: 1;
 }
 
