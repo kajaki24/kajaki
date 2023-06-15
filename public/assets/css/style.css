@@ -6996,8 +6996,7 @@ i {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	border: 1px solid #eaeaea;
-	background: #fff;
+	background: var(--color-accent-1);
 	padding: 30px;
 	-webkit-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
@@ -9430,10 +9429,6 @@ i {
 
 /***************** Contact Page *****************/
 
-.contact-v2 {
-	background-color: #f4f8fd;
-}
-
 .contact-v2 .contact-v2-left .contact-v2-list {
 	margin-top: 30px;
 }
@@ -9596,10 +9591,6 @@ i {
 
 .contact-v3 .contact-v2-right form .submit-btn button {
 	width: 100%;
-}
-
-.contact-v3-info-content {
-	background-color: #f4f8fd;
 }
 
 .contact-v3-info-content .info-content {
@@ -14622,7 +14613,6 @@ i {
 	width: 180px;
 	height: 60px;
 	border: 0;
-	background-color: #ffd532;
 	text-align: center;
 	line-height: 60px;
 	display: inline-block;
@@ -14961,7 +14951,7 @@ i {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #ffffffb5;
+	background-color: var(--color-accent-3);
 	filter: blur(130px);
 	z-index: -1;
 }
@@ -14995,7 +14985,6 @@ i {
 }
 
 .home6-pricing-table .home6-pricing .home6-pricing-column .feature-list ul li {
-	color: #001c8f;
 	font-weight: 500;
 	border-top: 1px solid #eaeaea;
 	padding: 8px 0;
