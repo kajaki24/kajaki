@@ -5618,7 +5618,7 @@ i {
 
 .bixol-service-section .bixol-services .bixol-service-item .bixol-service-content {
 	width: 100%;
-	background-color: #ffffff;
+	background-color: var(--color-accent-2);
 	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	padding: 35px 35px 35px 50px;
@@ -14539,7 +14539,8 @@ i {
 /*************** Booking Area *****************/
 
 .home6-booking-area {
-	background: url("/assets/images/splyw-mini2.jpg");
+	background-color: var(--color-accent-1);
+	background-image: url("/assets/images/booking-bg.jpg");
 }
 
 .home6-booking-area .title h3 {
@@ -14612,6 +14613,7 @@ i {
 .submit-btn {
 	width: 180px;
 	height: 60px;
+	background: #ffd532;
 	border: 0;
 	text-align: center;
 	line-height: 60px;
@@ -14911,17 +14913,6 @@ i {
 
 .home6-pricing-table {
 	position: relative;
-}
-
-.page-home .home6-pricing-table::before {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url("/assets/images/splyw.jpg");
-	background-size: cover
 }
 
 .pricing-title {

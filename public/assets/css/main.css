@@ -390,6 +390,7 @@ li {
     background-size: cover;
     background-position: center;
     text-align: center;
+    box-shadow: inset 0 -60px 60px var(--color-accent-2);
 }
 
 .hero-main h1,
@@ -404,8 +405,8 @@ li {
 .kayak-wrap {
     position: absolute;
     top: 15%;
-    left: 10%;
-    width: 80%
+    left: 15%;
+    width: 85%
 }
 
 

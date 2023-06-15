@@ -63,7 +63,7 @@ splitTextLetters.forEach(element =>{
 // Split text lines --------------------------------------------------------------
 let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
-splitTextLines.forEach(element =>{
+splitTextLines.forEach(element => {
    let mySplitText = new SplitText(element, {
      type:"lines",
      linesClass: "line"
@@ -95,7 +95,7 @@ gsap.from(".kayak-wrap", {
   duration: 2
 })
 gsap.to(".kayak", {
-  xPercent: 20,
+  xPercent: -20,
   scrollTrigger: {
     trigger: ".hero-main",
     start: "bottom 100%",
