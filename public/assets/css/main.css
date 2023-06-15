@@ -6,9 +6,14 @@
 
 :root {
     --color-accent-1: #0027e6;
-    --color-accent-2: #0027e6;
+    --color-accent-2: #031980;
     --color-light-1: #fff;
     --color-light-2: #ddd;
+}
+
+body {
+    background: var(--color-accent-2);
+    color: var(--color-light-1);
 }
 
 /* Fader
@@ -22,7 +27,7 @@
     height: 100%;
     z-index: 99999;
     pointer-events: none;
-    background: #0027e6;
+    background: var(--color-accent-2);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -257,21 +262,9 @@ h2, .h2 {
     font-weight: 600;
 }
 
-.big-text {
-    font-size: 300px;
-    line-height: .8;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-shadow: 0 2px 15px #1111118f
+.big-paragraph {
+    font-size: 22px;
 }
-
-.big-text .char-wrap:nth-child(1),
-.big-text .char-wrap:nth-child(3),
-.big-text .char-wrap:nth-child(5) {
-    position: relative;
-    z-index: 999;
-}
-
 
 /* Site header
 ------------------------------------------- */
@@ -322,7 +315,7 @@ h2, .h2 {
 ------------------------------------------- */
 
 .hero-main {
-    background: url("/assets/images/hero-main.jpg");
+    background: url("/assets/images/hero-main-2.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -331,6 +324,21 @@ h2, .h2 {
 .hero-main h1,
 .hero-main p {
     color: var(--color-light-1);
+}
+
+.big-text {
+    font-size: 300px;
+    line-height: .8;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 2px 15px #1111118f
+}
+
+.big-text .char-wrap:nth-child(1),
+.big-text .char-wrap:nth-child(3),
+.big-text .char-wrap:nth-child(5) {
+    position: relative;
+    z-index: 999;
 }
 
 .kayak-wrap {
@@ -381,7 +389,7 @@ h2, .h2 {
 ------------------------------------------- */
 
 .site-footer {
-    background: url("/assets/images/footer-kayak.jpg");
+    background: url("/assets/images/footer-2.jpg");
     background-size: cover;
     background-position: center;
 }

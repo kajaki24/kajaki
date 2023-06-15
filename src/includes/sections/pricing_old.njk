@@ -1,10 +1,11 @@
-<section class="home6-pricing-table pt-100 pb-70">
+<!-- Pricing Table -->
+<section class="home6-pricing-table pt-100 pb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="title-style-4 text-center">
-                    <span class="bixol-subtitle before-line">Kajaki24 Warka</span>
-                    <h2>Trasy jednodniowe</h2>
+                    <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
+                    <h2 class="pricing-title split-text-lines">Sprawdź cennik</h2>
                 </div>
             </div>
         </div>
@@ -12,11 +13,9 @@
             <div class="row justify-content-center">
                 {% for post in collections.cennik['Trasy jednodniowe'] %}
                 <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column">
+                    <div class="home6-pricing-column fade-in">
                         <div class="h6-headline">
-                            <h4>
-                                {{ post.data.title }}
-                            </h4>
+                            <h4>{{ post.data.title }}</h4>
                         </div>
                         <div class="feature-list">
                             <ul>
@@ -28,13 +27,19 @@
                             <h2>{{ post.data.price }}zł</h2>
                         </div>
                         <div class="price-btn">
-                            <a href="#">Zarezerwuj</a>
+                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
                         </div>
                     </div>
                 </div>
-                {%- endfor -%}
+                {% endfor %}
             </div>
         </div>
-
+        <div class="text-center fade-in">
+            <a href="/cennik" class="home5-primary-btn">
+                Zobacz wszystko
+                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+            </a>
+        </div>
     </div>
 </section>
+<!-- Pricing Plan End -->
