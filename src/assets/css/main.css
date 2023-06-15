@@ -12,9 +12,31 @@
     --color-text: #ddd;
 }
 
+/* Main
+------------------------------------------------ */
+
 body {
     background: var(--color-accent-2);
     color: var(--color-light-1);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.fade-no-duration {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Fader
@@ -291,6 +313,13 @@ li {
     font-size: 19px;
 }
 
+.char-wrap {
+    overflow: hidden;
+}
+.split-text-letters-load .char {
+    transform: translateY(100%)
+}
+
 @media(min-width:767px) {
     h1, .h1 {
         font-size: clamp(48px, 6vw, 78px);
@@ -367,11 +396,11 @@ li {
     color: var(--color-light-1);
 }
 
-.kayak-wrap {
+.hero-main-wrap {
     position: relative;
 }
 
-.kayak-wrap .kayak {
+.kayak-wrap {
     position: absolute;
     top: 15%;
     left: 10%;
@@ -406,6 +435,9 @@ li {
 
 
 
+/* About section
+------------------------------------------- */
+
 
 
 
@@ -438,4 +470,8 @@ li {
 .footer-copyright p {
     font-size: 12px;
     color: #ddd;
+}
+
+.footer-widget i {
+    width: 20px;
 }

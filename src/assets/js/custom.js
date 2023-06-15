@@ -1,5 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
- 
+     
+// Fade in no duration -------------------------------------------------------
+   gsap.to(".fade-no-duration", {
+       autoAlpha: 1,
+       opacity: 1,
+       duration: 0.05
+});
+
 // Fade in --------------------------------------------------------------
 let splitTextChars = [...document.querySelectorAll('.fade-in')];
 
@@ -17,8 +24,6 @@ splitTextChars.forEach(element =>{
    })
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-
 // Handwrite --------------------------------------------------------------
 
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
@@ -35,11 +40,12 @@ splitTextLetters.forEach(element =>{
   });
 
   gsap.set(".char-wrap", {overflow: "hidden"});
+  gsap.set(".char", {yPercent: 100,});
   
-   gsap.from(mySplitText.chars, {
-       autoAlpha: 0,
-       opacity: 0,
-       yPercent: 100,
+   gsap.to(mySplitText.chars, {
+       autoAlpha: 1,
+       opacity: 1,
+       yPercent: 0,
        duration: 2,
        ease: Expo. easeOut,
        stagger: {
@@ -68,11 +74,12 @@ splitTextLines.forEach(element =>{
    });
 
    gsap.set(".line-parent", {overflow: "hidden"}),
+   gsap.set(".line", {yPercent: 100}),
    
-    gsap.from(mySplitText.lines, {
+    gsap.to(mySplitText.lines, {
         duration: 0.6,
         stagger: 0.1,
-        yPercent: 100,
+        yPercent: 0,
         ease: "sine.out",
         scrollTrigger: { 
           trigger: element,
@@ -82,33 +89,18 @@ splitTextLines.forEach(element =>{
 });
 
 
-// Split text lines --------------------------------------------------------------
-let splitTextLinesLoad = [...document.querySelectorAll('.split-text-lines-load')];
-
-splitTextLinesLoad.forEach(element =>{
-   let mySplitText = new SplitText(element, {
-     type:"lines",
-     linesClass: "line"
-   });
-    new SplitText(element, {
-     type:"lines",
-     linesClass: "line-parent",
-   });
-
-   gsap.set(".line-parent", {overflow: "hidden"}),
-   
-    gsap.from(mySplitText.lines, {
-        duration: 0.6,
-        stagger: 0.1,
-        yPercent: 100,
-        ease: "sine.out",
-        scrollTrigger: { 
-          trigger: element,
-          //toggleActions: 'restart pause reverse pause',
-        },
-    })
-});
-
+// Kayak  --------------------------------------------------------------------
+gsap.from(".kayak-wrap", {
+  xPercent: 120,
+  duration: 2
+})
+gsap.to(".kayak", {
+  xPercent: 20,
+  scrollTrigger: {
+    trigger: ".hero-main",
+    start: "bottom 100%",
+    scrub: 1
+  }
 });
 
 // Reveal image --------------------------------------------------------------
@@ -136,7 +128,6 @@ revealContainers.forEach((element) => {
     }
   });
 });
-
 
 
 // Footer parallax

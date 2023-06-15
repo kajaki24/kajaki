@@ -4554,74 +4554,6 @@ h6 {
 	margin-bottom: 10px;
 }
 
-h1 {
-	color: #13182a;
-	font-size: 38px;
-}
-
-h2 {
-	color: #13182a;
-	font-size: 34px;
-}
-
-h3 {
-	color: #13182a;
-	font-size: 29px;
-}
-
-h4 {
-	color: #13182a;
-	font-size: 25px;
-	font-weight: 600;
-}
-
-h5 {
-	color: #13182a;
-	font-size: 22px;
-	font-weight: 600;
-}
-
-h6 {
-	color: #13182a;
-	font-size: 18px;
-	margin-bottom: 0;
-	font-weight: 600;
-}
-
-p {
-	color: #3a4268;
-	margin-bottom: 0;
-}
-
-.h4-headline h1,
-.h4-headline h2,
-.h4-headline h3,
-.h4-headline h4,
-.h4-headline h5,
-.h4-headline h6 {
-	color: #000000;
-	text-transform: initial;
-}
-
-.h6-headline h1,
-.h6-headline h2,
-.h6-headline h3,
-.h6-headline h4,
-.h6-headline h5,
-.h6-headline h6 {
-	color: #001c8f;
-}
-
-.h7-headline h1,
-.h7-headline h2,
-.h7-headline h3,
-.h7-headline h4,
-.h7-headline h5,
-.h7-headline h6 {
-	color: #111;
-	text-transform: initial;
-}
-
 .h7-pera-txt p {
 	color: #666666;
 }
@@ -12744,7 +12676,6 @@ i {
 	-ms-flex-align: center;
 	align-items: center;
 	gap: 6px;
-	color: #002245
 }
 
 .h4-about-section .about-bottom .about-list ul li+li {
