@@ -27,18 +27,20 @@ splitTextLetters.forEach(element =>{
   new SplitText(element, { 
     type: "words, chars",
     wordsClass: "word",
-    charsClass: "char-perspective" 
+    charsClass: "char-wrap" 
   });
   let mySplitText = new SplitText(element, {
     type:"chars",
     charsClass: "char"
   });
+
+  gsap.set(".char-wrap", {overflow: "hidden"});
   
    gsap.from(mySplitText.chars, {
        autoAlpha: 0,
        opacity: 0,
+       yPercent: 100,
        duration: 2,
-       delay: 0.8,
        ease: Expo. easeOut,
        stagger: {
          amount: 0.5,

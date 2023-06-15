@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap');
+
+/* Spacings
+------------------------------------------------ */
+
+.h-100vh {
+    min-height: 100vh
+}
+
+.pt-xxlarge {
+    padding-top: 200px
+}
+.pt-xlarge {
+    padding-top: 150px
+}
+.pt-large {
+    padding-top: 120px
+}
+.pt-medium {
+    padding-top: 90px
+}
+.pt-small {
+    padding-top: 60px
+}
+.pt-xsmall {
+    padding-top: 30px
+}
+
+.pb-xlarge {
+    padding-bottom: 150px
+}
+.pb-large {
+    padding-bottom: 120px
+}
+.pb-medium {
+    padding-bottom: 90px
+}
+.pb-small {
+    padding-bottom: 60px
+}
+.pb-xsmall {
+    padding-bottom: 30px
+}
+
+.py-medium {
+    padding-top: 90px;
+    padding-bottom: 90px
+}
+
+.pl-2 {
+    padding-left: 2em
+}
+.pl-3 {
+    padding-left: 3em
+}
+.pl-5 {
+    padding-left: 5em
+}
+.pr-2 {
+    padding-right: 2em
+}
+.pr-3 {
+    padding-right: 3em
+}
+.pr-5 {
+    padding-right: 5em
+}
+
+.mt-minus-medium {
+    margin-top: -90px
+}
+.mt-minus-large {
+    margin-top: -120px
+}
+.mb-minus-xlarge {
+    margin-bottom: -180px
+}
+.mb-minus-large {
+    margin-bottom: -120px
+}
+
+@media(min-width:767px) {
+    .h-md-100vh {
+        min-height: 100vh
+    }
+    .p-md-0 {
+        padding: 0
+    }
+    .pt-md-xxlarge {
+        padding-top: 200px
+    }
+    .pt-md-xlarge {
+        padding-top: 150px
+    }
+    .pt-md-large {
+        padding-top: 120px
+    }
+    .pt-md-medium {
+        padding-top: 90px
+    }
+    .pt-md-small {
+        padding-top: 60px
+    }
+    .pt-md-xsmall {
+        padding-top: 30px
+    }
+    .pb-md-xlarge {
+        padding-bottom: 150px
+    }
+    .pb-md-large {
+        padding-bottom: 120px
+    }
+    .pb-md-medium {
+        padding-bottom: 90px
+    }
+    .pb-md-small {
+        padding-bottom: 60px
+    }
+    .pb-md-xsmall {
+        padding-bottom: 30px
+    }
+    .pl-md-5 {
+        padding-left: 5em
+    }
+    .pr-md-5 {
+        padding-right: 5em
+    }
+    .pr-md-8 {
+        padding-right: 8em
+    }
+    .pr-md-10 {
+        padding-right: 10em
+    }
+    .w-md-75 {
+        width: 75%
+    }
+    .w-md-120 {
+        width: 120%
+    }
+    .w-md-200 {
+        width: 200%
+    }
+    .w-md-250 {
+        width: 250%
+    }
+}
+
+@media(min-width:1200px) {
+    .pt-md-xsmall {
+        padding-top: 30px
+    }
+    .pl-xl-0 {
+        padding-left: 0
+    }
+    .pr-xl-5 {
+        padding-right: 5em
+    }
+    .pr-xl-10 {
+        padding-right: 10em
+    }
+}
+
+
+/* Typography 
+------------------------------------------ */
+
+h1, .h1 {
+    font-size: 68px;
+    font-weight: 600;
+}
+
+h2, .h2 {
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.big-text {
+    font-size: 300px;
+    line-height: .8;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 2px 15px #1111118f
+}
+
+.big-text .char-wrap:nth-child(1),
+.big-text .char-wrap:nth-child(3),
+.big-text .char-wrap:nth-child(5) {
+    position: relative;
+    z-index: 999;
+}
+
+
+/* Site header
+------------------------------------------- */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999
+}
+
+.logo-wrapper {
+    padding-left: 20%;
+    margin-top: 40px;
+}
+
+.desktop-menu ul {
+    padding-left: 0;
+    text-align: end;
+}
+
+.desktop-menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.desktop-menu ul li a {
+    display: inline-block;
+    padding: 65px 30px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    transition: .2s ease-in-out;
+}
+
+.desktop-menu ul li a:hover,
+.desktop-menu ul li a.active {
+    background: #0027e6;
+}
+
+
+
+/* Hero main
+------------------------------------------- */
+
+.hero-main {
+    background: url("/assets/images/hero-main.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-main h1,
+.hero-main p {
+    color: #fff;
+}
+
+.kayak-wrap {
+    position: relative;
+}
+
+.kayak-wrap .kayak {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    transform: translateY(-50%);
+}
+
+
+/* Hero page
+------------------------------------------- */
+
+.hero-page {
+    background: url("/assets/images/hero-main.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-page-title {
+    color: #fff;
+}
+
+.hero-page-breadcrumbs a,
+.hero-page-breadcrumbs span {
+    font-size: 12px;
+    color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+/* Site footer
+------------------------------------------- */
+
+.site-footer {
+    background: url("/assets/images/footer-kayak.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-widget-title {
+    color: #fff;
+}
+
+.footer-widget p,
+.footer-widget a,
+.footer-widget li {
+    color: #eee;
+}
+
+.footer-widget li {
+    margin-bottom: 1em;
+}
+
+.footer-copyright p {
+    font-size: 12px;
+    color: #ddd;
+}

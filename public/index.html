@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="/assets/css/flaticon.css">
         <link rel="stylesheet" href="/assets/css/slick.css">
         <link rel="stylesheet" href="/assets/css/style.css">
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+
         <link rel="stylesheet" href="/assets/css/glightbox.min.css">
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -77,589 +80,82 @@
         </script>
         <!-- ScrollTop Button -->
         <a href="#" class="scrolltop-btn" title="Przewiń w górę"><span><i class="flaticon-arrow"></i></span></a>
-        <!-- Header Area -->
-        <header class="bixol-header header-style-5">
-            <div class="info-top sticky-info">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                            <div class="info-left">
-                                <p>Witaj <span>na stronie organizatora spływów kajakowych</span></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="info-right">
-                                <div class="phone-call">
-                                    <span><i class="flaticon-telephone"></i>Zadzwoń: <strong>
-                                        <a href="tel:+48 733 240 024" title="Zadzwoń">+48 733 240 024</a>
-                                    </strong></span>
-                                </div>
-                                <div class="mail-info">
-                                    <span><i class="fas fa-envelope"></i>Napisz: <strong>
-                                        <a href="mailto:kajaki24warka@gmail.com" title="Wyślij wiadomość">kajaki24warka@gmail.com</a>
-                                    </strong></span>
-                                </div>
-                                <div class="info-social">
-                                    <a href="https://www.facebook.com/Kajaki24" title="Facebook" rel="nofollow norefferer" target="_blank">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                            </div>
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo-wrapper">
+                            <a href="/" title="Strona główna">
+                                <img src="/static/img/kajaki-logo-biel.png" alt="Kajaki24 Warka - Logo">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-navigation header-style-2 header-style-3 header-bottom">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-sm-7 col-9">
-                            <div class="logo-wrapper">
-                                <a href="/" title="Strona główna">
-                                    <img src="/static/img/kajaki-logo.png" alt="Kajaki24 Warka - Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 desktop-menu-wrapper">
-                            <div class="desktop-menu">
+                    <div class="col-md-9">
+                        <div class="desktop-menu-wrap">
+                            <nav class="desktop-menu">
                                 <ul>
                                     <li>
-                                        <a href="/" title="Główna">Główna</a>
+                                        <a href="/" title="Główna" class="active">Główna</a>
                                     </li>
                                     <li>
-                                        <a href="/cennik" title="Cennik">Cennik</a>
+                                        <a href="/cennik" title="Cennik" >Cennik</a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin">Regulamin</a>
+                                        <a href="/regulamin" title="Regulamin" >Regulamin</a>
                                     </li>
                                     <li>
-                                        <a href="/galeria" title="Galeria">Galeria</a>
+                                        <a href="/galeria" title="Galeria" >Galeria</a>
                                     </li>
                                     <li>
-                                        <a href="/kontakt" title="Kontakt">Kontakt</a>
+                                        <a href="/kontakt" title="Kontakt" >Kontakt</a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-5 col-3">
-                            <div class="header-right">
-                                <div class="header-btn">
-                                    <a href="tel:+48733240024" class="home5-primary-btn" title="Zadzwoń">Zadzwoń<span><i class="fas fa-long-arrow-alt-right"></i></span></a>
-                                </div>
-                                <div class="bixol-mobile-hamburger">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Header Area End -->
-
-         <!-- Mobile Menu -->
-         <div class="bixol-mobile-menu">
-            <a href="/" class="mobile-menu-logo"><img src="/assets/images/kajaki-logo.png" alt="Kajaki24 Warka - Logo"></a>
-            <ul>
-                                    <li>
-                                        <a href="/" title="Główna">Główna</a>
-                                    </li>
-                                    <li>
-                                        <a href="/cennik" title="Cennik">Cennik</a>
-                                    </li>
-                                    <li>
-                                        <a href="/regulamin" title="Regulamin">Regulamin</a>
-                                    </li>
-                                    <li>
-                                        <a href="/galeria" title="Galeria">Galeria</a>
-                                    </li>
-                                    <li>
-                                        <a href="/kontakt" title="Kontakt">Kontakt</a>
-                                    </li>
-            </ul>
-        </div>
-        <!-- Mobile Menu End -->
 
 
-<section class="section-hero pt-120 pb-200 p-relative">
+
+<section class="hero-main pt-xxlarge pb-xlarge">
     <div class="container">
-        <div class="col-md-6">
-            <span class="bixol-subtitle split-text-lines">Kajaki24 Warka</span>
-            <h1 class="mt-10 split-text-lines-load">
-                <span class="thin-text">Spływy kajakowe </span> <br />pilicą -  Warka
-            </h1>
-            <p class="mt-20 mb-30 split-text-lines-load">
-                Przygotuj się na niezapomnianą przygodę na wodzie, pełną pięknych krajobrazów i ekscytujących doświadczeń.      
+        <h1 class="h2 split-text-lines mb-0">
+            Najlepsze Spływy Kajakowe Pilicą Warka
+        </h1>
+        <div class="kayak-wrap">
+            <p class="big-text split-text-letters mt-4 mb-2">
+                Kajaki
             </p>
-            <div class="fade-in">
-                <a href="tel:+48733240024" class="home5-primary-btn" title="Zadzwoń">
-                    Zadzwoń
-                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
-                </a>
-            </div>
+            <img src="/assets/images/kayak-main.png" class="kayak fade-in" alt="">
         </div>
-    </div>
-        <div class="big-text-wrap">
-            <div class="container">
-                <img src="/assets/images/big-text.png" alt="">
-            </div>
-        </div>
-</section>
-
-<section class="section-weather fade-in">
-    <div class="container">
-<script async defer>
-        (function(d, s, id) {
-            if (d.getElementById(id)) {
-                if (window.__TOMORROW__) {
-                    window.__TOMORROW__.renderWidget();
-                }
-                return;
-            }
-            const fjs = d.getElementsByTagName(s)[0];
-            const js = d.createElement(s);
-            js.id = id;
-            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'tomorrow-sdk');
-        </script>
-
-        <div class="tomorrow"
-           data-location-id="088477"
-           data-language="PL"
-           data-unit-system="METRIC"
-           data-skin="light"
-           data-widget-type="upcoming"
-           style="padding-bottom:22px;position:relative;"
-        >
-        </div>
-
-    </div>
-</section>
-<!-- About Section -->
-<section class="h4-about-section pt-120 pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 order-2 order-lg-1">
-                <div class="about-left">
-                    <div class="title-style-2">
-                        <span class="bixol-subtitle fade-in">Kajaki24 Warka</span>
-                        <h3 class="split-text-lines">Spływy kajakowe Pilicą </h3>
-                        <p class="split-text-lines">Spływy kajakowe stają się coraz bardziej popularną formą turystyki i rekreacji, nie tylko
-                            wśród młodzieży, ale także wśród rodzin z dziećmi, które w ten sposób chcą razem spędzić
-                            wakacje czy też wolne weekendy. </p>
-                    </div>
-                    <div class="h4-pera-txt mt-30">
-                        <p class="split-text-lines">Równie chętnie firmy organizują swoje imprezy integracyjne, sięgając po ten rodzaj turystyki,
-                            który sprzyja pełnemu relaksowi i odprężeniu tak fizycznemu jak i psychicznemu po miesiącach
-                            ciężkiej pracy. Zapraszamy!</p>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-list">
-                            <ul class="split-text-lines">
-                                <li><span><i class="fas fa-check"></i></span>Wypoczynek i integracja</li>
-                                <li><span><i class="fas fa-check"></i></span>Rodzinna atmosfera</li>
-                                <li><span><i class="fas fa-check"></i></span>Świeże powietrze</li>
-                            </ul>
-                        </div>
-                        <div class="about-yr-ex fade-in">
-                            <span class="icon-wrapper"><i class="flaticon flaticon-trophy"></i></span>
-                            <span class="title">10+</span>
-                            <span class="subtitle">Lat doświadczenia</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2">
-                <div class="about-right">
-                    <div class="img-wrapper fade-in">
-                        <img src="assets/images/about.png" alt="">
-                        <div class="ab-right-content">
-                            <div class="dark-bg">
-                                <span class="title">50+</span>
-                                <span class="subtitle">Kajaków</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- About Section End -->
-<section class="home6-booking-area pt-50 pb-40 fade-in">
-    <div class="container">
-        <div class="row align-items-center">
-                <div class="col-sm-6 col-md-7 col-lg-9 text-center text-md-start">
-                    <div class="title mt-30 mb-30">
-                        <h3>Zerezerwuj kajaki telefonicznie</h3>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-3 text-center text-md-end mt-30 mb-30">
-                    <a class="submit-btn">
-                         Zadzwoń
-                    </a>
-                </div>
-        </div>
-    </div>
-</section>
-<section class="bixol-service-section pt-120 pb-100">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4">
-                <div class="bixol-services pt-30">
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Bezpieczeństwo</h5>
-                            <p>Wygodne i bezpieczne kajaki</p>
-                        </div>
-                    </div>
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Profesjonalna obsługa</h5>
-                            <p>Zapewniamy profesjonalną obsługę</p>
-                        </div>
-                    </div>
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Duży wybór tras</h5>
-                            <p>Oferujemy duży wybór tras spływów</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="bixol-service-middle fade-in">
-                    <div class="img-wrapper">
-                        <img src="/assets/images/gallery/k-2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="bixol-services pt-30">
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Konkurencyjne ceny</h5>
-                            <p>Konkurencyjne ceny i promocje</p>
-                        </div>
-                    </div>
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Dodatkowe atrakcje</h5>
-                            <p>As a app web crawler expert</p>
-                        </div>
-                    </div>
-                    <div class="bixol-service-item">
-                        <div class="bixol-service-content fade-in">
-                            <h5>Elastyczne podejśćie</h5>
-                            <p>As a app web crawler expert </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-7 mx-auto">
+            <p class="split-text-lines mt-0">
+                Przygotuj się na niezapomnianą przygodę na wodzie, pełną pięknych krajobrazów i ekscytujących doświadczeń.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- Pricing Table -->
-<section class="home6-pricing-table pt-100 pb-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="title-style-4 text-center">
-                    <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
-                    <h2 class="pricing-title split-text-lines">Sprawdź cennik</h2>
-                </div>
-            </div>
-        </div>
-        <div class="home6-pricing">
-            <div class="row justify-content-center">
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Warka - Mniszew</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 3,5h</li>
-                                <li>Długość trasy: 15,6km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>120zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Lechanice - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 1,5h</li>
-                                <li>Długość trasy: 7,6km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>100zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Budy Michałowskie - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 3,5h</li>
-                                <li>Długość trasy: 16km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>120zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Budy Michałowskie - Mniszew</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 5 - 6h</li>
-                                <li>Długość trasy: 31,6km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>150zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Biejków - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 5 - 6h</li>
-                                <li>Długość trasy: 21km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>130zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="home6-pricing-column fade-in">
-                        <div class="h6-headline">
-                            <h4>Białobrzegi - Warka</h4>
-                        </div>
-                        <div class="feature-list">
-                            <ul>
-                                <li>Czas spływu: 8 - 9h</li>
-                                <li>Długość trasy: 28,7km</li>
-                            </ul>
-                        </div>
-                        <div class="price-area">
-                            <h2>150zł</h2>
-                        </div>
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zarezerwuj telefonicznie">Zarezerwuj</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="text-center fade-in">
-            <a href="/cennik" class="home5-primary-btn">
-                Zobacz wszystko
-                <span><i class="fas fa-long-arrow-alt-right"></i></span>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Pricing Plan End -->
-        <section class="home6-process-section pt-100 pb-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3 pb-60">
-                        <div class="title-style-4 text-center">
-                            <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
-                            <h2 class="split-text-lines">Harmonogram spływu</h2>
-                            <p class="split-text-lines">Tu znajdziesz wszystkie istotne informacje dotyczące organizacji spływu. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home6-process-bottom" data-background="assets/images/home6/line-bg.jpg">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="process-column fade-in">
-                                <div class="icon-wrapper">
-                                    <span><i class="flaticonv2 flaticonv2-recruitment"></i></span>
-                                    <span class="count">1</span>
-                                </div>
-                                <div class="item-content">
-                                    <div class="h6-headline">
-                                        <h5>Transport uczestników</h5>
-                                    </div>
-                                    <div class="h6-pera-txt">
-                                        <p>Transport do miejsca rozpoczęcia spływu</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="process-column fade-in">
-                                <div class="icon-wrapper">
-                                    <span><i class="flaticonv2 flaticonv2-settings"></i></span>
-                                    <span class="count">2</span>
-                                </div>
-                                <div class="item-content">
-                                    <div class="h6-headline">
-                                        <h5>Rozpoczęcie spływu</h5>
-                                    </div>
-                                    <div class="h6-pera-txt">
-                                        <p>Każdy uczestnik dostaje kajak i kamizelkę</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="process-column fade-in">
-                                <div class="icon-wrapper">
-                                    <span><i class="flaticonv2 flaticonv2-appointment"></i></span>
-                                    <span class="count">3</span>
-                                </div>
-                                <div class="item-content">
-                                    <div class="h6-headline">
-                                        <h5>Koniec spływu</h5>
-                                    </div>
-                                    <div class="h6-pera-txt">
-                                        <p>Wodowanie i odbiór sprzętu i uczestników</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Feedback Area -->
-        <section class="home6-feedback-area pt-100 pb-100" data-background="/assets/images/feedback/feedback-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <div class="title-style-4 text-center">
-                            <span class="bixol-subtitle before-line fade-in">Kajaki24 Warka</span>
-                            <h2 class="split-text-lines">Opinie klientów</h2>
-                            <p class="split-text-lines">W tej sekcji zebraliśmy opinie klientów, którzy mieli okazję skorzystać z naszych spływów kajakowych Pilicą. Wierzymy w transparentność i wartość autentycznych opinii, dlatego udostępniamy je tutaj, abyście mogli je poznać.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home6-feedback-bottom">
-                    <div class="clients-thumbs fade-in">
-                        <span><img src="/assets/images/feedback/client-thumb-1.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-2.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-3.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-4.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-5.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-6.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-7.png" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-8.html" alt=""></span>
-                        <span><img src="/assets/images/feedback/client-thumb-9.html" alt=""></span>
-                    </div>
-                    <div class="home6-feedback-slider fade-in">
-                        <div class="feedback-wrapper">
-                            <div class="feedback-single">
-                                <div class="img-wrapper">
-                                    <img src="/assets/images/feedback/client-1.jpg" alt="">
-                                </div>
-                                <div class="feedback-txt">
-                                    <p>Super spływ . Warka- Mniszew..4 kajaki...ok. 4 godziny spływu...mnóstwo wysepek  i kąpielisk z możliwością odpoczynku. Przecudne klify z gniazdami jeżyków. Woda spokojna... pełnen relaks.  Dzieci? Jak najbardziej!... Mielizny - przygoda... Polecam 🙂</p>
-                                </div>
-                                <div class="clients-content">
-                                    <span class="title">Gosia Kozłowska</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-wrapper">
-                            <div class="feedback-single">
-                                <div class="img-wrapper">
-                                    <img src="/assets/images/feedback/client-1.jpg" alt="">
-                                </div>
-                                <div class="feedback-txt">
-                                    <p>Super profesjonalny kontakt z właścicielem, wszystko organizowane na najwyższym poziomie, dla tego pana nie ma rzeczy nie możliwych💪. Widoki nie zapomniane, dlatego jeszcze nie raz skorzystam z wypoczynku nad Pilicą organizowanego przez Roberta😉</p>
-                                </div>
-                                <div class="clients-content">
-                                    <span class="title">Erwin Socha</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-wrapper">
-                            <div class="feedback-single">
-                                <div class="img-wrapper">
-                                    <img src="/assets/images/feedback/client-1.jpg" alt="">
-                                </div>
-                                <div class="feedback-txt">
-                                    <p>Polecam z czystym sumieniem.  Super kontakt, spływ mieliśmy z przygodą burzliwą ale było super. Dodam, że pierwszy raz a wiele lat jeździmy na spływy kajakowe w kraju, kajaki były czyste jak z fabryki w życiu nie trafiliśmy na tak czyste kajaki. Właściciel podchodzi z sercem do klienta.</p>
-                                </div>
-                                <div class="clients-content">
-                                    <span class="title">Daniel Borowski</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Feedback Area End -->
 
 
 
-  <footer class="bixol-footer h6-footer">
+  <footer class="site-footer pt-xlarge pb-xsmall">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="bixol-footer-widget">
-                        <a href="index.html" class="footer-logo"><img src="/assets/images/logo/kajaki-logo-biel.png" alt=""></a>
-                        <p>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
+                    <div class="footer-widget">
+                        <a href="index.html" class="footer-logo">
+                        <img src="/assets/images/logo/kajaki-logo-biel.png" alt="">
+                        </a>
+                        <p class="mt-4">We work with a passion of taking challenges and creating new ones in advertising sector.</p>
                     </div>
                 </div>
                 <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-6">
-                    <div class="bixol-footer-widget">
-                        <h4>Adres</h4>
-                        <div class="bixol-footer-address">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title mb-4">Adres</h4>
                             <ul>
                                 <li><i class="fas fa-map-marker-alt"></i> ul. Nowy Zjazd 4a, 05-660 Warka</li>
                                 <li>
@@ -675,23 +171,20 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="bixol-footer-widget">
-                        <h4>Godziny pracy</h4>
-                        <div class="footer-office-time">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title mb-4">Godziny pracy</h4>
                             <ul>
                                 <li>Pon - Pt: 10.00 - 19.00</li>
                                 <li>Sob - Nd: 10.00 - 19.00</li>
                             </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright pt-medium">
             <div class="container">
                 <p>2023 &copy; Wszelkie prawa zastrzeżone </p>
             </div>
@@ -699,14 +192,10 @@
 </footer>
 </div>
 
-<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/vendor/slick.min.js"></script>
 <script src="assets/js/vendor/split.js"></script>
 <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
-<script src="assets/js/main.js"></script>
 <script src="assets/js/custom.js"></script>
 
 <script src="/assets/js/glightbox.min.js"></script>

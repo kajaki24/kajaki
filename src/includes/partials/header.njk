@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="/assets/css/flaticon.css">
         <link rel="stylesheet" href="/assets/css/slick.css">
         <link rel="stylesheet" href="/assets/css/style.css">
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+
         <link rel="stylesheet" href="/assets/css/glightbox.min.css">
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -77,107 +80,40 @@
         </script>
         <!-- ScrollTop Button -->
         <a href="#" class="scrolltop-btn" title="Przewiń w górę"><span><i class="flaticon-arrow"></i></span></a>
-        <!-- Header Area -->
-        <header class="bixol-header header-style-5">
-            <div class="info-top sticky-info">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                            <div class="info-left">
-                                <p>Witaj <span>na stronie organizatora spływów kajakowych</span></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="info-right">
-                                <div class="phone-call">
-                                    <span><i class="flaticon-telephone"></i>Zadzwoń: <strong>
-                                        <a href="tel:{{ collections.settings[0].data.site_phone }}" title="Zadzwoń">{{ collections.settings[0].data.site_phone }}</a>
-                                    </strong></span>
-                                </div>
-                                <div class="mail-info">
-                                    <span><i class="fas fa-envelope"></i>Napisz: <strong>
-                                        <a href="mailto:{{ collections.settings[0].data.site_mail }}" title="Wyślij wiadomość">{{ collections.settings[0].data.site_mail }}</a>
-                                    </strong></span>
-                                </div>
-                                <div class="info-social">
-                                    <a href="https://www.facebook.com/Kajaki24" title="Facebook" rel="nofollow norefferer" target="_blank">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                            </div>
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo-wrapper">
+                            <a href="/" title="Strona główna">
+                                <img src="{{ collections.settings[0].data.site_logo | url }}" alt="Kajaki24 Warka - Logo">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-navigation header-style-2 header-style-3 header-bottom">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-sm-7 col-9">
-                            <div class="logo-wrapper">
-                                <a href="/" title="Strona główna">
-                                    <img src="{{ collections.settings[0].data.site_logo | url }}" alt="Kajaki24 Warka - Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 desktop-menu-wrapper">
-                            <div class="desktop-menu">
+                    <div class="col-md-9">
+                        <div class="desktop-menu-wrap">
+                            <nav class="desktop-menu">
                                 <ul>
                                     <li>
-                                        <a href="/" title="Główna">Główna</a>
+                                        <a href="/" title="Główna" {% if page.url === "/" %}class="active"{% endif %}>Główna</a>
                                     </li>
                                     <li>
-                                        <a href="/cennik" title="Cennik">Cennik</a>
+                                        <a href="/cennik" title="Cennik" {% if page.url === "/cennik/" %}class="active"{% endif %}>Cennik</a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin">Regulamin</a>
+                                        <a href="/regulamin" title="Regulamin" {% if page.url === "/regulamin/" %}class="active"{% endif %}>Regulamin</a>
                                     </li>
                                     <li>
-                                        <a href="/galeria" title="Galeria">Galeria</a>
+                                        <a href="/galeria" title="Galeria" {% if page.url === "/galeria/" %}class="active"{% endif %}>Galeria</a>
                                     </li>
                                     <li>
-                                        <a href="/kontakt" title="Kontakt">Kontakt</a>
+                                        <a href="/kontakt" title="Kontakt" {% if page.url === "/kontakt/" %}class="active"{% endif %}>Kontakt</a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-5 col-3">
-                            <div class="header-right">
-                                <div class="header-btn">
-                                    <a href="tel:+48733240024" class="home5-primary-btn" title="Zadzwoń">Zadzwoń<span><i class="fas fa-long-arrow-alt-right"></i></span></a>
-                                </div>
-                                <div class="bixol-mobile-hamburger">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Header Area End -->
-
-         <!-- Mobile Menu -->
-         <div class="bixol-mobile-menu">
-            <a href="/" class="mobile-menu-logo"><img src="/assets/images/kajaki-logo.png" alt="Kajaki24 Warka - Logo"></a>
-            <ul>
-                                    <li>
-                                        <a href="/" title="Główna">Główna</a>
-                                    </li>
-                                    <li>
-                                        <a href="/cennik" title="Cennik">Cennik</a>
-                                    </li>
-                                    <li>
-                                        <a href="/regulamin" title="Regulamin">Regulamin</a>
-                                    </li>
-                                    <li>
-                                        <a href="/galeria" title="Galeria">Galeria</a>
-                                    </li>
-                                    <li>
-                                        <a href="/kontakt" title="Kontakt">Kontakt</a>
-                                    </li>
-            </ul>
-        </div>
-        <!-- Mobile Menu End -->
