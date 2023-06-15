@@ -138,6 +138,37 @@
         </div>
     </div>
 </section>
+<section class="section-weather fade-in">
+    <div class="container">
+<script async defer>
+        (function(d, s, id) {
+            if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                    window.__TOMORROW__.renderWidget();
+                }
+                return;
+            }
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'tomorrow-sdk');
+        </script>
+
+        <div class="tomorrow"
+           data-location-id="088477"
+           data-language="PL"
+           data-unit-system="METRIC"
+           data-skin="light"
+           data-widget-type="upcoming"
+           style="padding-bottom:22px;position:relative;"
+        >
+        </div>
+
+    </div>
+</section>
 <!-- About Section -->
 <section class="h4-about-section pt-120 pb-120">
     <div class="container">
@@ -320,7 +351,7 @@
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-3 text-center text-md-end mt-30 mb-30">
                     <a class="submit-btn">
-                         Zadzwoń
+                         +48 733 240 024
                     </a>
                 </div>
         </div>
