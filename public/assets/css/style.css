@@ -4389,16 +4389,6 @@ span.bixol-subtitle {
 	font-family: "Kalam";
 }
 
-.title-style-4 span.bixol-subtitle::after {
-	content: '';
-	position: absolute;
-	bottom: 10px;
-	right: -38px;
-	width: 30px;
-	height: 0px;
-	border-bottom: 2px dashed #628dfb;
-}
-
 .title-style-4 span.bixol-subtitle.before-line::before {
 	content: '';
 	position: absolute;
@@ -6996,11 +6986,8 @@ i {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background: var(--color-accent-1);
+	background: var(--color-accent-3);
 	padding: 30px;
-	-webkit-transition: all 0.3s ease-in;
-	-o-transition: all 0.3s ease-in;
-	transition: all 0.3s ease-in;
 	margin-bottom: 30px;
 }
 
@@ -9548,9 +9535,7 @@ i {
 
 .contact-v2 .contact-v2-right form .submit-btn button {
 	width: 212px;
-	height: 50px;
 	text-align: center;
-	line-height: 50px;
 	background-color: #267FF9;
 	border: 0;
 	border-radius: 3px;
@@ -12660,6 +12645,8 @@ i {
 }
 
 .h4-about-section .about-bottom .about-list ul li {
+	font-weight: 600;
+	margin-bottom: 1em;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

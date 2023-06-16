@@ -8,6 +8,7 @@
     --color-accent-1: #0027e6;
     --color-accent-2: #031980;
     --color-accent-3: #2f60ff;
+    --color-accent-4: #f3de00;
     --color-light-1: #fff;
     --color-light-2: #ddd;
     --color-text: #ddd;
@@ -29,7 +30,11 @@ img {
 
 a {
     color: inherit;
-    
+    transition: .1s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-accent-4);
 }
 
 ul {
