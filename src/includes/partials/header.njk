@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="author" content="Przemek Miros">
-        <!-- Page Title -->
-        <title>{{ title }} - Kajaki24 Warka</title>
-        <meta name="description" content="{{ description }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Przemek Miros">
+    <!-- Page Title -->
+    <title>{{ title }} - Kajaki24 Warka</title>
+    <meta name="description" content="{{ description }}">
 
-        <meta property="og:title" content="Kajaki24 Warka">
-        <meta property="og:site_name" content="Spływy kajakowe Pilicą - Warka">
-        <meta property="og:url" content="https://kajaki24.com.pl">
-        <meta property="og:description" content="Kajaki24 to wypożyczalnia kajaków która kompleksowo zorganizuje wypoczynek na rzece i nie tylko. Przeżyj wspaniałą przygodę nad Pilicą">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="/assets/images/opengraph.jpg">
+    <meta property="og:title" content="Kajaki24 Warka">
+    <meta property="og:site_name" content="Spływy kajakowe Pilicą - Warka">
+    <meta property="og:url" content="https://kajaki24.com.pl">
+    <meta property="og:description"
+        content="Kajaki24 to wypożyczalnia kajaków która kompleksowo zorganizuje wypoczynek na rzece i nie tylko. Przeżyj wspaniałą przygodę nad Pilicą">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/images/opengraph.jpg">
 
-        <!-- Favicon Icon -->
-        <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
 
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/css/fontawesome.css">
-        <link rel="stylesheet" href="/assets/css/flaticon.css">
-        <link rel="stylesheet" href="/assets/css/slick.css">
-        <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-        <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 
-        <link rel="stylesheet" href="/assets/css/glightbox.min.css">
-        <!-- Netlify Identity Widget -->
-        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <script>
-            function fadeInPage() {
-                if (!window.AnimationEvent) {
-                    return;
-                }
-                var fader = document.getElementById('fader');
-                fader.classList.add('fade-out-f');
+    <link rel="stylesheet" href="/assets/css/glightbox.min.css">
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        function fadeInPage() {
+            if (!window.AnimationEvent) {
+                return;
             }
-            document.addEventListener('DOMContentLoaded', function () {
-                if (!window.AnimationEvent) {
-                    return;
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out-f');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.AnimationEvent) {
+                return;
+            }
+            var anchors = document.querySelectorAll('a:not(.glightbox)');
+            for (var idx = 0; idx < anchors.length; idx += 1) {
+                if (anchors[idx].hostname !== window.location.hostname ||
+                    anchors[idx].pathname === window.location.pathname) {
+                    continue;
                 }
-                var anchors = document.querySelectorAll('a:not(.glightbox)');
-                for (var idx = 0; idx < anchors.length; idx += 1) {
-                    if (anchors[idx].hostname !== window.location.hostname ||
-                        anchors[idx].pathname === window.location.pathname) {
-                        continue;
-                    }
-                    anchors[idx].addEventListener('click', function (event) {
-                        var fader = document.getElementById('fader'),
-                            anchor = event.currentTarget;
-                        var listener = function () {
-                            window.location = anchor.href;
-                            fader.removeEventListener('animationend', listener);
-                        };
-                        fader.addEventListener('animationend', listener);
-                        event.preventDefault();
-                        fader.classList.add('fade-in-f');
-                    });
-                }
-            });
-            window.addEventListener('pageshow', function (event) {
-                if (!event.persisted) {
-                    return;
-                }
-                var fader = document.getElementById('fader');
-                fader.classList.remove('fade-in-f');
-            });
-        </script>
-    </head>
+                anchors[idx].addEventListener('click', function (event) {
+                    var fader = document.getElementById('fader'),
+                        anchor = event.currentTarget;
+                    var listener = function () {
+                        window.location = anchor.href;
+                        fader.removeEventListener('animationend', listener);
+                    };
+                    fader.addEventListener('animationend', listener);
+                    event.preventDefault();
+                    fader.classList.add('fade-in-f');
+                });
+            }
+        });
+        window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+                return;
+            }
+            var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in-f');
+        });
+    </script>
+</head>
 
-    <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
-        <div class="page fade-no-duration">
+<body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+    <div class="page fade-no-duration">
         <svg id="fader"></svg>
         <script>
             fadeInPage();
@@ -82,39 +84,96 @@
         <header class="site-header">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-lg-2 col-xl-3">
+                    <div class="col-9 col-sm-5 col-xl-3">
                         <div class="logo-wrapper">
                             <a href="/" title="Strona główna">
-                                <img src="{{ collections.settings[0].data.site_logo | url }}" alt="Kajaki24 Warka - Logo">
+                                <img src="{{ collections.settings[0].data.site_logo | url }}"
+                                    alt="Kajaki24 Warka - Logo">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-10 col-xl-9">
-                        <div class="desktop-menu-wrap d-none d-lg-block">
-                            <nav class="desktop-menu">
+                    <div class="col-3 col-sm-7 col-xl-9">
+                        <div class="desktop-menu-wrap d-flex justify-content-end">
+                            <nav class="desktop-menu d-none d-xl-block">
                                 <ul>
                                     <li>
-                                        <a href="/" title="Główna" {% if page.url === "/" %}class="active"{% endif %}>Główna</a>
+                                        <a href="/" title="Główna" {% if page.url === "/" %}class="active"
+                                            {% endif %}>Główna</a>
                                     </li>
                                     <li>
-                                        <a href="/cennik" title="Cennik" {% if page.url === "/cennik/" %}class="active"{% endif %}>Cennik</a>
+                                        <a href="/cennik" title="Cennik" {% if page.url === "/cennik/" %}class="active"
+                                            {% endif %}>Cennik</a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin" {% if page.url === "/regulamin/" %}class="active"{% endif %}>Regulamin</a>
+                                        <a href="/regulamin" title="Regulamin"
+                                            {% if page.url === "/regulamin/" %}class="active" {% endif %}>Regulamin</a>
                                     </li>
                                     <li>
-                                        <a href="/galeria" title="Galeria" {% if page.url === "/galeria/" %}class="active"{% endif %}>Galeria</a>
+                                        <a href="/galeria" title="Galeria"
+                                            {% if page.url === "/galeria/" %}class="active" {% endif %}>Galeria</a>
                                     </li>
                                     <li>
-                                        <a href="/ogniska" title="Imprezy firmowe" {% if page.url === "/ogniska/" %}class="active"{% endif %}>Imprezy firmowe</a>
+                                        <a href="/ogniska" title="Imprezy firmowe"
+                                            {% if page.url === "/ogniska/" %}class="active" {% endif %}>Imprezy
+                                            firmowe</a>
                                     </li>
                                     <li>
-                                        <a href="/kontakt" title="Kontakt" {% if page.url === "/kontakt/" %}class="active"{% endif %}>Kontakt</a>
+                                        <a href="/kontakt" title="Kontakt"
+                                            {% if page.url === "/kontakt/" %}class="active" {% endif %}>Kontakt</a>
                                     </li>
                                 </ul>
                             </nav>
+                            <button class="menu-toggle" id="menuToggle" aria-controls="primary-menu"
+                                aria-label="Navigation" aria-expanded="false">
+                                <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
+                                    <path d="M10,2 L2,2" class="bar-1"></path>
+                                    <path d="M2,5 L10,5" class="bar-2"></path>
+                                    <path d="M10,8 L2,8" class="bar-3"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <section class="fullpage-menu">
+            <div class="fullpage-menu-inner">
+                <div class="menu-bg"></div>
+                <nav>
+                    <div class="mobile-menu">
+                        <ul id="menu-mobile-menu" class="menu">
+                                <li>
+                                        <a href="/" title="Główna" {% if page.url === "/" %}class="active"
+                                            {% endif %}>
+                                            <span>Główna</span>    
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/cennik" title="Cennik" {% if page.url === "/cennik/" %}class="active"
+                                            {% endif %}>
+                                            <span>Cennik</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/regulamin" title="Regulamin"
+                                            {% if page.url === "/regulamin/" %}class="active" {% endif %}>Regulamin</a>
+                                    </li>
+                                    <li>
+                                        <a href="/galeria" title="Galeria"
+                                            {% if page.url === "/galeria/" %}class="active" {% endif %}>Galeria</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ogniska" title="Imprezy firmowe"
+                                            {% if page.url === "/ogniska/" %}class="active" {% endif %}>Imprezy
+                                            firmowe</a>
+                                    </li>
+                                    <li>
+                                        <a href="/kontakt" title="Kontakt"
+                                            {% if page.url === "/kontakt/" %}class="active" {% endif %}>Kontakt</a>
+                                    </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>

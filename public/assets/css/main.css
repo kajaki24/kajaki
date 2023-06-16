@@ -364,11 +364,10 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999
+    z-index: 99999
 }
 
 .logo-wrapper {
-    padding-left: 20%;
     margin-top: 40px;
 }
 
@@ -380,12 +379,12 @@ li {
 .desktop-menu ul li {
     list-style: none;
     display: inline-block;
-    margin-left: 1em;
+    margin-left: 0;
 }
 
 .desktop-menu ul li a {
     display: inline-block;
-    padding: 65px 30px 25px;
+    padding: 65px 20px 25px;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
@@ -398,6 +397,112 @@ li {
 .desktop-menu ul li a.active {
     background: var(--color-accent-1)
 }
+
+@media(min-width:1400px) {
+    .logo-wrapper {
+        padding-left: 20%;
+    }
+    .desktop-menu ul li a {
+        padding: 65px 30px 25px;
+    }
+}
+
+
+
+
+  
+  /* Navigation
+  --------------------------*/
+
+  .menu-toggle {
+    margin-top: 35px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none; /* if using anchor */
+}
+
+.hamburger path {
+    fill: none;
+    stroke: var(--color-light-1);
+    stroke-linecap: round;
+}
+
+.fullpage-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 5em;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 9999
+}
+
+.fullpage-menu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 0 80px;
+}
+
+.menu-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-light-2);
+    backdrop-filter: blur(15px);
+    opacity: 0
+}
+
+.mobile-menu ul {
+    padding-left: 0;
+    list-style-type: none;
+    text-align: center
+}
+
+.mobile-menu li {
+    margin-bottom: 0;
+    line-height: 1.2!important;
+    overflow: hidden;
+}
+
+.mobile-menu li + li {
+    margin-top: 2.2em
+}
+
+.mobile-menu li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #222;
+    transform: translateY(35px);
+}
+
+.mobile-menu li a span {
+    position: relative;
+    display: block;
+}
+
+@media(min-width:1200px) {
+	.menu-toggle {
+        display: none
+      }
+}
+
 
 
 
