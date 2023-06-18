@@ -15242,38 +15242,38 @@ i {
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(1) {
-	top: 0;
+	top: -100px;
 	left: 0;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(2) {
-	top: 150px;
+	top: 50px;
 	left: -60px;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(3) {
-	top: 300px;
+	top: 200px;
 	left: 0;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(4) {
 	right: 0;
-	top: -60px;
+	top: -160px;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(5) {
 	right: 90px;
-	top: 120px;
+	top: 20px;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(6) {
 	right: -80px;
-	top: 190px;
+	top: 90px;
 }
 
 .home6-feedback-area .home6-feedback-bottom .clients-thumbs span:nth-child(7) {
 	right: 80px;
-	top: 300px;
+	top: 200px;
 }
 
 .home6-feedback-area .home6-feedback-slider {
@@ -15281,20 +15281,15 @@ i {
 	margin-top: 80px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.home6-feedback-area .home6-feedback-slider .feedback-wrapper {
-	padding: 0 20px 20px 20px;
-	background-color: rgba(255, 255, 255, 0.9);
+	background: #fff;
 }
 
 .home6-feedback-area .home6-feedback-slider .feedback-wrapper .feedback-single {
 	position: relative;
 	-webkit-box-shadow: 0px 10px 25px 0px rgba(0, 28, 143, 0.05);
 	box-shadow: 0px 10px 25px 0px rgba(0, 28, 143, 0.05);
-	background-color: #ffffff;
 	text-align: center;
-	padding: 20px 30px;
+	padding: 20px 30px 50px;
 	-webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 	box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);
 }

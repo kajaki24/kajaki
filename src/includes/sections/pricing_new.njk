@@ -1,44 +1,39 @@
-<section class="section-pricing pt-medium pb-medium">
-    <div class="container">
+<section class="section-pricing pt-large pb-small">
+    <div class="container-fluid">
         <div class="row">
-            <div class="flex-col pb-xsmall text-center">
-                <h2 class="split-text-lines">Cennik</h2>
+            <div class="flex-col pb-small text-center">
+                <h2 class="split-text-lines color-blue">Sprawdź cennik</h2>
             </div>
         </div>
-        <div class="row gx-0 justify-content-center pb-small">
+        <div class="row gx-0 justify-content-center pb-medium">
             {% for post in collections.cennik['Trasy jednodniowe'] %}
             <div class="col-md-4">
                 <div class="pricing-card pt-large pb-small">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
-                            <h4 class="h5 split-text-lines mb-4">
+                            <h4 class="h4 split-text-lines mb-4 color-blue">
                                 {{ post.data.title }}
                                 <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
-                                        fill="#fff" transform="matrix(-1 0 0 1 190 -12)"></path>
+                                        fill="var(--color-accent-4)" stroke-width="5px" transform="matrix(-1 0 0 1 190 -12)"></path>
                                 </svg>
                             </h4>
                         </div>
                         <div class="feature-list">
                             <ul class="split-text-lines">
-                                <li><strong>Czas spływu: </strong>{{ post.data.rafting_time }}h</li>
-                                <li><strong>Długość trasy: </strong>{{ post.data.route_length }}km</li>
+                                <li class="color-blue"><strong>Czas spływu: </strong>{{ post.data.rafting_time }}h</li>
+                                <li class="color-blue"><strong>Długość trasy: </strong>{{ post.data.route_length }}km</li>
                             </ul>
                         </div>
                         <div class="price-area split-text-lines">
-                            <h3 class="h3 mt-4">{{ post.data.price }}zł</h3>
+                            <h3 class="h3 mt-4 color-blue">{{ post.data.price }}zł</h3>
                         </div>
                     </div>
                     <div class="pricing-card-content-hiding text-center">
                         <div class="price-btn">
-                            <a href="#">
-                                <span>Zarezerwuj</span>
-                                <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
-                                        fill="#fff" transform="matrix(-1 0 0 1 190 -12)"></path>
-                                </svg>
+                            <a href="tel:+48733240024" class="ka-button">
+                                <span class="color-blue">Zarezerwuj</span>
                             </a>
                         </div>
                     </div>
@@ -51,7 +46,7 @@
         </div>
         <div class="text-center pb-small">
             <a href="/cennik" class="ka-button">
-                <span>Zobacz pełny cennik</span>
+                <span class="color-blue">Zobacz pełny cennik</span>
                 <svg class="btn-arrow" height="26" viewBox="0 0 16 16" width="26" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
