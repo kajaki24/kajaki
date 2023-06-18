@@ -25,7 +25,6 @@ splitTextChars.forEach(element =>{
 });
 
 // Handwrite --------------------------------------------------------------
-
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
 splitTextLetters.forEach(element =>{
@@ -112,17 +111,17 @@ revealContainers.forEach((element) => {
 
   gsap.from(element, 1.5, {
     xPercent: -100,
-    delay: .3,
-    ease: Power2.out,
+    duration: .7,
+    ease: Power3. easeInOut,
     scrollTrigger: {
       trigger: element
     }
   });
   gsap.from(image, 1.5, {
     xPercent: 100,
-    delay: .3,
+    duration: .7,
     scale: 1.3,
-    ease: Power2.out,
+    ease: Power3. easeInOut,
     scrollTrigger: {
       trigger: element
     }
@@ -232,3 +231,64 @@ menuToggle.addEventListener('click', function(){
 	menuBar.reversed(!menuBar.reversed());
 	navTl.reversed(!navTl.reversed());
 });
+
+
+// Circle
+const circleContent0 = document.querySelector(".hover0");
+const circleContent1 = document.querySelector(".hover1");
+const circleContent2 = document.querySelector(".hover2");
+const circleContent3 = document.querySelector(".hover3");
+
+const circleImage0 = document.querySelector(".circ-img-0");
+const circleImage1 = document.querySelector(".circ-img-1");
+const circleImage2 = document.querySelector(".circ-img-2");
+const circleImage3 = document.querySelector(".circ-img-3");
+
+
+
+circleContent0.addEventListener("mouseenter", () => {
+  circleImage0.classList.add("active");
+  circleImage1.classList.remove("active");
+  circleImage2.classList.remove("active");
+  circleImage3.classList.remove("active");
+  circleContent0.classList.add("active");
+  circleContent1.classList.remove("active");
+  circleContent2.classList.remove("active");
+  circleContent3.classList.remove("active");
+  });
+
+  circleContent1.addEventListener("mouseenter", () => {
+    circleImage1.classList.add("active");
+    circleImage0.classList.remove("active");
+    circleImage2.classList.remove("active");
+    circleImage3.classList.remove("active");
+    circleContent1.classList.add("active");
+    circleContent0.classList.remove("active");
+    circleContent2.classList.remove("active");
+    circleContent3.classList.remove("active");
+    });
+  
+    circleContent2.addEventListener("mouseenter", () => {
+      circleImage2.classList.add("active");
+      circleImage0.classList.remove("active");
+      circleImage1.classList.remove("active");
+      circleImage3.classList.remove("active");
+      circleContent2.classList.add("active");
+      circleContent0.classList.remove("active");
+      circleContent1.classList.remove("active");
+      circleContent3.classList.remove("active");
+      });
+    
+      circleContent3.addEventListener("mouseenter", () => {
+        circleImage3.classList.add("active");
+        circleImage0.classList.remove("active");
+        circleImage1.classList.remove("active");
+        circleImage2.classList.remove("active");
+        circleContent3.classList.add("active");
+        circleContent0.classList.remove("active");
+        circleContent1.classList.remove("active");
+        circleContent2.classList.remove("active");
+        });
+      
+
+

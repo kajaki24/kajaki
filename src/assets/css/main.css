@@ -384,7 +384,7 @@ h5,
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--color-text);
 }
 
@@ -591,6 +591,22 @@ li {
 }
 
 
+.ka-button {
+    font-weight: 600;
+}
+
+.btn-arrow {
+    background-color: var(--color-accent-4);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: .8em;
+    margin-left: 1em;
+}
+
+.btn-arrow path {
+    stroke-width: 3px;
+}
 
 
 /* Hero main
@@ -660,7 +676,7 @@ li {
     position: relative;
 }
 
-.circ-small-image {
+.circ-small-image img {
     position: absolute;
     width: 60%;
     top: 51.5%;
@@ -687,6 +703,17 @@ li {
     color: var(--color-accent-4);
 }
 
+.circ-small-image img {
+    transition: .5s ease-in-out;
+    opacity: 0;
+}
+
+.circ-small-image img:first-child,
+.circ-small-image img.active {
+    opacity: 1;
+    transform: translateY(-50%) rotate(360deg);
+}
+
 @media(min-width:767px) {
     .circ-big-image {
         position: absolute;
@@ -695,20 +722,18 @@ li {
         left: 22%;
         transform: translateY(-50%);
     }
-    .circ-small-image {
+    .circ-small-image img {
         position: absolute;
         width: 33.3%;
         top: 50%;
         left: 33.3%;
         transform: translateY(-50%);
     }
-    .hover0,
-    .hover1,
-    .hover2,
-    .hover3 {
+    .text-block {
+        transition: .3s ease-in-out;
         opacity: .4;
     }
-    .hover0.active {
+    .text-block.active {
         opacity: 1;
     }
     .hover0 svg {
@@ -726,6 +751,33 @@ li {
 }
 
 
+/* Reveal image
+--------------------------------------------------------------------------------- */
+
+.reveal-wrap {
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.reveal-image {
+    height: auto;
+    width: 100%;
+    transform-origin: left;
+    object-fit: cover;
+    object-position: center
+}
+
+.aspect-4-6 {
+    aspect-ratio: 4/6;
+}
+
+.aspect-6-6 {
+    aspect-ratio: 6/6;
+}
+
 /* Pricing section 
 ------------------------------------------- */
 
@@ -736,7 +788,7 @@ li {
 }
 
 .pricing-card-headline {
-    transition: .3s ease-in-out;
+    transition: .45s ease-in-out;
 }
 
 .pricing-card .feature-list li {
@@ -750,7 +802,7 @@ li {
     left: 0;
     right: 0;
     overflow: hidden;
-    transition: .3s ease-in-out;
+    transition: all .65s cubic-bezier(.7, .1, .2, 1);
 }
 
 .pricing-card-image::before {
@@ -770,7 +822,7 @@ li {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: .3s ease-in-out;
+    transition: all .65s cubic-bezier(.7, .1, .2, 1);
 }
 
 .pricing-card::before,
@@ -778,20 +830,20 @@ li {
     position: absolute;
     content: "";
     background-color: var(--color-accent-2);
-    transition: .3s ease-in-out;
+    transition: all .65s cubic-bezier(.7, .1, .2, 1);
     pointer-events: none;
     z-index: 2
 }
 
 .pricing-card::before {
     top: 0;
-    bottom: 50%;
+    bottom: 40%;
     left: 0;
     right: 0;
 }
 
 .pricing-card::after {
-    top: 50%;
+    top: 40%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -817,7 +869,7 @@ li {
 }
 
 .pricing-card-content-hiding {
-    transition: .3s ease-in-out;
+    transition: all .55s cubic-bezier(.7, .1, .2, 1);
    opacity: 0;
 }
 
@@ -840,9 +892,9 @@ li {
 .about-image .image-small {
     position: absolute;
     bottom: -30%;
-    right: -18%;
+    right: -15%;
     width: 40%;
-
+    overflow: hidden;
 }
 
 .about-content .big-paragraph {
