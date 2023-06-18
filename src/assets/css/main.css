@@ -684,6 +684,8 @@ li {
 
 .circ-big-image {
     position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .circ-small-image img {
@@ -713,6 +715,10 @@ li {
     color: var(--color-accent-4);
 }
 
+.text-block svg {
+    display: none;
+}
+
 .circ-small-image img {
     transition: .5s ease-in-out;
     opacity: 0;
@@ -725,6 +731,9 @@ li {
 }
 
 @media(min-width:767px) {
+    .text-block svg {
+        display: block;
+    }
     .circ-big-image {
         position: absolute;
         width: 56%;
@@ -832,7 +841,7 @@ li {
     height: 100%;
     background-color: var(--color-accent-2);
     pointer-events: none;
-    opacity: .75;
+    opacity: .85;
     z-index: 1;
 }
 
@@ -918,6 +927,7 @@ li {
 
 .about-image {
     position: relative;
+    margin-bottom: 4em;
 }
 
 .about-image .image-small {
@@ -954,6 +964,10 @@ li {
     background-position: center;
     overflow: hidden;
     box-shadow: inset 0 60px 60px var(--color-accent-2);
+}
+
+.footer-widget {
+    margin-bottom: 60px;
 }
 
 .footer-widget-title {
