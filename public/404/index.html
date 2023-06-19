@@ -16,18 +16,13 @@
     <meta property="og:description"
         content="Kajaki24 to wypożyczalnia kajaków która kompleksowo zorganizuje wypoczynek na rzece i nie tylko. Przeżyj wspaniałą przygodę nad Pilicą">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/images/opengraph.jpg">
+    <meta property="og:image" content="https://kajaki24.com.pl/assets/images/opengraph.jpg">
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
-
     <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="/assets/css/flaticon.css">
-    <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <link rel="stylesheet" href="/assets/css/glightbox.min.css">
@@ -210,17 +205,20 @@
   <footer class="site-footer pt-xlarge pb-xsmall">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-10">
-                    <div class="footer-widget">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-10">
+                    <div class="footer-widget border-right">
                         <a href="/" class="footer-logo">
                         <img src="/static/img/kajaki-logo-biel-5.png" alt="Kajaki24 Warka">
                         </a>
                         <p class="mt-4">Podczas spływu kajakowego będziesz miał okazję do podziwiania przekięknej okolicy.</p>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-widget-title mb-4">Adres</h4>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget border-right">
+                        <h5 class="h4 footer-widget-title mb-4">Adres</h5>
                             <ul>
                                 <li><i class="fas fa-map-marker-alt"></i> ul. Nowy Zjazd 4a, 05-660 Warka</li>
                                 <li>
@@ -240,7 +238,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer-widget">
-                        <h4 class="footer-widget-title mb-4">Godziny pracy</h4>
+                        <h5 class="h4 footer-widget-title mb-4">Godziny pracy</h5>
                             <ul>
                                 <li>Pon - Nd: 8.00 - 21.00</li>
                             </ul>
@@ -259,9 +257,7 @@
 <script src="/assets/js/vendor/split.js"></script>
 <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
 <script src="/assets/js/custom.js"></script>
-
 <script src="/assets/js/glightbox.min.js"></script>
 <script>
    const lightbox = GLightbox({
@@ -270,5 +266,39 @@
    autoplayVideos: true
 });
 </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Kajaki24 Warka",
+      "image": "https://kajaki24.com.pl/assets/images/opengraph.jpg",
+      "@id": "",
+      "url": "https://kajaki24.com.pl/",
+      "telephone": "+48 733 240 024",
+      "priceRange": "100 - 150",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nowy Zjazd 4a",
+        "addressLocality": "Warka",
+        "postalCode": "05-660",
+        "addressCountry": "PL"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": "https://www.facebook.com/Kajaki24" 
+    }
+    </script>    
 </body>
 </html>

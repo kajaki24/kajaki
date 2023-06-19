@@ -1,0 +1,65 @@
+  <footer class="site-footer pt-xlarge pb-xsmall">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-10">
+                    <div class="footer-widget">
+                        <a href="/" class="footer-logo">
+                        <img src="{{ collections.settings[0].data.site_logo | url }}" alt="Kajaki24 Warka">
+                        </a>
+                        <p class="mt-4">Podczas spływu kajakowego będziesz miał okazję do podziwiania przekięknej okolicy.</p>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title mb-4">Adres</h4>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> ul. Nowy Zjazd 4a, 05-660 Warka</li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:{{ collections.settings[0].data.site_phone }}">
+                                        {{ collections.settings[0].data.site_phone }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:{{ collections.settings[0].data.site_mail }}">
+                                        {{ collections.settings[0].data.site_mail }}
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title mb-4">Godziny pracy</h4>
+                            <ul>
+                                <li>Pon - Nd: 8.00 - 21.00</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright pt-large">
+            <div class="container">
+                <p>2023 &copy; Wszelkie prawa zastrzeżone </p>
+            </div>
+        </div>
+</footer>
+</div>
+
+<script src="/assets/js/vendor/split.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+<script src="/assets/js/custom.js"></script>
+
+<script src="/assets/js/glightbox.min.js"></script>
+<script>
+   const lightbox = GLightbox({
+   touchNavigation: true,
+   loop: false,
+   autoplayVideos: true
+});
+</script>
+</body>
+</html>
