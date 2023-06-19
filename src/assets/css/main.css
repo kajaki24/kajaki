@@ -644,7 +644,7 @@ li {
 }
 
 .btn-arrow path {
-    stroke-width: 3px;
+    fill: var(--color-accent-2);
 }
 
 
