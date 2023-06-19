@@ -16885,6 +16885,7 @@ i {
 }
 
 .section-weather {
+background: var(--color-accent-2);
 	position: relative;
 	min-height: 176px;
 	pointer-events: none;
