@@ -336,6 +336,12 @@ ul li {
     }
 }
 
+@media(min-width:1400px) {
+    .pt-xxl-small {
+        padding-top: 60px
+    }
+}
+
 
 /* Typography 
 ------------------------------------------ */
@@ -1253,7 +1259,7 @@ li {
     margin-bottom: .6em;
     padding-top: .8em;
     padding-bottom: 1.2em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-copyright p {
@@ -1266,7 +1272,7 @@ li {
 }
 
 .border-right {
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 @media(min-width:767px) {
