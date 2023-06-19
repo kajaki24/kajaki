@@ -601,6 +601,11 @@ li {
 
 .ka-button {
     font-weight: 600;
+    transition: .2s ease-in-out;
+}
+
+.ka-button span {
+    transition: .2s ease-in-out;
 }
 
 .btn-arrow {
@@ -678,7 +683,7 @@ li {
 /* Circle section
 ------------------------------------------- */
 
-.circ-flex-col {
+.circle-wrap {
     position: relative;
 }
 
@@ -727,7 +732,7 @@ li {
 .circ-small-image img:first-child,
 .circ-small-image img.active {
     opacity: 1;
-    transform: translateY(-50%) rotate(360deg);
+    transform: translateY(-45%) rotate(360deg);
 }
 
 @media(min-width:767px) {
@@ -746,7 +751,7 @@ li {
         width: 33.3%;
         top: 50%;
         left: 33.3%;
-        transform: translateY(-50%);
+        transform: translateY(-45%);
     }
     .text-block {
         transition: .3s ease-in-out;
@@ -921,6 +926,17 @@ li {
     transform: translateY(-20px);
 }
 
+.price-area {
+    position: relative;
+}
+
+.price-desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44px;
+    font-size: 12px;
+}
 
 /* About section
 ------------------------------------------- */
@@ -953,6 +969,20 @@ li {
 
 .feedback-wrapper p {
     color: #666;
+}
+
+/* Gallery
+----------------------------------------------- */
+
+.gallery-section {
+    background: #fff;
+}
+
+/* Contact section
+----------------------------------------------- */
+
+.contact-section {
+    background: #fff;
 }
 
 /* Site footer
