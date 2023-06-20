@@ -24,6 +24,9 @@ splitTextChars.forEach(element =>{
    })
 });
 
+
+addEventListener("DOMContentLoaded", (event) => {
+
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
@@ -87,6 +90,7 @@ splitTextLines.forEach(element => {
     })
 });
 
+});
 
 // Kayak  --------------------------------------------------------------------
 gsap.from(".kayak-wrap", {
@@ -214,17 +218,16 @@ navTl.to('.fullpage-menu', {
 }, "<");
 
 navTl.to('.menu-bg', {
-	duration: 1,
+	duration: .8,
 	opacity: 1,
 	ease: Expo.easeInOut
 }, "<");
 
 navTl.to('.menu li a', {
-	duration: 1.5,
+	duration: .5,
 	y: 0,
 	stagger: 0.05,
-	ease: Power3.easeInOut 
-}, "-=0.8");
+}, "-=0.2");
 
 navTl.reverse();
 

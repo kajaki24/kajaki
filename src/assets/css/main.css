@@ -590,7 +590,7 @@ li {
     display: block;
     position: absolute;
     width: max-content;
-    top: 45%;
+    top: 46%;
     right: -12.5em;
     transform: translateY(-50%) scale(0);
     background: #ffe300;
@@ -600,10 +600,6 @@ li {
     transition: .2s ease-in-out;
     color: var(--color-accent-2);
     font-weight: 600;
-}
-
-.fixed-phone:hover .fixed-phone-number {
-    transform: translateY(-50%) scale(1);
 }
 
 @media(min-width:1400px) {
@@ -617,7 +613,9 @@ li {
         bottom: 70px;
         left: 70px;
     }
-    
+.fixed-phone:hover .fixed-phone-number {
+    transform: translateY(-50%) scale(1);
+}
 }
 
 /* Navigation
@@ -670,7 +668,7 @@ li {
     position: absolute;
     left: 0;
     top: 0;
-    background: var(--color-light-2);
+    background: #17213ae3;
     backdrop-filter: blur(15px);
     opacity: 0
 }
@@ -699,8 +697,8 @@ li {
     display: inline-block;
     line-height: 1;
     letter-spacing: 2px;
-    color: #222;
-    transform: translateY(35px);
+    color: #fff;
+    transform: translateY(115%);
 }
 
 .mobile-menu li a span {
