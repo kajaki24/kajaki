@@ -24,9 +24,6 @@ splitTextChars.forEach(element =>{
    })
 });
 
-
-addEventListener("DOMContentLoaded", (event) => {
-
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
@@ -90,7 +87,6 @@ splitTextLines.forEach(element => {
     })
 });
 
-});
 
 // Kayak  --------------------------------------------------------------------
 gsap.from(".kayak-wrap", {
