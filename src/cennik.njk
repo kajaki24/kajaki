@@ -4,7 +4,7 @@ description: Zapraszamy do zapoznania się z naszym cennikiem
 layout: "templates/base.njk"
 ---
 
-<section class="section-pricing pt-large pb-small">
+<section class="section-pricing pt-small">
     <div class="container-fluid">
         <div class="row">
             <div class="flex-col pb-small text-center">
@@ -17,14 +17,14 @@ layout: "templates/base.njk"
                 <div class="pricing-card pt-large pb-small">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
-                            <h4 class="h4 split-text-lines mb-4 color-blue">
+                            <h3 class="h4 split-text-lines mb-4 color-blue">
                                 {{ post.data.title }}
                                 <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
                                         fill="var(--color-accent-4)" stroke-width="5px" transform="matrix(-1 0 0 1 190 -12)"></path>
                                 </svg>
-                            </h4>
+                            </h3>
                         </div>
                         <div class="feature-list">
                             <ul class="fade-in">
@@ -58,7 +58,7 @@ layout: "templates/base.njk"
     </div>
 </section>
 
-<section class="section-pricing pb-small">
+<section class="section-pricing">
     <div class="container-fluid">
         <div class="row">
             <div class="flex-col pb-small text-center">
@@ -71,14 +71,14 @@ layout: "templates/base.njk"
                 <div class="pricing-card pt-large pb-small">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
-                            <h4 class="h4 split-text-lines mb-4 color-blue">
+                            <h3 class="h4 split-text-lines mb-4 color-blue">
                                 {{ post.data.title }}
                                 <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
                                         fill="var(--color-accent-4)" stroke-width="5px" transform="matrix(-1 0 0 1 190 -12)"></path>
                                 </svg>
-                            </h4>
+                            </h3>
                         </div>
                         <div class="feature-list">
                             <ul class="fade-in">
@@ -112,7 +112,7 @@ layout: "templates/base.njk"
     </div>
 </section>
 
-<section class="section-pricing pb-small">
+<section class="section-pricing">
     <div class="container-fluid">
         <div class="row">
             <div class="flex-col pb-small text-center">
@@ -125,14 +125,14 @@ layout: "templates/base.njk"
                 <div class="pricing-card pt-large pb-small">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
-                            <h4 class="h4 split-text-lines mb-4 color-blue">
+                            <h3 class="h4 split-text-lines mb-4 color-blue">
                                 {{ post.data.title }}
                                 <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
                                         fill="var(--color-accent-4)" stroke-width="5px" transform="matrix(-1 0 0 1 190 -12)"></path>
                                 </svg>
-                            </h4>
+                            </h3>
                         </div>
                         <div class="feature-list">
                             <ul class="fade-in">
@@ -158,7 +158,7 @@ layout: "templates/base.njk"
                         </div>
                     </div>
                     <div class="pricing-card-image">
-                        <img src="/assets/images/gallery/003.jpg" alt="">
+                        {% Image "src/assets/images/gallery/003.jpg", "Trasa i cennik - kajaki24 Warka" %}
                     </div>
                 </div>
             </div>
