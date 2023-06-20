@@ -33,6 +33,11 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/settings/**/*.md').reverse();
   });  
 
+  // Galerry
+  eleventyConfig.addCollection('galeria', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/galeria/**/*.md').reverse();
+  });
+
   eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className) => {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
