@@ -176,11 +176,19 @@ if (window.matchMedia("(min-width: 767px)").matches) {
           ease: "none",
         }); 
     });
+  };
+
+// About parallax img
+if (window.matchMedia("(min-width: 767px)").matches) {
+gsap.to(".image-small", {
+  yPercent: 30,
+  scrollTrigger: {
+    trigger: ".section-about",
+    scrub: 1
   }
+});
+};
 
-
-
-  
 // Navigation
 
 var menuToggle = document.getElementById("menuToggle");

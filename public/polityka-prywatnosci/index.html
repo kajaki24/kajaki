@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <link rel="stylesheet" href="/assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css">
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
 
     <script>
@@ -127,7 +128,6 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <button class="change-theme">Zmień motyw</button>
                             <button class="menu-toggle" id="menuToggle" aria-controls="primary-menu"
                                 aria-label="Navigation" aria-expanded="false">
                                 <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
@@ -678,6 +678,15 @@
 <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 <script src="/assets/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+<script>
+  new Glide('#glide1', {
+	type: 'carousel',
+	perView: 1,
+    autoplay: 3000,
+    hoverpause: true
+}).mount();
+</script>
 <script src="/assets/js/glightbox.min.js"></script>
 <script>
    const lightbox = GLightbox({
@@ -722,33 +731,5 @@
       "sameAs": "https://www.facebook.com/Kajaki24" 
     }
 </script>   
-<script>
-    const changeTheme = document.querySelector(".change-theme");
-let theme = localStorage.getItem("theme");
-
-
-changeTheme.addEventListener('click', () => {
-if (theme === "dark") {
-    document.querySelector("html").classList.remove("dark");
-    document.querySelector("html").classList.add("light");
-    theme = "light";
-} else {
-    document.querySelector("html").classList.add("dark");
-    document.querySelector("html").classList.remove("light");
-    theme = "dark";
-}
-
-localStorage.setItem("theme", theme);
-});
-
-
-if (theme === "dark") {
-document.querySelector("html").classList.add("dark");
-}
-
-if (theme === "light") {
-document.querySelector("html").classList.add("light");
-}
-</script> 
 </body>
 </html>
