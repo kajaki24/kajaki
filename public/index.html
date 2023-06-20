@@ -115,7 +115,7 @@
                                         <a href="/cennik" title="Cennik" >Cennik</a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin"
+                                        <a href="/regulamin-splywu" title="Regulamin"
                                             >Regulamin</a>
                                     </li>
                                     <li>
@@ -161,7 +161,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin"
+                                        <a href="/regulamin-splywu" title="Regulamin"
                                             >
                                             <span>Regulamin</span>
                                         </a>
@@ -886,6 +886,34 @@
       },
       "sameAs": "https://www.facebook.com/Kajaki24" 
     }
-    </script>    
+</script>   
+<script>
+    const changeTheme = document.querySelector(".change-theme");
+let theme = localStorage.getItem("theme");
+
+
+changeTheme.addEventListener('click', () => {
+if (theme === "dark") {
+    document.querySelector("html").classList.remove("dark");
+    document.querySelector("html").classList.add("light");
+    theme = "light";
+} else {
+    document.querySelector("html").classList.add("dark");
+    document.querySelector("html").classList.remove("light");
+    theme = "dark";
+}
+
+localStorage.setItem("theme", theme);
+});
+
+
+if (theme === "dark") {
+document.querySelector("html").classList.add("dark");
+}
+
+if (theme === "light") {
+document.querySelector("html").classList.add("light");
+}
+</script> 
 </body>
 </html>

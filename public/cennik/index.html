@@ -115,7 +115,7 @@
                                             >Cennik</a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin"
+                                        <a href="/regulamin-splywu" title="Regulamin"
                                             >Regulamin</a>
                                     </li>
                                     <li>
@@ -161,7 +161,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/regulamin" title="Regulamin"
+                                        <a href="/regulamin-splywu" title="Regulamin"
                                             >
                                             <span>Regulamin</span>
                                         </a>
@@ -193,7 +193,7 @@
     <div class="container">
         <div class="hero-page-content">
             <h1 class="hero-page-title split-text-letters mb-0">Cennik</h1>
-            <div class="hero-page-description">
+            <div class="hero-page-description col-md-8 mx-auto">
                 <p class="big-paragraph split-text-lines mt-0">Zapraszamy do zapoznania się z naszym cennikiem</p>
             </div>
         </div>
@@ -824,6 +824,34 @@
       },
       "sameAs": "https://www.facebook.com/Kajaki24" 
     }
-    </script>    
+</script>   
+<script>
+    const changeTheme = document.querySelector(".change-theme");
+let theme = localStorage.getItem("theme");
+
+
+changeTheme.addEventListener('click', () => {
+if (theme === "dark") {
+    document.querySelector("html").classList.remove("dark");
+    document.querySelector("html").classList.add("light");
+    theme = "light";
+} else {
+    document.querySelector("html").classList.add("dark");
+    document.querySelector("html").classList.remove("light");
+    theme = "dark";
+}
+
+localStorage.setItem("theme", theme);
+});
+
+
+if (theme === "dark") {
+document.querySelector("html").classList.add("dark");
+}
+
+if (theme === "light") {
+document.querySelector("html").classList.add("light");
+}
+</script> 
 </body>
 </html>

@@ -1,0 +1,5 @@
+{
+    "layout": "templates/policy.njk",
+    "permalink": "/{{ title | slugify }}/",
+    "robots": "noindex"
+}
