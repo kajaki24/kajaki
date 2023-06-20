@@ -9,6 +9,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/static/img");
   eleventyConfig.addPassthroughCopy("src/admin");
 
+  // get the current year 
+  eleventyConfig.addShortcode("getYear", function() {
+    const year = new Date().getFullYear();
+      return `${year}`;
+  });
+
   // Collections 
 eleventyConfig.addCollection('cennik', function(collectionApi) {
   const cennikPosts = collectionApi.getFilteredByGlob('src/cennik/**/*.md').reverse();

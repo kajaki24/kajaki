@@ -15,11 +15,16 @@
     --color-text: #464759;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 /* Main
 ------------------------------------------------ */
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
     background: var(--color-accent-2);
     color: var(--color-text);
@@ -496,6 +501,7 @@ li {
 }
 
 .desktop-menu ul {
+    margin-top: 0;
     padding-left: 0;
     text-align: end;
 }
