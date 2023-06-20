@@ -15,6 +15,33 @@
     --color-text: #464759;
 }
 
+.light {
+    --color-accent-1: #0027e6;
+    --color-accent-2: #031980;
+    --color-accent-3: #2f60ff;
+    --color-accent-4: #f3de00;
+    --color-light-1: #fff;
+    --color-light-2: #f7f7f8;
+    --color-light-3: #ddd;
+    --color-dark-1: #111;
+    --color-text: #464759;
+}
+
+.dark {
+    --color-accent-1: #d60000;
+    --color-accent-2: #AC0000;
+    --color-accent-3: #2f60ff;
+    --color-accent-4: #2f60ff;
+}
+@media(prefers-color-scheme: dark) {
+    :root {
+        --color-accent-1: #AC0000;
+        --color-accent-2: #880000;
+        --color-accent-3: #2f60ff;
+        --color-accent-4: #2f60ff;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -761,6 +788,10 @@ li {
     box-shadow: inset 0 -60px 60px var(--color-accent-2);
 }
 
+.dark .hero-main {
+    background: url("/assets/images/baner-red.jpg");
+}
+
 .hero-main h1,
 .hero-main p {
     color: var(--color-light-1);
@@ -772,7 +803,7 @@ li {
 
 .kayak-wrap {
     position: absolute;
-    top: 12%;
+    top: 7%;
     left: 12%;
     width: 75%
 }
