@@ -42,6 +42,21 @@
     }
 }
 
+.change-theme {
+    border: none;
+background: transparent;
+color: #fff;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+@media(min-width:767px) {
+    .change-theme {
+    padding: 45px 0 24px;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -789,7 +804,7 @@ li {
 }
 
 .dark .hero-main {
-    background: url("/assets/images/baner-red.jpg");
+    background: url("/assets/images/baner-red.png");
 }
 
 .hero-main h1,
@@ -818,6 +833,10 @@ li {
     background-position: center;
     text-align: center;
     box-shadow: inset 0 -60px 60px var(--color-accent-2);
+}
+
+.dark .hero-page {
+    background: url("/assets/images/baner-red.png");
 }
 
 .hero-page-title {
