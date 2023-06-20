@@ -528,19 +528,97 @@ li {
     background: var(--color-accent-1)
 }
 
+.fixed-button {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.fixed-phone {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 1em;
+    border-radius: 50%;
+    border: 3px solid var(--color-light-1);
+    background: var(--color-accent-3);;
+}
+
+.fixed-phone-icon {
+    display: inline-block;
+    width: 34px;
+    height: auto;
+    animation: phoneRing 1s infinite ease-in-out;
+}
+
+@keyframes phoneRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.fixed-phone-icon svg path {
+    fill: #fff;
+}
+
+.fixed-phone-number {
+    display: block;
+    position: absolute;
+    width: max-content;
+    top: 45%;
+    right: -12.5em;
+    transform: translateY(-50%) scale(0);
+    background: #ffe300;
+    padding: 1.2em 2em;
+    border-radius: 50px;
+    border: 3px solid var(--color-light-1);
+    transition: .2s ease-in-out;
+    color: var(--color-accent-2);
+    font-weight: 600;
+}
+
+.fixed-phone:hover .fixed-phone-number {
+    transform: translateY(-50%) scale(1);
+}
+
 @media(min-width:1400px) {
     .logo-wrapper {
         padding-left: 20%;
     }
-
     .desktop-menu ul li a {
         padding: 65px 30px 25px;
     }
+    .fixed-button {
+        bottom: 70px;
+        left: 70px;
+    }
+    
 }
-
-
-
-
 
 /* Navigation
   --------------------------*/
@@ -638,10 +716,13 @@ li {
 
 
 .ka-button {
+    display: inline-flex;
+    align-items: center;
     background: transparent;
     border: none;
     font-weight: 600;
     transition: all .3s cubic-bezier(.7, .1, .2, 1);
+    cursor: pointer;
 }
 
 .ka-button span {
