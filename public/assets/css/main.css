@@ -9,7 +9,8 @@
     --color-accent-3: #2f60ff;
     --color-accent-4: #f3de00;
     --color-light-1: #fff;
-    --color-light-2: #ddd;
+    --color-light-2: #f7f7f8;
+    --color-light-3: #ddd;
     --color-dark-1: #111;
     --color-text: #464759;
 }
@@ -351,6 +352,11 @@ ul li {
 
 /* Typography 
 ------------------------------------------ */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 1.2em;
+    margin-bottom: .8em;
+    color: var(--color-accent-2);
+}
 
 h1,
 .h1 {
@@ -461,7 +467,7 @@ li {
     color: var(--color-light-1);
 }
 .color-light-2 {
-    color: var(--color-light-2);
+    color: var(--color-light-3);
 }
 .color-blue {
     color: var(--color-accent-2);
@@ -626,12 +632,14 @@ li {
 
 
 .ka-button {
+    background: transparent;
+    border: none;
     font-weight: 600;
-    transition: .2s ease-in-out;
+    transition: all .3s cubic-bezier(.7, .1, .2, 1);
 }
 
 .ka-button span {
-    transition: .2s ease-in-out;
+    transition: all .3s cubic-bezier(.7, .1, .2, 1);
 }
 
 .btn-arrow {
@@ -641,12 +649,21 @@ li {
     height: 40px;
     padding: .8em;
     margin-left: 1em;
+    transition: all .3s cubic-bezier(.7, .1, .2, 1);
 }
 
 .btn-arrow path {
     fill: var(--color-accent-2);
+    transition: all .3s cubic-bezier(.7, .1, .2, 1);
 }
 
+.ka-button:hover .btn-arrow {
+    background-color: var(--color-accent-3);
+}
+
+.ka-button:hover path {
+    fill: var(--color-accent-4);
+}
 
 /* Hero main
 ------------------------------------------- */
@@ -848,12 +865,12 @@ li {
 ------------------------------------------- */
 
 .section-pricing {
-    background: #fff;
+    background: var(--color-light-2);
 }
 
 .pricing-card {
     position: relative;
-    background-color: #ffffff;
+    background-color: var(--color-light-1);
     overflow: hidden;
     border: 1px solid #0319801c;
     margin-right: -1px;
@@ -903,7 +920,7 @@ li {
 .pricing-card::after {
     position: absolute;
     content: "";
-    background-color: #fff;
+    background-color: var(--color-light-1);
     transition: all .65s cubic-bezier(.7, .1, .2, 1);
     pointer-events: none;
     z-index: 2
@@ -937,17 +954,17 @@ li {
 }
 
 .pricing-card h3,
-.pricing-card h4,
+.pricing-card p,
 .pricing-card li {
     transition: all .55s cubic-bezier(.7, .1, .2, 1);
 }
 
 .pricing-card:hover h3,
-.pricing-card:hover h4,
+.pricing-card:hover p,
 .pricing-card:hover li,
 .pricing-card:hover .price-desc,
 .pricing-card:hover .ka-button span {
-    color: #fff;
+    color: var(--color-light-1);
 }
 
 .pricing-card-content-visible,
@@ -1207,8 +1224,8 @@ li {
     border-radius: 8px;
 }
 
-.submit-btn .button {
-
+.policy-check {
+    font-size: 12px;
 }
 
 /* Site footer

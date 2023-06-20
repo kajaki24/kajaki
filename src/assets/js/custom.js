@@ -102,6 +102,7 @@ gsap.to(".kayak", {
   }
 });
 
+
 // Reveal image --------------------------------------------------------------
 let revealContainers = document.querySelectorAll(".reveal-wrap");
 

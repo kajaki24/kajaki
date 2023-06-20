@@ -169,10 +169,10 @@
                 </nav>
             </div>
         </section>
-<section class="hero-page pt-xxlarge pb-large">
+<section class="hero-page pt-large pb-large">
     <div class="container">
         <div class="hero-page-content">
-            <h1 class="hero-page-title split-text-letters">Kontakt</h1>
+            <h1 class="hero-page-title split-text-letters mb-1">Kontakt</h1>
             <div class="hero-page-description">
                 <p class="big-paragraph split-text-lines">Tutaj znajdziesz dane kontaktowe. Zadzwoń lub napisz!</p>
             </div>
@@ -188,14 +188,14 @@
             <div class="col-lg-6">
                 <div class="contact-v2-left">
                     <div class="pb-small">
-                        <h3 class="color-blue split-text-lines">Zadzwoń lub wyślij formularz</h3>
+                        <h3 class="color-blue split-text-lines mt-0 mb-2">Zadzwoń lub wyślij formularz</h3>
                     </div>
                     <div class="pb-xsmall">
-                        <h5 class="color-blue split-text-lines">Adres</h5>
+                        <h5 class="color-blue split-text-lines mt-0">Adres</h5>
                         <p class="split-text-lines">Nowy Zjazd 4a, 05-660 Warka</p>
                     </div>
                     <div class="pb-xsmall">
-                        <h5 class="color-blue split-text-lines">Numer telefonu</h5>
+                        <h5 class="color-blue split-text-lines mt-0">Telefon</h5>
                         <p class="split-text-lines">
                             <a href="tel:+48733240024" title="Zadzwoń">
                                 +48 733 240 024
@@ -203,7 +203,7 @@
                         </p>
                     </div>
                     <div class="pb-xsmall">
-                        <h5 class="color-blue split-text-lines">Adres email</h5>
+                        <h5 class="color-blue split-text-lines mt-0">Email</h5>
                         <p class="split-text-lines">
                             <a href="mailto:kajaki24warka@gmail.com" title="Wyślij wiadomość">
                                 kajaki24warka@gmail.com
@@ -214,36 +214,46 @@
             </div>
             <div class="col-lg-6">
                 <div class="ka-form-wrap fade-in">
-                    <form class="ka-form" action="#">
+                    <form class="ka-form" action="https://formsubmit.co/kontakt@futurewebstudio.pl" method="POST">
                         <div class="row gy-4">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <div class="input-wrap">
-                                    <input type="text" placeholder="Imię i nazwisko*">
+                                    <input type="text" name="Imię i nazwisko" placeholder="Imię i nazwisko*" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-wrap">
-                                    <input type="text" placeholder="Trasa*">
+                                    <input type="email" name="Adres email" placeholder="Adres email*" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-wrap">
-                                    <input type="email" placeholder="Adsres email*">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="input-wrap">
-                                    <input type="tel" placeholder="Numer telefonu*">
+                                    <input type="tel" name="Numer telefonu" placeholder="Numer telefonu*" required>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="input-wrap">
-                                    <textarea placeholder="Wiadomość*" rows="5"></textarea>
+                                    <textarea name="Treść wiadomości" placeholder="Wiadomość*" rows="5" required></textarea>
                                 </div>
+                            </div>
+                            <div class="col-sm-12 pb-xsmall">
+                                <fieldset>
+                                    <input type="checkbox" id="policy-checkbox" required>
+                                    <label class="policy-check" for="policy-checkbox">
+                                        Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przesłania na wskazany przeze mnie e-mail informacji handlowych lub kontakt telefoniczny.
+                                    </label>
+                                </fieldset>
                             </div>
                         </div>
                         <div class="submit-btn">
-                            <button type="submit">Wyślij</button>
+                            <button type="submit" class="ka-button">                             
+                                <span class="color-blue">Wyślij wiadomość</span>
+                                <svg class="btn-arrow" height="26" viewBox="0 0 16 16" width="26" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m189.339509 19.360018h-13.356776l6.567085-6.2516062c.26517-.2611971.26517-.6512995 0-.912514-.265169-.2611971-.661205-.2611971-.926392 0l-7.226968 6.8607883c-.528611.5206922-.528611 1.3467136 0 1.8674058l7.228291 6.9029056c.132584.1305986.308218.1730025.440803.1730025.175633 0 .352986-.0865012.528611-.2170998.220402-.2611971.175634-.6954141-.087817-.9125139l-6.524327-6.2077521h13.356776c.352987 0 .661205-.303601.661205-.6512994s-.308218-.6512995-.661205-.6512995z"
+                                        fill="#fff" transform="matrix(-1 0 0 1 190 -12)"></path>
+                                </svg>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -274,7 +284,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer-widget border-right">
-                        <h5 class="h4 footer-widget-title mb-4">Skontaktuj się</h5>
+                        <h5 class="h4 footer-widget-title mt-0 mb-4">Skontaktuj się</h5>
                             <ul>
                                 <li>
                                     <a href="tel:+48 733 240 024" class="d-flex justify-content-between align-items-center"
@@ -296,7 +306,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer-widget">
-                        <h5 class="h4 footer-widget-title mb-4">Godziny pracy</h5>
+                        <h5 class="h4 footer-widget-title mt-0 mb-4">Godziny pracy</h5>
                             <ul>
                                 <li>Pon - Nd: 8.00 - 21.00</li>
                             </ul>
