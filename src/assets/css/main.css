@@ -863,6 +863,7 @@ li {
     position: relative;
     margin-top: 2em;
     margin-bottom: 2em;
+    mix-blend-mode: plus-lighter;
 }
 
 .circ-small-image {
@@ -908,7 +909,7 @@ li {
 .circ-small-image .image-wrapper:first-child img,
 .circ-small-image .image-wrapper img.active {
     opacity: 1;
-    transform: translateY(-45%) rotate(360deg);
+    transform: translateY(-42%) rotate(360deg);
 }
 
 @media(min-width:767px) {
@@ -927,7 +928,7 @@ li {
         width: 50%;
         top: 50%;
         left: 24%;
-        transform: translateY(-45%);
+        transform: translateY(-42%);
     }
     .text-block {
         transition: .3s ease-in-out;
