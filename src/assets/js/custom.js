@@ -222,16 +222,17 @@ navTl.to('.fullpage-menu', {
 }, "<");
 
 navTl.to('.menu-bg', {
-	duration: .8,
+	duration: 1.2,
 	opacity: 1,
 	ease: Expo.easeInOut
 }, "<");
 
 navTl.to('.menu li a', {
-	duration: .5,
 	y: 0,
 	stagger: 0.05,
-}, "-=0.2");
+  duration: 1,
+  ease: Expo.easeInOut
+}, "-=0.6");
 
 navTl.reverse();
 

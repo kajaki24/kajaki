@@ -532,12 +532,12 @@ li {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--color-light-1);
-    transition: .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
 }
 
 .desktop-menu ul li a:hover,
 .desktop-menu ul li a.active {
-    background: var(--color-accent-1)
+    background-color: var(--color-accent-1)
 }
 
 .fixed-button {
@@ -710,7 +710,7 @@ li {
     line-height: 1;
     letter-spacing: 2px;
     color: #fff;
-    transform: translateY(115%);
+    transform: translateY(45px);
 }
 
 .mobile-menu li a span {
@@ -1364,6 +1364,11 @@ li {
 
 .policy-check {
     font-size: 12px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
 }
 
 /* Site footer

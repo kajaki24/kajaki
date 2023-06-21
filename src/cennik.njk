@@ -1,6 +1,6 @@
 ---
 title: Cennik
-description: Zapraszamy do zapoznania się z naszym cennikiem
+description: Zapoznaj się z trasami spływów i naszym cennikiem. Zerezerwuj spływ telefonicznie +48 733 240 024 
 layout: "templates/base.njk"
 ---
 
@@ -14,7 +14,7 @@ layout: "templates/base.njk"
         <div class="row gx-0 justify-content-center pb-medium">
             {% for post in collections.cennik['Trasy jednodniowe'] %}
             <div class="col-md-4">
-                <div class="pricing-card pt-large pb-small">
+                <div class="pricing-card pt-large pb-medium">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
                             <h3 class="h4 split-text-lines mb-4 color-blue">
@@ -33,7 +33,7 @@ layout: "templates/base.njk"
                             </ul>
                         </div>
                         <div class="price-area">
-                            <h3 class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }}zł</h3>
+                           <p class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }} zł | dzień</p>
                             {% if post.data.price_descrition %}
                             <p class="price-desc split-text-lines">
                                 {{ post.data.price_descrition }}
@@ -68,7 +68,7 @@ layout: "templates/base.njk"
         <div class="row gx-0 justify-content-center pb-medium">
             {% for post in collections.cennik['Trasy dwudniowe'] %}
             <div class="col-md-4">
-                <div class="pricing-card pt-large pb-small">
+                <div class="pricing-card pt-large pb-medium">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
                             <h3 class="h4 split-text-lines mb-4 color-blue">
@@ -87,7 +87,7 @@ layout: "templates/base.njk"
                             </ul>
                         </div>
                         <div class="price-area">
-                            <h3 class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }}zł</h3>
+                           <p class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }} zł | dzień</p>
                             {% if post.data.price_descrition %}
                             <p class="price-desc split-text-lines">
                                 {{ post.data.price_descrition }}
@@ -122,7 +122,7 @@ layout: "templates/base.njk"
         <div class="row gx-0 justify-content-center pb-medium">
             {% for post in collections.cennik['Trasy trzydniowe'] %}
             <div class="col-md-4">
-                <div class="pricing-card pt-large pb-small">
+                <div class="pricing-card pt-large pb-medium">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
                             <h3 class="h4 split-text-lines mb-4 color-blue">
@@ -142,7 +142,7 @@ layout: "templates/base.njk"
                         </div>
                         <div class="price-area">
                             {% if post.data.price %}
-                                <h2 class="h3">{{ post.data.price }}zł</h2>
+                           <p class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }} zł | dzień</p>
                             {% else %}
                                 <div class="liquid-price">
                                     <h3 class="h5 color-blue">Cena do uzgodnienia</h3>
