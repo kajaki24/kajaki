@@ -792,15 +792,13 @@ li {
 
 .kayak-wrap {
     position: absolute;
-    top: 3%;
-    left: 12%;
-    width: 75%
+    top: 9%;
+    left: 19%;
+    width: 65%
 }
-
 
 /* Hero page
 ------------------------------------------- */
-
 .hero-page {
     background: url("/assets/images/hero-main-2.jpg");
     background-size: cover;
