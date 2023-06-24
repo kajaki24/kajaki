@@ -19,6 +19,7 @@ collections:
       - { label: "Logo", name: "site_logo", widget: "image" }
       - { label: "Numer telefonu", name: "site_phone", widget: "string" }
       - { label: "Adres email", name: "site_mail", widget: "string" }
+      - { label: "Voucher", name: "voucher", widget: "image" }
 # Cennik
   - label: "Cennik" 
     name: "cennik"

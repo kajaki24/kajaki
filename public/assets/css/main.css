@@ -1549,6 +1549,7 @@ fieldset {
   .modal-container {
     border-radius: 10px;
     position: relative;
+    background-color: #fff;
   }
   .modal-close {
     position: absolute;

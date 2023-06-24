@@ -88,6 +88,7 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
 });
 
+
     return {
       dir: {
         input: "src",
