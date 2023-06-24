@@ -15,6 +15,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Logo", name: "site_logo", widget: "image" }
       - { label: "Numer telefonu", name: "site_phone", widget: "string" }
       - { label: "Adres email", name: "site_mail", widget: "string" }
