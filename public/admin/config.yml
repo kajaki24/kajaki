@@ -37,7 +37,7 @@ collections:
 # Galeria
   - label: "Galeria"
     name: gallery
-    folder: "src/assets/images/galeria"
+    folder: "src/galeria/img"
     media_folder: "img/"
     public_folder: "/galeria/img/"
     slug: "{{slug}}"
