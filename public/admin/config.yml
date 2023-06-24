@@ -39,7 +39,7 @@ collections:
     name: gallery
     folder: "src/galeria"
     media_folder: "img/"
-    public_folder: "/galeria/img/"
+    public_folder: "/assets/images/galeria/img/"
     slug: "{{slug}}"
     create: true
     fields:
