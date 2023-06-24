@@ -89,6 +89,7 @@ splitTextLines.forEach(element => {
 
 
 // Kayak  --------------------------------------------------------------------
+if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
   duration: 2
@@ -101,7 +102,7 @@ gsap.to(".kayak", {
     scrub: 1
   }
 });
-
+};
 
 // Reveal image --------------------------------------------------------------
 let revealContainers = document.querySelectorAll(".reveal-wrap");
@@ -128,33 +129,6 @@ revealContainers.forEach((element) => {
     }
   });
 });
-
-
-// Footer parallax
-if (window.matchMedia("(min-width: 767px)").matches) {
-    gsap.from(".footer-parallax", {
-      y: "-25%",
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".bixol-footer",
-        start: "top 85%",
-        end: "top 55%",
-        scrub: true
-      }
-    });
-    } else {
-      gsap.from(".footer-parallax", {
-        y: "-15%",
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".bixol-footer",
-          start: "top 95%",
-          end: "bottom 90%",
-          scrub: true
-        }
-      });
-    };
-  
 
 // parallax 
 if (window.matchMedia("(min-width: 767px)").matches) {
@@ -243,6 +217,7 @@ menuToggle.addEventListener('click', function(){
 
 
 // Circle
+if(document.querySelector(".circ-flex-col")) {
 if (window.matchMedia("(min-width: 767px)").matches) {
 const circleContent0 = document.querySelector(".hover0");
 const circleContent1 = document.querySelector(".hover1");
@@ -299,4 +274,5 @@ circleContent0.addEventListener("mouseenter", () => {
         circleContent1.classList.remove("active");
         circleContent2.classList.remove("active");
         });
+}
 }

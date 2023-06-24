@@ -1261,9 +1261,8 @@ article .h5 {
 }
 
 .feedback-slider .feedback-wrapper .feedback-single .img-wrapper {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
+	width: 50px;
+	height: 50px;
 	overflow: hidden;
 	display: inline-block;
 	-webkit-box-shadow: 0px 13px 35px 0px rgba(5, 71, 241, 0.2);
@@ -1271,10 +1270,6 @@ article .h5 {
 	margin-top: -65px;
 	padding: 3px;
 	background-color: #ffffff;
-}
-
-.feedback-slider .feedback-wrapper .feedback-single .img-wrapper img {
-	border-radius: 50%;
 }
 
 .feedback-slider .feedback-wrapper .feedback-single .feedback-txt {

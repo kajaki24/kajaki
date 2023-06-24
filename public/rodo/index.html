@@ -410,7 +410,7 @@
                             <ul>
                                 <li>Pon - Nd: 8.00 - 21.00</li>
                             </ul>
-                            <a href="https://www.facebook.com/Kajaki24" title="Facebook">
+                            <a href="https://www.facebook.com/Kajaki24" title="Facebook" rel="nofollow" target="_blank">
                             <svg width="32" height="32" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M28 14.0351C28 6.28772 21.728 0 14 0C6.272 0 0 6.28772 0 14.0351C0 20.8281 4.816 26.4842 11.2 27.7895V18.2456H8.4V14.0351H11.2V10.5263C11.2 7.81754 13.398 5.61403 16.1 5.61403H19.6V9.82456H16.8C16.03 9.82456 15.4 10.4561 15.4 11.2281V14.0351H19.6V18.2456H15.4V28C22.47 27.2982 28 21.3193 28 14.0351Z" fill="white"/>
 </svg>
@@ -433,12 +433,14 @@
 <script src="/assets/js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
 <script>
+if(document.querySelector("#glide1")) {
   new Glide('#glide1', {
 	type: 'carousel',
 	perView: 1,
     autoplay: 3000,
     hoverpause: true
 }).mount();
+}
 </script>
 <script src="/assets/js/glightbox.min.js"></script>
 <script>
