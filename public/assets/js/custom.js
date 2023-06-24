@@ -243,6 +243,7 @@ menuToggle.addEventListener('click', function(){
 
 
 // Circle
+if (window.matchMedia("(min-width: 767px)").matches) {
 const circleContent0 = document.querySelector(".hover0");
 const circleContent1 = document.querySelector(".hover1");
 const circleContent2 = document.querySelector(".hover2");
@@ -298,4 +299,4 @@ circleContent0.addEventListener("mouseenter", () => {
         circleContent1.classList.remove("active");
         circleContent2.classList.remove("active");
         });
-      
+}
