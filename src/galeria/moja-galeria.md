@@ -12,4 +12,6 @@ images:
   - image: /galeria/img/ognisko-3.jpg
   - image: /galeria/img/ognisko-2.jpg
   - image: /galeria/img/ognisko-1.jpg
+  - image: /galeria/img/mot1.jpg
+  - image: /galeria/img/mot2.jpg
 ---
