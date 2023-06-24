@@ -53,8 +53,8 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     let stats = await Image(src, {
       widths: [25, 320, 640, 960, 1200, 1800, 2400],
       formats: ['jpeg', 'webp'],
-      urlPath: '/assets/img/',
-      outputDir: './public/assets/img/',
+      urlPath: '/assets/images/',
+      outputDir: './public/assets/images/',
     });
 
     let lowestSrc = stats['jpeg'][0];
