@@ -40,6 +40,7 @@ body {
     font-family: "Poppins", sans-serif;
     background: var(--color-accent-2);
     color: var(--color-text);
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -380,6 +381,7 @@ article ul li {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 1.2em;
     margin-bottom: .8em;
+    line-height: 1.25;
     color: var(--color-accent-2);
 }
 
@@ -447,6 +449,10 @@ li {
 
 .split-text-letters-load .char {
     transform: translateY(100%)
+}
+
+.split-text-letters .char-wrap {
+    margin-bottom: -0.1em;
 }
 
 @media(min-width:767px) {
@@ -807,6 +813,7 @@ article .h5 {
     background-position: center;
     text-align: center;
     box-shadow: inset 0 -60px 60px var(--color-accent-2);
+    overflow: hidden;
 }
 
 .light .hero-main {
@@ -875,11 +882,13 @@ article .h5 {
         position: relative;
         min-height: 176px;
         pointer-events: none;
+        overflow: hidden;
         z-index: 999
     }
     .section-weather a img {
         opacity: 0;
         pointer-events: none;
+        overflow: hidden;
     }  
 
 /* Circle section
@@ -887,6 +896,7 @@ article .h5 {
 
 .section-circle {
     background: var(--color-accent-2);
+    overflow: hidden;
 }
 
 .circle-wrap {
@@ -1023,6 +1033,7 @@ article .h5 {
 
 .section-pricing {
     background: var(--color-light-2);
+    overflow: hidden;
 }
 
 .pricing-card {
@@ -1129,6 +1140,10 @@ article .h5 {
     transition: all .55s cubic-bezier(.7, .1, .2, 1);
 }
 
+.price-btn svg {
+    margin-left: 1em;
+}
+
 @media(min-width:767px) {
 .pricing-card:hover::before {
     transform: translateY(-100%);
@@ -1160,6 +1175,12 @@ article .h5 {
 
 .section-about {
     background-color: var(--color-accent-2);
+    overflow: hidden;
+}
+
+.about-content {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about-image {
@@ -1419,7 +1440,6 @@ fieldset {
 
 .footer-widget {
     height: 100%;
-    padding-right: 3em;
     margin-bottom: 60px;
 }
 
@@ -1460,6 +1480,9 @@ fieldset {
 }
 
 @media(min-width:767px) {
+    .footer-widget {
+        padding-right: 3em
+    }
     .footer-logo {
         transform: translateX(-17px);
         display: inline-block;

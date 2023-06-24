@@ -1,3 +1,4 @@
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const Image = require('@11ty/eleventy-img');
 
 module.exports = function(eleventyConfig) {
@@ -9,6 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/static/img");
   eleventyConfig.addPassthroughCopy("src/galeria/img");
   eleventyConfig.addPassthroughCopy("src/admin");
+
+  eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
 
   // get the current year 
   eleventyConfig.addShortcode("getYear", function() {
