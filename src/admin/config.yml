@@ -37,9 +37,9 @@ collections:
 # Galeria
   - label: "Galeria"
     name: gallery
-    folder: "src/galeria"
+    folder: "src/assets/images/galeria"
     media_folder: "img/"
-    public_folder: "/assets/images/galeria/img/"
+    public_folder: "/galeria/img/"
     slug: "{{slug}}"
     create: true
     fields:
