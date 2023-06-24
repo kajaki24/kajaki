@@ -60,7 +60,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-accent-4);
+    color: var(--color-accent-3);
 }
 
 ul {
@@ -451,7 +451,6 @@ li {
 }
 
 @media(min-width:767px) {
-
     h1,
     .h1 {
         font-size: clamp(48px, 6vw, 78px);
@@ -484,6 +483,35 @@ li {
     .big-paragraph {
         font-size: 22px;
     }
+article h1,
+article .h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+article h2,
+article .h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+article h3,
+article .h3 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+article h4,
+article .h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+article h5,
+article .h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
 }
 
 .color-dark {
