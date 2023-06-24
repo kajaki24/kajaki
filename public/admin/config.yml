@@ -16,8 +16,8 @@ collections:
       preview: false
     fields:
       - { label: "Logo", name: "site_logo", widget: "image" }
-      - { label: "Numer telefonu", name: "site_phone", widget: "text" }
-      - { label: "Adres email", name: "site_mail", widget: "text" }
+      - { label: "Numer telefonu", name: "site_phone", widget: "string" }
+      - { label: "Adres email", name: "site_mail", widget: "string" }
 # Cennik
   - label: "Cennik" 
     name: "cennik"
@@ -32,3 +32,18 @@ collections:
       - { label: "Czas spływu", name: "rafting_time", widget: "string" }
       - { label: "Długość trasy", name: "route_length", widget: "string" }
       - { label: "Cena", name: "price", widget: "string" }
+      - { label: "Pod ceną", name: "price_descrition", widget: "string" }
+      - { label: "Data", name: "date", widget: "date" }
+# Galeria
+  - label: "Galeria"
+    name: gallery
+    folder: "src/galeria"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string, tagname: h1}
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}

@@ -1,8 +1,6 @@
 ---
-title: Moja Galeria
-description: Opis galerii
 images:
-  - image: /src/assets/image/gallery/k-1.jpg
-  - image: /assets/image/gallery/k-2.jpg
-  - image: wetewrtwet
+  - image: /assets/images/gallery/k-1.jpg
+  - image: /assets/images/gallery/k-2.jpg
+  - image: /assets/images/gallery/k-3.jpg
 ---
