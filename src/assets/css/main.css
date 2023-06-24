@@ -591,12 +591,12 @@ article .h5 {
 
 .fixed-phone {
     display: inline-block;
-    width: 70px;
-    height: 70px;
-    padding: 1em;
+    width: 60px;
+    height: 60px;
+    padding: .8em;
     border-radius: 50%;
-    border: 3px solid var(--color-light-1);
-    background: var(--color-accent-3);;
+    box-shadow: 0 0 30px #0001;
+    background: var(--color-accent-3);
 }
 
 .fixed-phone-icon {
@@ -648,9 +648,9 @@ article .h5 {
     right: -12.5em;
     transform: translateY(-50%) scale(0);
     background: #ffe300;
-    padding: 1.2em 2em;
+    padding: 1em 2em;
     border-radius: 50px;
-    border: 3px solid var(--color-light-1);
+    box-shadow: 0 0 30px #0001;
     transition: .2s ease-in-out;
     color: var(--color-accent-2);
     font-weight: 600;
@@ -664,8 +664,8 @@ article .h5 {
         padding: 65px 30px 25px;
     }
     .fixed-button {
-        bottom: 70px;
-        left: 70px;
+        bottom: 30px;
+        left: 23px;
     }
 .fixed-phone:hover .fixed-phone-number {
     transform: translateY(-50%) scale(1);
