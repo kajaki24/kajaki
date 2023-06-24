@@ -38,6 +38,8 @@ collections:
   - label: "Galeria"
     name: gallery
     folder: "src/galeria"
+    media_folder: "img/"
+    public_folder: "/galeria/img/"
     slug: "{{slug}}"
     create: true
     fields:
