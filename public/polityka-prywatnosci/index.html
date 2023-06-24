@@ -34,7 +34,7 @@
                 return;
             }
             var fader = document.getElementById('fader');
-            fader.classList.add('fade-out-f');
+            fader.classList.add('fadeOut');
         }
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.AnimationEvent) {
@@ -55,7 +55,7 @@
                     };
                     fader.addEventListener('animationend', listener);
                     event.preventDefault();
-                    fader.classList.add('fade-in-f');
+                    fader.classList.add('fadeIn');
                 });
             }
         });
@@ -64,7 +64,7 @@
                 return;
             }
             var fader = document.getElementById('fader');
-            fader.classList.remove('fade-in-f');
+            fader.classList.remove('fadeIn');
         });
     </script>
 </head>
@@ -629,7 +629,7 @@
   <footer class="site-footer pt-xlarge pb-xsmall">
         <div class="container pb-medium">
             <div class="row gx-5">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-10">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="footer-widget border-right">
                         <h3 class="h4 footer-widget-title mt-0 mb-4">Mapa strony</h3>
                             <ul>

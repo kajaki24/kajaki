@@ -94,14 +94,13 @@ article ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 99999999;
     pointer-events: none;
     background: var(--color-accent-2);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation-duration: 150ms;
-    animation-timing-function: ease-in-out;
+    animation: all .3s;
 }
 
 @keyframes fade-out {
@@ -124,12 +123,12 @@ article ul li {
     }
 }
 
-#fader.fade-out-f {
+#fader.fadeOut {
     opacity: 0;
     animation-name: fade-out;
 }
 
-#fader.fade-in-f {
+#fader.fadeIn {
     opacity: 1;
     animation-name: fade-in;
 }
