@@ -43,7 +43,7 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/settings/**/*.md').reverse();
   });  
 
-  // Galerry
+  // Gallery
   eleventyConfig.addCollection('galeria', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/galeria/**/*.md').reverse();
   });
