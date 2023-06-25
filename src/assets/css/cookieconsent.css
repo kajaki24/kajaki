@@ -231,6 +231,7 @@
 /** fix https://github.com/orestbida/cookieconsent/issues/94 **/
 #cc_div #cm {
     display: block!important;
+    z-index: 999999999999999999999;
 }
 
 #c-ttl{
