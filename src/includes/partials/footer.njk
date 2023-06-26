@@ -156,6 +156,30 @@ modals.forEach(function (trigger) {
       }(document, 'script', 'facebook-jssdk'));
     </script>
     
+    <script>
+      const transWrap = document.querySelector("body");
+      
+      setTimeout(function () {
+        return transWrap.classList.add('render');
+      }, 60);
+      
+      var navlinks = Array.from(document.querySelectorAll('a:not(.glightbox)'));
+      
+      var navigate = function navigate(linkEl) {
+        transWrap.classList.remove('render');
+        transWrap.addEventListener('transitionend', function () {
+          return window.location = linkEl.href;
+        });
+      };
+      
+      navlinks.forEach(function (link) {
+        return link.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          navigate(ev.target);
+        });
+      });
+          </script>
+    
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",

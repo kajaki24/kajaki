@@ -28,45 +28,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css">
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
 
-    <script>
-        function fadeInPage() {
-            if (!window.AnimationEvent) {
-                return;
-            }
-            var fader = document.getElementById('fader');
-            fader.classList.add('fadeOut');
-        }
-        document.addEventListener('DOMContentLoaded', function () {
-            if (!window.AnimationEvent) {
-                return;
-            }
-            var anchors = document.querySelectorAll('a:not(.glightbox)');
-            for (var idx = 0; idx < anchors.length; idx += 1) {
-                if (anchors[idx].hostname !== window.location.hostname ||
-                    anchors[idx].pathname === window.location.pathname) {
-                    continue;
-                }
-                anchors[idx].addEventListener('click', function (event) {
-                    var fader = document.getElementById('fader'),
-                        anchor = event.currentTarget;
-                    var listener = function () {
-                        window.location = anchor.href;
-                        fader.removeEventListener('animationend', listener);
-                    };
-                    fader.addEventListener('animationend', listener);
-                    event.preventDefault();
-                    fader.classList.add('fadeIn');
-                });
-            }
-        });
-        window.addEventListener('pageshow', function (event) {
-            if (!event.persisted) {
-                return;
-            }
-            var fader = document.getElementById('fader');
-            fader.classList.remove('fadeIn');
-        });
-    </script>
 </head>
 
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
@@ -91,10 +52,6 @@
         <a class="modal-link" data-modal="modal-one">Voucher</a>
     </div>
     <div class="page">
-        <svg id="fader"></svg>
-        <script>
-            fadeInPage();
-        </script>
     <div class="fade-no-duration">
         <header class="site-header">
             <div class="container-fluid">

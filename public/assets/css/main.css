@@ -57,7 +57,7 @@ img {
 a {
     color: inherit;
     text-decoration: none;
-    transition: .1s ease-in-out;
+    transition: color .1s ease-in-out;
 }
 
 a:hover {
@@ -88,50 +88,13 @@ article ul li {
 
 /* Fader
 ------------------------------------------------ */
-
-#fader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999999;
-    pointer-events: none;
-    background: var(--color-accent-2);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: all .3s;
+body {
+	opacity: 0;
+	transition: opacity .5s;
 }
 
-@keyframes fade-out {
-    from {
-        opacity: 1
-    }
-
-    to {
-        opacity: 0
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-#fader.fadeOut {
-    opacity: 0;
-    animation-name: fade-out;
-}
-
-#fader.fadeIn {
-    opacity: 1;
-    animation-name: fade-in;
+body.render {
+	opacity: 1;
 }
 
 /* List
@@ -1533,7 +1496,7 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 999999999999999999999;
   }
   .modal.open {
     visibility: visible;
