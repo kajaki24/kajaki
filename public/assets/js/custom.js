@@ -1,11 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-     
-// Fade in no duration -------------------------------------------------------
-   gsap.to(".fade-no-duration", {
-       autoAlpha: 1,
-       opacity: 1,
-       duration: 0.05
-});
 
 // Fade in --------------------------------------------------------------
 let splitTextChars = [...document.querySelectorAll('.fade-in')];
@@ -23,6 +16,8 @@ splitTextChars.forEach(element =>{
        },
    })
 });
+
+window.addEventListener('load', function(){
 
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
@@ -58,7 +53,6 @@ splitTextLetters.forEach(element =>{
    })
 });
 
-
 // Split text lines --------------------------------------------------------------
 let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
@@ -76,6 +70,8 @@ splitTextLines.forEach(element => {
    gsap.set(".line", {yPercent: 100}),
    
     gsap.to(mySplitText.lines, {
+        autoAlpha: 1,
+      opacity: 1,
         duration: 0.6,
         stagger: 0.1,
         yPercent: 0,
@@ -87,6 +83,7 @@ splitTextLines.forEach(element => {
     })
 });
 
+});
 
 // Kayak  --------------------------------------------------------------------
 if(document.querySelector(".kayak-wrap")) {

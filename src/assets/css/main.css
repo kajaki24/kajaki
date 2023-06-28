@@ -84,6 +84,25 @@ article ul li {
 .fade-no-duration {
     opacity: 0;
     visibility: hidden;
+    animation: .5s fadeMain .1s linear forwards;
+}
+
+@keyframes fadeMain {
+    0% {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    20% {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 
