@@ -1458,7 +1458,7 @@ fieldset {
     z-index: 9999
 }
 
-.modal-link-wrap a {
+.modal-link-wrap button {
     padding: 3em .7em;
     background: #fff;
     cursor: pointer;
@@ -1469,7 +1469,7 @@ fieldset {
     transition: .3s ease-in-out;
 }
 
-.modal-link-wrap a:hover {
+.modal-link-wrap button:hover {
     background: var(--color-accent-3);
     color: #fff;
 }
