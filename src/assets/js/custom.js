@@ -17,6 +17,9 @@ splitTextChars.forEach(element =>{
    })
 });
 
+
+document.fonts.onloadingdone = () => {
+
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
@@ -82,6 +85,8 @@ splitTextLines.forEach(element => {
         },
     })
 });
+
+};
 
 // Kayak  --------------------------------------------------------------------
 if(document.querySelector(".kayak-wrap")) {
