@@ -33,7 +33,7 @@ collections:
       - { label: "Typ trasy", name: "category", widget: "string" }
       - { label: "Czas spływu", name: "rafting_time", widget: "string" }
       - { label: "Długość trasy", name: "route_length", widget: "string" }
-      - { label: "Cena", name: "price", widget: "string" }
+      - { label: "Cena", name: "price", widget: "string", required: "false" }
       - { label: "Pod ceną", name: "price_descrition", widget: "string" }
       - { label: "Data", name: "date", widget: "date" }
 # Galeria
