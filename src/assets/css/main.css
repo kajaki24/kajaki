@@ -537,7 +537,7 @@ article .h5 {
 
 .fixed-button {
     position: fixed;
-    bottom: 30px;
+    bottom: 23px;
     left: 20px;
     opacity: 0;
     transform: translateY(100px);
@@ -646,7 +646,7 @@ article .h5 {
         padding: 65px 30px 25px;
     }
     .fixed-button {
-        bottom: 30px;
+        bottom: 23px;
         left: 23px;
     }
 }
