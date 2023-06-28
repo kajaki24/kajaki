@@ -86,16 +86,6 @@ article ul li {
     visibility: hidden;
 }
 
-/* Fader
------------------------------------------------- */
-body {
-	opacity: 0;
-	transition: opacity .5s;
-}
-
-body.render {
-	opacity: 1;
-}
 
 /* List
 ------------------------------------------------ */
