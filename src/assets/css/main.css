@@ -647,7 +647,7 @@ article .h5 {
   --------------------------*/
 
 .menu-toggle {
-    margin-top: 35px;
+    margin-top: 38px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -1092,10 +1092,6 @@ article .h5 {
     z-index: 9;
 }
 
-.pricing-card-content-hiding {
-    transition: all .55s cubic-bezier(.7, .1, .2, 1);
-   opacity: 0;
-}
 
 .price-area {
     position: relative;
@@ -1131,6 +1127,10 @@ article .h5 {
 .pricing-card:hover .price-desc,
 .pricing-card:hover .ka-button span {
     color: var(--color-light-1);
+}
+.pricing-card-content-hiding {
+   transition: all .55s cubic-bezier(.7, .1, .2, 1);
+   opacity: 0;
 }
 .pricing-card:hover .pricing-card-content-hiding {
     opacity: 1;

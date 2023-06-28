@@ -8,7 +8,7 @@
         <div class="row gx-0 justify-content-center pb-medium">
             {% for post in collections.cennik['Trasy jednodniowe'] %}
             <div class="col-md-4">
-                <div class="pricing-card pt-large pb-small">
+                <div class="pricing-card pt-medium pt-md-large pb-medium pb-md-small">
                     <div class="pricing-card-content-visible pb-xsmall text-center">
                         <div class="pricing-card-headline">
                             <h3 class="h4 split-text-lines mt-1 mb-4 color-blue">
@@ -31,8 +31,8 @@
                         </div>
                     </div>
                     <div class="pricing-card-content-hiding text-center">
-                        <div class="price-btn">
-                            <a href="tel:+48733240024" title="Zadzwoń" class="ka-button">
+                        <div class="price-btn fade-in">
+                            <a href="tel:+48733240024" title="Zadzwoń" class="ka-button no-trans">
                                 <span class="color-blue">Zarezerwuj</span>
                                 <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -50,7 +50,7 @@
             {%- endfor -%}
         </div>
         <div class="text-center pb-small">
-            <a href="/cennik" title="Zobacz cennik" class="ka-button trans-link">
+            <a href="/cennik" title="Zobacz cennik" class="ka-button no-trans">
                 <span class="color-blue">Zobacz pełny cennik</span>
                 <svg class="btn-arrow" height="26" viewBox="0 0 16 16" width="26" xmlns="http://www.w3.org/2000/svg">
                     <path

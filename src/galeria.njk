@@ -23,7 +23,7 @@ layout: "templates/base.njk"
             <div class="row gy-4">
                 {% for image in item.data.images %}
                 <div class="col-6 col-md-4">
-                    <a href="{{ image.image }}" class="glightbox">
+                    <a href="{{ image.image }}" class="glightbox no-trans">
                         <img src="{{ image.image }}" alt="{{ image.alt }}" class="gallery-item fade-in" 
                         sizes="(max-width: 400px) 100vw, 400px">
                     </a>

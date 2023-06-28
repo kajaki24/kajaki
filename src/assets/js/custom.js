@@ -39,6 +39,7 @@ splitTextLetters.forEach(element =>{
        opacity: 1,
        yPercent: 0,
        duration: 2,
+       delay: .3,
        ease: Expo. easeOut,
        stagger: {
          amount: 0.5,
@@ -50,7 +51,6 @@ splitTextLetters.forEach(element =>{
        },
    })
 });
-
 
 // Split text lines --------------------------------------------------------------
 let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
@@ -72,6 +72,7 @@ splitTextLines.forEach(element => {
       autoAlpha: 1,
       opacity: 1,
         duration: 0.6,
+        delay: .3,
         stagger: 0.1,
         yPercent: 0,
         ease: "sine.out",
@@ -86,6 +87,7 @@ splitTextLines.forEach(element => {
 if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
+  delay: .3,
   duration: 2
 })
 gsap.to(".kayak", {

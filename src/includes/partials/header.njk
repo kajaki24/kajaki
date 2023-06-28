@@ -67,7 +67,7 @@
 
 body {
 	opacity: 0;
-	transition: opacity .5s;
+	transition: opacity .25s;
 }
 body.render {
 	opacity: 1;
@@ -78,7 +78,7 @@ body.render {
 
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     <div class="fixed-button">
-        <a href="tel:+48733240024" class="fixed-phone">
+        <a href="tel:+48733240024" class="fixed-phone no-trans">
             <span class="fixed-phone-icon">
                 <svg viewBox="0 0 96 96" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_66_3)">
@@ -104,7 +104,7 @@ body.render {
                 <div class="row align-items-center">
                     <div class="col-9 col-sm-5 col-xl-3">
                         <div class="logo-wrapper">
-                            <a href="/" title="Strona główna">
+                            <a href="/" title="Strona główna" class="no-trans">
                                 <img src="{{ collections.settings[0].data.site_logo | url }}"
                                     alt="Kajaki24 Warka - Logo">
                             </a>
@@ -114,9 +114,6 @@ body.render {
                         <div class="desktop-menu-wrap d-flex justify-content-end">
                             <nav class="desktop-menu d-none d-xl-block">
                                 <ul>
-                                    <li {% if page.url === "/" %}class="active" {% endif %}>
-                                        <a href="/" class="trans-link" title="Główna">Główna</a>
-                                    </li>
                                     <li {% if page.url === "/cennik/" %}class="active" {% endif %}>
                                         <a href="/cennik" class="trans-link" title="Cennik">Cennik</a>
                                     </li>
@@ -152,9 +149,6 @@ body.render {
                 <nav>
                     <div class="mobile-menu">
                         <ul id="menu-mobile-menu" class="menu">
-                            <li {% if page.url === "/" %}class="active" {% endif %}>
-                                <a href="/" class="trans-link" title="Główna">Główna</a>
-                            </li>
                             <li {% if page.url === "/cennik/" %}class="active" {% endif %}>
                                 <a href="/cennik" class="trans-link" title="Cennik">Cennik</a>
                             </li>
