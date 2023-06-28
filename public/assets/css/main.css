@@ -559,9 +559,9 @@ article .h5 {
 
 .fixed-phone {
     display: inline-block;
-    width: 48px;
-    height: 48px;
-    padding: .4em;
+    width: 45px;
+    height: 45px;
+    padding: .35em;
     border-radius: 50%;
     box-shadow: 0 0 30px #0001;
     background: #0a7cff;
