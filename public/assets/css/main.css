@@ -624,7 +624,7 @@ article .h5 {
     right: -12.5em;
     transform: translateY(-50%) scale(0);
     background: #ffe300;
-    padding: 1em 2em;
+    padding: .8em 2em;
     border-radius: 50px;
     box-shadow: 0 0 30px #0001;
     transition: .2s ease-in-out;
