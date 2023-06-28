@@ -200,6 +200,7 @@
 
 .show--settings .c--anim #s-cnt{
     visibility: visible!important;
+    z-index: 999999999999999;
 }
 
 /* Show overlays */
@@ -231,7 +232,7 @@
 /** fix https://github.com/orestbida/cookieconsent/issues/94 **/
 #cc_div #cm {
     display: block!important;
-    z-index: 999999999999999999999;
+    z-index: 99999999
 }
 
 #c-ttl{
@@ -801,7 +802,7 @@ CookieConsent settings modal
 }
 
 #cs-ov{
-    z-index: 2;
+    z-index: 99999999;
 }
 
 .force--consent .cc_div{
