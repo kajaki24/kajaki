@@ -561,7 +561,7 @@ article .h5 {
 .desktop-menu ul li {
     list-style: none;
     display: inline-block;
-    margin-left: 0;
+    margin-left: 0
 }
 
 .desktop-menu ul li a {
@@ -572,11 +572,11 @@ article .h5 {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--color-light-1);
-    transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out
 }
 
 .desktop-menu ul li a:hover,
-.desktop-menu ul li a.active {
+.desktop-menu ul li.active a {
     background-color: var(--color-accent-1)
 }
 
@@ -588,7 +588,7 @@ article .h5 {
     transform: translateY(100px);
     visibility: hidden;
     animation: 1s phoneFadeIn 2s linear forwards;
-    z-index: 9999;
+    z-index: 9999
 }
 
 @keyframes phoneFadeIn {
@@ -1595,3 +1595,8 @@ fieldset {
         max-width: 62%;
       }
   } 
+
+  #counterForWebsiteDiv {
+    pointer-events: none!important;       
+    margin: 0 0 0 auto!important
+  }

@@ -17,9 +17,6 @@ splitTextChars.forEach(element =>{
    })
 });
 
-
-document.fonts.onloadingdone = () => {
-
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
@@ -86,8 +83,6 @@ splitTextLines.forEach(element => {
     })
 });
 
-};
-
 // Kayak  --------------------------------------------------------------------
 if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
@@ -104,7 +99,7 @@ gsap.to(".kayak", {
   }
 });
 };
-
+  
 // Reveal image --------------------------------------------------------------
 let revealContainers = document.querySelectorAll(".reveal-wrap");
 
