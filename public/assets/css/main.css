@@ -1603,3 +1603,8 @@ fieldset {
     pointer-events: none!important;       
     margin: 0 0 0 auto!important
   }
+
+  .widget-forecast.widget-forecast-5day .widget-icon-forecast {
+    max-width: 67px!important;
+    margin: 0 auto;
+  }
