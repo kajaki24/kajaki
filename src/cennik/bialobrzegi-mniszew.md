@@ -1,9 +1,9 @@
 ---
 title: Białobrzegi - Warka
-category: "Trasy dwudniowe"
+category: Trasy dwudniowe
 rafting_time: 13 - 14
 route_length: 45,7
-price: 150
-price_descrition: 
+price: "120"
+price_descrition: null
 date: 2023-01-30
 ---
