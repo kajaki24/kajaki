@@ -75,6 +75,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", Arial, sans-serif;
+    font-kerning: none;
+    -webkit-text-rendering: optimizeSpeed;
+    text-rendering: optimizeSpeed;
     background: var(--color-accent-2);
     color: var(--color-text);
     width: 100%;
@@ -517,6 +520,9 @@ article h5,
 article .h5 {
     font-size: 22px;
     font-weight: 600;
+}
+.text-md-left {
+    text-align: left;
 }
 }
 
@@ -1527,7 +1533,7 @@ fieldset {
 .modal-link-wrap {
     position: fixed;
     right: 0;
-    top: 50%;
+    top: 50vh;
     transform: translateY(-50%) translateX(35%);
     box-shadow: 0 0 40px 20px #03198017;
     z-index: 9999
