@@ -211,7 +211,6 @@ menuToggle.addEventListener('click', function(){
 	navTl.reversed(!navTl.reversed());
 });
 
-
 // Circle
 if(document.querySelector(".circ-flex-col")) {
 if (window.matchMedia("(min-width: 767px)").matches) {
@@ -224,8 +223,6 @@ const circleImage0 = document.querySelector(".circ-img-0");
 const circleImage1 = document.querySelector(".circ-img-1");
 const circleImage2 = document.querySelector(".circ-img-2");
 const circleImage3 = document.querySelector(".circ-img-3");
-
-
 
 circleContent0.addEventListener("mouseenter", () => {
   circleImage0.classList.add("active");
