@@ -546,6 +546,10 @@ article .h5 {
     background-color: var(--color-light-2);
 }
 
+.border-radius {
+    border-radius: 8px;
+}
+
 /* Site header
 ------------------------------------------- */
 
@@ -1240,6 +1244,7 @@ article .h5 {
     aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
+    border-radius: 8px
 }
 
 /* Feedback 
