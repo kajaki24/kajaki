@@ -424,7 +424,7 @@ h5,
 }
 
 .big-text {
-    font-size: 22vw;
+    font-size: clamp(60px, 22vw, 120px);
     line-height: .8;
     font-weight: 800;
     text-transform: uppercase;
