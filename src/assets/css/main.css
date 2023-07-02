@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'Poppins';
     font-display: fallback;
@@ -38,6 +39,7 @@
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-800.woff2') format('woff2'), 
          url('/assets/fonts/poppins-v20-latin_latin-ext-800.ttf') format('truetype'); 
   }  
+  */
 
 /* Variables
 ------------------------------------------------ */
@@ -461,6 +463,13 @@ li {
     margin-bottom: -0.1em;
 }
 
+.split-text-lines .words,
+.split-text-lines .chars {
+    margin-bottom: -0.1em;
+    margin-top: -0.1em;
+    line-height: 1.25;
+}
+
 @media(min-width:767px) {
     h1,
     .h1 {
@@ -488,7 +497,7 @@ li {
     }
 
     .big-text {
-        font-size: clamp(120px, 19vw, 280px);
+        font-size: clamp(120px, 18vw, 280px);
     }
 
     .big-paragraph {

@@ -57,23 +57,21 @@ let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
 splitTextLines.forEach(element => {
    let mySplitText = new SplitText(element, {
-     type:"lines",
-     linesClass: "line"
-   });
-    new SplitText(element, {
-     type:"lines",
-     linesClass: "line-parent",
+     type:"words, chars",
+     wordsClass: "words",
+     charsClass: "chars"
    });
 
-   gsap.set(".line-parent", {overflow: "hidden"}),
-   gsap.set(".line", {yPercent: 100}),
+
+   gsap.set(".words", {overflow: "hidden"}),
+   gsap.set(".chars", {yPercent: 100}),
    
-    gsap.to(mySplitText.lines, {
+    gsap.to(mySplitText.chars, {
       autoAlpha: 1,
       opacity: 1,
         duration: 0.6,
         delay: .3,
-        stagger: 0.1,
+        stagger: 0.005,
         yPercent: 0,
         ease: "sine.out",
         scrollTrigger: { 
