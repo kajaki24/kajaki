@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-     
+if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
 let splitTextChars = [...document.querySelectorAll('.fade-in')];
 
@@ -125,7 +125,6 @@ revealContainers.forEach((element) => {
 });
 
 // parallax 
-if (window.matchMedia("(min-width: 767px)").matches) {
     gsap.utils.toArray(".parallax-wrap").forEach(function(container) {
       let image = container.querySelector("img");
     
@@ -144,10 +143,8 @@ if (window.matchMedia("(min-width: 767px)").matches) {
           ease: "none",
         }); 
     });
-  };
 
 // About parallax img
-if (window.matchMedia("(min-width: 767px)").matches) {
 gsap.to(".image-small", {
   yPercent: 30,
   scrollTrigger: {
@@ -155,6 +152,8 @@ gsap.to(".image-small", {
     scrub: 1
   }
 });
+
+
 };
 
 // Navigation
