@@ -9,7 +9,7 @@ splitTextChars.forEach(element =>{
        opacity: 0,
        y: 80,
        duration: 1,
-       ease: Expo.easeOut,
+       ease: Power3. easeInOut,
        scrollTrigger: { 
          trigger: element,
          //toggleActions: 'restart pause reverse pause',
@@ -32,15 +32,14 @@ splitTextLetters.forEach(element =>{
   });
 
   gsap.set(".char-wrap", {overflow: "hidden"});
-  gsap.set(".char", {yPercent: 100,});
   
-   gsap.to(mySplitText.chars, {
-       autoAlpha: 1,
-       opacity: 1,
-       yPercent: 0,
+   gsap.from(mySplitText.chars, {
+       autoAlpha: 0,
+       opacity: 0,
+       yPercent: 105,
        duration: 2,
        delay: .3,
-       ease: Expo. easeOut,
+       ease: Power3. easeInOut,
        stagger: {
          amount: 0.5,
          from: "0"
@@ -62,17 +61,15 @@ splitTextLines.forEach(element => {
      charsClass: "chars"
    });
 
-
    gsap.set(".words", {overflow: "hidden"}),
-   gsap.set(".chars", {yPercent: 100}),
    
-    gsap.to(mySplitText.chars, {
-      autoAlpha: 1,
-      opacity: 1,
+    gsap.from(mySplitText.chars, {
+      autoAlpha: 0,
+        opacity: 0,
         duration: 0.6,
         delay: .3,
         stagger: 0.005,
-        yPercent: 0,
+        yPercent: 105,
         ease: "sine.out",
         scrollTrigger: { 
           trigger: element,
