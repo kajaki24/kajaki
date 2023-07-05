@@ -38,7 +38,7 @@ splitTextLetters.forEach(element =>{
        opacity: 0,
        yPercent: 105,
        duration: 2,
-       delay: .3,
+       delay: .1,
        ease: Power3. easeInOut,
        stagger: {
          amount: 0.5,
@@ -67,7 +67,7 @@ splitTextLines.forEach(element => {
       autoAlpha: 0,
         opacity: 0,
         duration: 0.6,
-        delay: .3,
+        delay: .1,
         stagger: 0.005,
         yPercent: 105,
         ease: "sine.out",
@@ -82,7 +82,7 @@ splitTextLines.forEach(element => {
 if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
-  delay: .3,
+  delay: .1,
   duration: 2
 })
 gsap.to(".kayak", {
