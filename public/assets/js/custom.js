@@ -51,8 +51,14 @@ splitTextLetters.forEach(element =>{
   
    gsap.from(mySplitText.chars, {
        yPercent: 105,
+<<<<<<< HEAD
        duration: 1,
        ease: Power3.easeOut,
+=======
+       duration: 2,
+       delay: .1,
+       ease: Power3. easeInOut,
+>>>>>>> a883a5dba35c97482ccfc064d9f79c9840095cb3
        stagger: {
          amount: 0.3,
          from: "0"
@@ -80,7 +86,7 @@ splitTextLines.forEach(element => {
       autoAlpha: 0,
         opacity: 0,
         duration: 0.6,
-        delay: .3,
+        delay: .1,
         stagger: 0.005,
         yPercent: 105,
         ease: "sine.out",
@@ -95,8 +101,13 @@ splitTextLines.forEach(element => {
 if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
+<<<<<<< HEAD
   delay: .3,
   duration: 1.2
+=======
+  delay: .1,
+  duration: 2
+>>>>>>> a883a5dba35c97482ccfc064d9f79c9840095cb3
 })
 gsap.to(".kayak", {
   xPercent: -20,
