@@ -16,13 +16,13 @@
                             </h3>
                         </div>
                         <div class="feature-list">
-                            <ul class="fade-in">
-                                <li class="color-blue"><strong>Czas spływu: </strong>{{ post.data.rafting_time }} h</li>
-                                <li class="color-blue"><strong>Długość trasy: </strong>{{ post.data.route_length }} km</li>
+                            <ul>
+                                <li class="fade-in color-blue"><strong>Czas spływu: </strong>{{ post.data.rafting_time }} h</li>
+                                <li class="fade-in color-blue"><strong>Długość trasy: </strong>{{ post.data.route_length }} km</li>
                             </ul>
                         </div>
                         <div class="price-area">
-                            <p class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }} zł | dzień</p>
+                            <p class="h3 split-text-lines mt-4 color-blue">{{ post.data.price }} zł | osobę</p>
                             {% if post.data.price_descrition %}
                             <p class="price-desc split-text-lines">
                                 {{ post.data.price_descrition }}

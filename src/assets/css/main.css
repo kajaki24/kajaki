@@ -1088,12 +1088,12 @@ article .h5 {
 
 .pricing-card {
     position: relative;
+    height: 100%;
     background-color: var(--color-light-1);
     overflow: hidden;
     border: 1px solid #0319801c;
     margin-right: -1px;
-    margin-bottom: -1px;
-    ;
+    margin-bottom: -1px
 }
 
 .pricing-card-headline {
@@ -1162,7 +1162,7 @@ article .h5 {
 .pricing-card h3,
 .pricing-card p,
 .pricing-card li {
-    transition: all .55s cubic-bezier(.7, .1, .2, 1);
+    transition: color .55s cubic-bezier(.7, .1, .2, 1);
 }
 
 .pricing-card-content-visible,
@@ -1272,6 +1272,10 @@ article .h5 {
 
 .feedback-bottom {
 	position: relative;
+}
+
+.clients-thumbs {
+    position: relative
 }
 
 .clients-thumbs span {

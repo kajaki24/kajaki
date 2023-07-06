@@ -1,13 +1,29 @@
 gsap.registerPlugin(ScrollTrigger);
 if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
-let splitTextChars = [...document.querySelectorAll('.fade-in')];
+let fadeIn = [...document.querySelectorAll('.fade-in')];
+
+fadeIn.forEach(element =>{
+   gsap.from(element, {
+       autoAlpha: 0,
+       opacity: 0,
+       yPercent: 100,
+       duration: 1,
+       ease: Power3. easeInOut,
+       scrollTrigger: { 
+         trigger: element,
+         //toggleActions: 'restart pause reverse pause',
+       },
+   })
+});
+
+// Fade --------------------------------------------------------------
+let splitTextChars = [...document.querySelectorAll('.fade')];
 
 splitTextChars.forEach(element =>{
    gsap.from(element, {
        autoAlpha: 0,
        opacity: 0,
-       y: 80,
        duration: 1,
        ease: Power3. easeInOut,
        scrollTrigger: { 
@@ -34,14 +50,11 @@ splitTextLetters.forEach(element =>{
   gsap.set(".char-wrap", {overflow: "hidden"});
   
    gsap.from(mySplitText.chars, {
-       autoAlpha: 0,
-       opacity: 0,
        yPercent: 105,
-       duration: 2,
-       delay: .3,
-       ease: Power3. easeInOut,
+       duration: 1,
+       ease: Power3.easeOut,
        stagger: {
-         amount: 0.5,
+         amount: 0.3,
          from: "0"
        },
        scrollTrigger: { 
@@ -83,7 +96,7 @@ if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
   delay: .3,
-  duration: 2
+  duration: 1.2
 })
 gsap.to(".kayak", {
   xPercent: -20,
