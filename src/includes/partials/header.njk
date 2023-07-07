@@ -44,7 +44,7 @@
 
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     <div class="fixed-button">
-        <a href="tel:+48733240024" class="fixed-phone no-trans">
+        <a href="tel:{{ collections.settings[0].data.site_phone }}" class="fixed-phone no-trans" title="Zadzwoń">
             <span class="fixed-phone-icon">
                 <svg viewBox="0 0 96 96" width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_66_3)">
@@ -57,7 +57,7 @@
                     </defs>
                     </svg>                    
             </span>
-            <span class="fixed-phone-number">+48 733 240 024</span>
+            <span class="fixed-phone-number">{{ collections.settings[0].data.site_phone }}</span>
         </a>
     </div> 
     <div class="modal-link-wrap d-none d-md-block">
