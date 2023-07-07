@@ -1,0 +1,28 @@
+---
+title: Trasy
+description: Trasy spływów
+layout: "templates/archive.njk"
+---
+
+<section>
+    <div class="container">
+        <div class="row">
+           {% for post in collections.trasy %}
+            <div class="col-md-4">
+                <a href="{{ post.url }}" class="no-trans">
+                    <div class="">
+                    <div class="">
+                        {% Image "src/assets/images/gallery/003.jpg", "Trasa jednodniowa - kajaki Warka" %}
+                    </div>
+                    <div class="">
+                        <h3 class="h4 split-text-lines mb-4 color-light-1">
+                            {{ post.data.title }}
+                        </h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>

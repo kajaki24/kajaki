@@ -38,6 +38,11 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
   return cennikCategories;
 });
 
+  // Trasy
+  eleventyConfig.addCollection('trasy', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/trasy/**/*.md').reverse();
+  });
+
   // Settings
   eleventyConfig.addCollection('settings', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/settings/**/*.md').reverse();

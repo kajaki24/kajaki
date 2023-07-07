@@ -1,0 +1,4 @@
+{
+   "layout": "templates/base.njk",
+   "permalink": "/trasy/{{ title | slugify }}/"
+}

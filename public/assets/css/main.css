@@ -943,19 +943,18 @@ article .h5 {
 ------------------------------------------- */
 
 .section-circle {
-    background: var(--color-accent-2);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .circle-wrap {
-    position: relative;
+    position: relative
 }
 
 .circ-big-image {
     position: relative;
     margin-top: 2em;
     margin-bottom: 2em;
-    mix-blend-mode: plus-lighter;
+    mix-blend-mode: plus-lighter
 }
 
 .circ-small-image {
@@ -963,7 +962,7 @@ article .h5 {
     width: 60%;
     top: 51.5%;
     left: 21%;
-    transform: translateY(-42%);
+    transform: translateY(-42%)
 }
 
 .circ-big-image img {
@@ -971,7 +970,7 @@ article .h5 {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
-    opacity: .25;
+    opacity: .25
 }
 
 .circ-small-image img {
@@ -1224,8 +1223,7 @@ article .h5 {
 ------------------------------------------- */
 
 .section-about {
-    background-color: var(--color-accent-2);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .about-content {
@@ -1487,11 +1485,10 @@ fieldset {
 ------------------------------------------- */
 
 .site-footer {
-    background: var(--color-accent-2);
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    box-shadow: inset 0 60px 60px var(--color-accent-2);
+    box-shadow: inset 0 60px 60px var(--color-accent-2)
 }
 
 .footer-widget {
