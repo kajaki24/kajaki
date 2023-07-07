@@ -1,15 +1,31 @@
 gsap.registerPlugin(ScrollTrigger);
-     
+if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
-let splitTextChars = [...document.querySelectorAll('.fade-in')];
+let fadeIn = [...document.querySelectorAll('.fade-in')];
+
+fadeIn.forEach(element =>{
+   gsap.from(element, {
+       autoAlpha: 0,
+       opacity: 0,
+       yPercent: 100,
+       duration: 1,
+       ease: Power3. easeInOut,
+       scrollTrigger: { 
+         trigger: element,
+         //toggleActions: 'restart pause reverse pause',
+       },
+   })
+});
+
+// Fade --------------------------------------------------------------
+let splitTextChars = [...document.querySelectorAll('.fade')];
 
 splitTextChars.forEach(element =>{
    gsap.from(element, {
        autoAlpha: 0,
        opacity: 0,
-       y: 80,
        duration: 1,
-       ease: Expo.easeOut,
+       ease: Power3. easeInOut,
        scrollTrigger: { 
          trigger: element,
          //toggleActions: 'restart pause reverse pause',
@@ -32,17 +48,13 @@ splitTextLetters.forEach(element =>{
   });
 
   gsap.set(".char-wrap", {overflow: "hidden"});
-  gsap.set(".char", {yPercent: 100,});
   
-   gsap.to(mySplitText.chars, {
-       autoAlpha: 1,
-       opacity: 1,
-       yPercent: 0,
-       duration: 2,
-       delay: .3,
-       ease: Expo. easeOut,
+   gsap.from(mySplitText.chars, {
+       yPercent: 105,
+       duration: 1,
+       ease: Power3.easeOut,
        stagger: {
-         amount: 0.5,
+         amount: 0.3,
          from: "0"
        },
        scrollTrigger: { 
@@ -57,24 +69,20 @@ let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
 splitTextLines.forEach(element => {
    let mySplitText = new SplitText(element, {
-     type:"lines",
-     linesClass: "line"
-   });
-    new SplitText(element, {
-     type:"lines",
-     linesClass: "line-parent",
+     type:"words, chars",
+     wordsClass: "words",
+     charsClass: "chars"
    });
 
-   gsap.set(".line-parent", {overflow: "hidden"}),
-   gsap.set(".line", {yPercent: 100}),
+   gsap.set(".words", {overflow: "hidden"}),
    
-    gsap.to(mySplitText.lines, {
-      autoAlpha: 1,
-      opacity: 1,
+    gsap.from(mySplitText.chars, {
+      autoAlpha: 0,
+        opacity: 0,
         duration: 0.6,
-        delay: .3,
-        stagger: 0.1,
-        yPercent: 0,
+        delay: .1,
+        stagger: 0.005,
+        yPercent: 105,
         ease: "sine.out",
         scrollTrigger: { 
           trigger: element,
@@ -87,7 +95,7 @@ splitTextLines.forEach(element => {
 if(document.querySelector(".kayak-wrap")) {
 gsap.from(".kayak-wrap", {
   xPercent: 120,
-  delay: .3,
+  delay: .1,
   duration: 2
 })
 gsap.to(".kayak", {
@@ -127,7 +135,6 @@ revealContainers.forEach((element) => {
 });
 
 // parallax 
-if (window.matchMedia("(min-width: 767px)").matches) {
     gsap.utils.toArray(".parallax-wrap").forEach(function(container) {
       let image = container.querySelector("img");
     
@@ -146,10 +153,8 @@ if (window.matchMedia("(min-width: 767px)").matches) {
           ease: "none",
         }); 
     });
-  };
 
 // About parallax img
-if (window.matchMedia("(min-width: 767px)").matches) {
 gsap.to(".image-small", {
   yPercent: 30,
   scrollTrigger: {
@@ -157,6 +162,8 @@ gsap.to(".image-small", {
     scrub: 1
   }
 });
+
+
 };
 
 // Navigation
@@ -211,7 +218,6 @@ menuToggle.addEventListener('click', function(){
 	navTl.reversed(!navTl.reversed());
 });
 
-
 // Circle
 if(document.querySelector(".circ-flex-col")) {
 if (window.matchMedia("(min-width: 767px)").matches) {
@@ -224,8 +230,6 @@ const circleImage0 = document.querySelector(".circ-img-0");
 const circleImage1 = document.querySelector(".circ-img-1");
 const circleImage2 = document.querySelector(".circ-img-2");
 const circleImage3 = document.querySelector(".circ-img-3");
-
-
 
 circleContent0.addEventListener("mouseenter", () => {
   circleImage0.classList.add("active");

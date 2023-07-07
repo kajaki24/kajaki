@@ -1,6 +1,7 @@
 /*
 @font-face {
     font-family: 'Poppins';
+    font-display: fallback;
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-regular.woff2') format('woff2'), 
@@ -8,6 +9,7 @@
   }
   @font-face {
     font-family: 'Poppins';
+    font-display: fallback;
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-500.woff2') format('woff2'), 
@@ -15,13 +17,15 @@
   }
   @font-face {
     font-family: 'Poppins';
-    font-style: normal;
+    font-display: fallback;
+    font-style: normal; 
     font-weight: 600;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-600.woff2') format('woff2'), 
          url('/assets/fonts/poppins-v20-latin_latin-ext-600.ttf') format('truetype'); 
   }
   @font-face {
     font-family: 'Poppins';
+    font-display: fallback;
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-700.woff2') format('woff2'), 
@@ -29,12 +33,12 @@
   }
   @font-face {
     font-family: 'Poppins';
+    font-display: fallback;
     font-style: normal;
     font-weight: 800;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-800.woff2') format('woff2'), 
          url('/assets/fonts/poppins-v20-latin_latin-ext-800.ttf') format('truetype'); 
   }  
-
   */
 
 /* Variables
@@ -75,6 +79,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", Arial, sans-serif;
+    font-kerning: none;
+    -webkit-text-rendering: optimizeSpeed;
+    text-rendering: optimizeSpeed;
     background: var(--color-accent-2);
     color: var(--color-text);
     width: 100%;
@@ -417,7 +424,7 @@ h5,
 }
 
 .big-text {
-    font-size: 22vw;
+    font-size: clamp(60px, 22vw, 120px);
     line-height: .8;
     font-weight: 800;
     text-transform: uppercase;
@@ -456,6 +463,13 @@ li {
     margin-bottom: -0.1em;
 }
 
+.split-text-lines .words,
+.split-text-lines .chars {
+    margin-bottom: -0.1em;
+    margin-top: -0.1em;
+    line-height: 1.25;
+}
+
 @media(min-width:767px) {
     h1,
     .h1 {
@@ -483,7 +497,7 @@ li {
     }
 
     .big-text {
-        font-size: clamp(120px, 19vw, 280px);
+        font-size: clamp(120px, 18vw, 280px);
     }
 
     .big-paragraph {
@@ -518,6 +532,9 @@ article .h5 {
     font-size: 22px;
     font-weight: 600;
 }
+.text-md-left {
+    text-align: left;
+}
 }
 
 .color-dark {
@@ -538,6 +555,10 @@ article .h5 {
 }
 .bg-light-2 {
     background-color: var(--color-light-2);
+}
+
+.border-radius {
+    border-radius: 8px;
 }
 
 /* Site header
@@ -1031,28 +1052,30 @@ article .h5 {
 /* Reveal image
 --------------------------------------------------------------------------------- */
 
-.reveal-wrap {
-    visibility: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden
-}
-
-.reveal-image {
-    height: auto;
-    width: 100%;
-    transform-origin: left;
-    object-fit: cover;
-    object-position: center
-}
-
 .aspect-4-6 {
     aspect-ratio: 4/6;
 }
 
 .aspect-6-6 {
     aspect-ratio: 6/6;
+}
+
+@media(min-width:767px) {
+    .reveal-wrap {
+        visibility: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+    
+    .reveal-image {
+        height: auto;
+        width: 100%;
+        transform-origin: left;
+        object-fit: cover;
+        object-position: center
+    }
 }
 
 /* Pricing section 
@@ -1065,12 +1088,12 @@ article .h5 {
 
 .pricing-card {
     position: relative;
+    height: 100%;
     background-color: var(--color-light-1);
     overflow: hidden;
     border: 1px solid #0319801c;
     margin-right: -1px;
-    margin-bottom: -1px;
-    ;
+    margin-bottom: -1px
 }
 
 .pricing-card-headline {
@@ -1139,7 +1162,7 @@ article .h5 {
 .pricing-card h3,
 .pricing-card p,
 .pricing-card li {
-    transition: all .55s cubic-bezier(.7, .1, .2, 1);
+    transition: color .55s cubic-bezier(.7, .1, .2, 1);
 }
 
 .pricing-card-content-visible,
@@ -1234,6 +1257,7 @@ article .h5 {
     aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
+    border-radius: 8px
 }
 
 /* Feedback 
@@ -1248,6 +1272,10 @@ article .h5 {
 
 .feedback-bottom {
 	position: relative;
+}
+
+.clients-thumbs {
+    position: relative
 }
 
 .clients-thumbs span {
@@ -1527,7 +1555,7 @@ fieldset {
 .modal-link-wrap {
     position: fixed;
     right: 0;
-    top: 50%;
+    top: 50vh;
     transform: translateY(-50%) translateX(35%);
     box-shadow: 0 0 40px 20px #03198017;
     z-index: 9999
