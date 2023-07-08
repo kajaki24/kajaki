@@ -5,11 +5,12 @@
     <div class="container">
         <div class="row">
         <div class="col-md-7">
-            <div class="fade-in-opacity">
+            <div class="pb-small fade-in-opacity">
                 {{ content | safe }}
             </div>
-            <div>
-                <div class="post-navigation pt-small">
+            <div class="line-x"></div>
+            <div class="fade-in-opacity">
+                <div class="post-navigation pt-xsmall">
                     {%- if collections.trasy %}
                     {%- set nextPost = collections.trasy | getNextCollectionItem(page) %}
                     {%- set previousPost = collections.trasy | getPreviousCollectionItem(page) %}
@@ -44,7 +45,7 @@
         </div>
         </div>
         <div class="offset-md-1 col-md-4">
-            <div class="sidebar">
+            <div class="sidebar fade-in-opacity">
             <div>
                 <h3 class="h3 mt-2 mb-5">
                     Zobacz pozostałe trasy

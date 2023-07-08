@@ -1,9 +1,21 @@
-<section class="hero-page pt-large pb-medium">
+<section class="hero-post pt-xxlarge pb-medium">
     <div class="container">
-        <div class="hero-page-content">
-            <h1 class="h2 hero-page-title split-text-letters mb-4">{{ title }}</h1>
-            <div class="hero-page-description col-md-6 mx-auto">
-                <p class="split-text-lines mt-0">{{ description }}</p>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="">
+                    <p class="mt-2">
+                        <small class="color-light-2">Trasa spływu</small>
+                    </p>
+                    <h1 class="h2 hero-page-title split-text-letters mt-1 mb-4">{{ title }}</h1>
+                    <div class="hero-page-description">
+                        <p class="split-text-lines mt-0 color-light-2">{{ description }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-xl-2 col-md-6 col-xl-4 d-none d-md-block">
+                <div class="fade-in-opacity">
+                    <img src="{{thumbnail | url }}" class="post-thumb" alt="Trasa spływu - {{ title }}">
+                </div>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Przybyszew - Warka
-description: 
+description: Spływ kajakowy Pilicą to doskonały sposób na aktywny wypoczynek i odkrywanie uroków polskiej przyrody. Trasa spływu kajakowego Pilicą z Przybyszewa do Warki oferuje niezapomniane wrażenia i wyjątkową bliskość z naturą.
 thumbnail: /assets/images/trip/trasa-5.jpg
 date: 2023-05-22
 ---
