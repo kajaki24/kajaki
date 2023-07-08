@@ -3,7 +3,7 @@ layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Biejków - Warka
 description: Spływ kajakowy Pilicą to wyjątkowa przygoda, która pozwala połączyć aktywność fizyczną z obcowaniem z pięknem natury. Trasa spływu kajakowego z Biejkowa do Warki oferuje niezapomniane wrażenia i możliwość odkrywania uroków tej malowniczej rzeki.
-thumbnail: /assets/images/kajaki24-2.jpg
+thumbnail: /assets/images/trip/trasa-2.png
 date: 2023-02-02
 ---
 

@@ -3,7 +3,7 @@ layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Białobrzegi - Warka
 description: Spływ kajakowy jest wspaniałym sposobem na aktywne spędzanie czasu na świeżym powietrzu i jednoczesne odkrywanie uroków natury. Jednym z malowniczych szlaków kajakowych w Polsce jest trasa spływu kajakowego Pilicą z Białobrzegów do Warki.
-thumbnail: /assets/images/kajaki24-1.jpg
+thumbnail: /assets/images/trip/trasa-1.png
 date: 2023-02-16
 ---
 

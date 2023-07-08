@@ -1,10 +1,10 @@
 ---
 title: Trasy
-description: Trasy spływów
+description: Odkrywaj malowniczą rzekę Pilicę, ciesząc się wspaniałymi krajobrazami i bliskością natury. Oferuje różnorodne trasy spływów kajakowych, dostosowane do różnych poziomów zaawansowania i preferencji. 
 layout: "templates/archive.njk"
 ---
 
-<section>
+<section class="bg-light-1 pt-large pb-large">
     <div class="container">
         <div class="row">
            {% for post in collections.trasy %}
@@ -12,10 +12,10 @@ layout: "templates/archive.njk"
                 <a href="{{ post.url }}" class="no-trans">
                     <div class="">
                     <div class="">
-                        {% Image "src/assets/images/gallery/003.jpg", "Trasa jednodniowa - kajaki Warka" %}
+                        <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
                     </div>
-                    <div class="">
-                        <h3 class="h4 split-text-lines mb-4 color-light-1">
+                    <div class="pb-xsmall">
+                        <h3 class="h4 split-text-lines mb-4">
                             {{ post.data.title }}
                         </h3>
                     </div>

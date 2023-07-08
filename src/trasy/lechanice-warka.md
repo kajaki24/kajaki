@@ -3,7 +3,7 @@ layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Lechanice - Warka
 description: Trasa spływu kajakowego z Lechanic do Warki. Spływając Pilicą, możemy cieszyć się pięknymi widokami, bliskim kontaktem z naturą oraz zapierającymi dech w piersiach krajobrazami.
-thumbnail: /assets/images/kajaki24-3.jpg
+thumbnail: /assets/images/trip/trasa-4.jpg
 date: 2023-03-12
 ---
 

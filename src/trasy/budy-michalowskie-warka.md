@@ -3,7 +3,7 @@ layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Budy Michałowskie - Warka
 description: Jednym z popularnych szlaków dla miłośników kajakarstwa w Polsce jest trasa spływu kajakowego Pilicą z Budy Michałowskiej do Warki. Ta malownicza trasa oferuje niezapomniane wrażenia i możliwość odkrywania uroków rzeki.
-thumbnail: /assets/images/kajaki24-3.jpg
+thumbnail: /assets/images/trip/trasa-3.png
 date: 2023-01-09
 ---
 

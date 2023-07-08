@@ -3,7 +3,7 @@ layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Warka - Mniszew
 description: Trasa spływu kajakowego Pilicą z Warki do Mniszew oferuje niezapomniane widoki i przygodę na wodzie. To doskonała okazja, aby zanurzyć się w pięknie rzeki i cieszyć się aktywnością na łonie natury.
-thumbnail: /assets/images/opengraph.jpg
+thumbnail: /assets/images/trip/trasa-6.jpg
 date: 2023-04-21
 ---
 
