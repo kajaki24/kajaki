@@ -2,7 +2,8 @@
 layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Białobrzegi - Warka
-description: 
+description: Spływ kajakowy jest wspaniałym sposobem na aktywne spędzanie czasu na świeżym powietrzu i jednoczesne odkrywanie uroków natury. Jednym z malowniczych szlaków kajakowych w Polsce jest trasa spływu kajakowego Pilicą z Białobrzegów do Warki.
+thumbnail: /assets/images/kajaki24-1.jpg
 date: 2023-02-16
 ---
 
@@ -26,24 +27,3 @@ Po kilku godzinach pływania dotrzemy do urokliwej Warki, która będzie miejsce
 
 Spływ kajakowy Pilicą trasą z Białobrzegów do Warki to niezwykła przygoda, która pozwoli nam odkryć piękno polskiej przyrody, cieszyć się aktywnością na świeżym powietrzu i jednocześnie w pełni zrelaksować się. Trasa ta oferuje niezapomniane chwile, wspaniałe widoki i bliski kontakt z dziką przyrodą. Bez względu na to, czy jesteś początkującym kajakarzem, czy doświadczonym miłośnikiem wodnych wypraw, spływ kajakowy Pilicą zapewni Ci niezapomniane wrażenia i piękne wspomnienia.
 
-## Najczęściej zadawane pytania (FAQs)
-
-1. Czy potrzebuję doświadczenia w kajakarstwie, aby wziąć udział w spływie?
-
-Nie jest wymagane wcześniejsze doświadczenie. Trasa jest odpowiednia zarówno dla początkujących, jak i dla osób z pewnym doświadczeniem w kajakarstwie.
-
-2. Jak długo trwa spływ kajakowy Pilicą trasą z Białobrzegów do Warki?
-
-Czas trwania spływu zależy od tempa pływania, warunków pogodowych i indywidualnych preferencji. Przeciętnie spływ trwa około 5-6 godzin.
-
-3. Czy muszę mieć własny sprzęt kajakowy?
-
-Nie, można wynająć kajaki w miejscach startowych lub skorzystać z usług organizatorów spływów, którzy zapewniają kompletny sprzęt.
-
-4. Czy na trasie są miejsca postojowe?
-
-Tak, na trasie spływu znajdują się wyznaczone miejsca postojowe, gdzie można odpocząć i zjeść posiłek.
-
-5. Czy spływ kajakowy Pilicą jest odpowiedni dla dzieci?
-
-Spływ jest odpowiedni dla dzieci powyżej 12 roku życia pod opieką osoby dorosłej. Należy jednak wziąć pod uwagę umiejętności pływania dziecka oraz warunki pogodowe.

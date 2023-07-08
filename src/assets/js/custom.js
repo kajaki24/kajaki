@@ -218,6 +218,34 @@ menuToggle.addEventListener('click', function(){
 	navTl.reversed(!navTl.reversed());
 });
 
+// Accordion
+if (document.querySelector(".accordion")) {
+  let t = document.getElementsByClassName("accordion");
+    for (let e = 0; e < t.length; e++) t[e].addEventListener("click", function () {
+      let e = this.nextElementSibling;
+      if (e.style.maxHeight) e.style.maxHeight = null, this.classList.remove("open");
+      else {
+        for (let a = 0; a < t.length; a++) t[a].classList.remove("open"), t[a].nextElementSibling.style.maxHeight = null;
+        e.style.maxHeight = e.scrollHeight + "px", this.classList.toggle("open");
+      }
+    });
+  };
+
+  // Line animation
+const lineX = gsap.utils.toArray('.line-x');
+lineX.forEach(lineXItem => {
+gsap.from(lineXItem, { 
+width: "0",
+duration: 1.2,
+delay: 0.1,
+ease: Power4.easeInOut,
+scrollTrigger: {
+trigger: lineXItem,
+start: "top 98%",
+}
+})
+});
+
 // Circle
 if(document.querySelector(".circ-flex-col")) {
 if (window.matchMedia("(min-width: 767px)").matches) {

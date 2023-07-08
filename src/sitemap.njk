@@ -31,8 +31,17 @@ layout: null
         </url> 
         <url>
             <loc>
-                https://przemekmiros.pl/kontakt
+                https://kajaki24.com.pl/kontakt
             </loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
         </url> 
+    {% for page in collections.trasy %}
+        <url>
+            <loc>
+                https://kajaki24.com.pl{{ page.url | url }}
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url> 
+    {% endfor %}
 </urlset>
+

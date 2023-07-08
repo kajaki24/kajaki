@@ -1,11 +1,77 @@
 {% include "partials/header.njk" %}
-{% include "partials/hero-page.njk" %}
+{% include "partials/hero-post.njk" %}
 
-<section class="pt-medium pb-medium bg-light-1">
+<section class="article pt-medium pb-medium bg-light-1">
     <div class="container">
-        <div class="col-md-8 mx-auto">
-            {{ content | safe }}
+        <div class="row">
+        <div class="col-md-7">
+            <div class="fade-in-opacity">
+                {{ content | safe }}
+            </div>
+            <div>
+                <div class="post-navigation pt-small">
+                    {%- if collections.trasy %}
+                    {%- set nextPost = collections.trasy | getNextCollectionItem(page) %}
+                    {%- set previousPost = collections.trasy | getPreviousCollectionItem(page) %}
+                    {%- if nextPost or previousPost %}
+                    <ul class="row fadeIn">
+                        {%- if previousPost %}
+                        <li class="hover-reveal-wrap col-md-6 prev d-none d-md-block">
+                            <p class="mb-4">
+                                <small>
+                                    Poprzedni:
+                                </small>
+                            </p>
+                            <a href="{{ previousPost.url | url }}" title="{{ previousPost.data.title }}"
+                                class="h4 mb-3">{{ previousPost.data.title }}</a>
+                        </li>
+                        {% endif %}
+                        {%- if nextPost %}
+                        <li class="hover-reveal-wrap col-md-6 next">
+                            <p class="mb-4">
+                                <small>
+                                    Kolejny:
+                                </small>
+                            </p>
+                            <a href="{{ nextPost.url | url }}" title="{{ nextPost.data.title }}"
+                                class="h4 mb-3">{{ nextPost.data.title }}</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {%- endif %}
+                    {%- endif %}
+                </div>
         </div>
+        </div>
+        <div class="offset-md-1 col-md-4">
+            <div class="sidebar">
+            <div>
+                <h3 class="h3 mt-2 mb-5">
+                    Zobacz pozostałe trasy
+                </h3>
+            </div>
+           {% for post in collections.trasy %}
+            <div class="pb-xxsmall fade-in-opacity">
+                <a href="{{ post.url }}" class="no-trans">
+                    <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{ post.data.thumbnail | url }}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="h5 mt-1 mb-2">
+                            {{ post.data.title }}
+                        </h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="line-x"></div>
+            <div class="pb-xxsmall"></div>
+            {%- endfor -%}
+            </div>
+        </div>
+        </div>
+
     </div>
 </section>
 

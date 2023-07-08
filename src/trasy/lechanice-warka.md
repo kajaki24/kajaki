@@ -2,7 +2,8 @@
 layout: "templates/post.njk"
 permalink: "/trasy/{{ title | slugify }}/"
 title: Lechanice - Warka
-description: 
+description: Trasa spływu kajakowego z Lechanic do Warki. Spływając Pilicą, możemy cieszyć się pięknymi widokami, bliskim kontaktem z naturą oraz zapierającymi dech w piersiach krajobrazami.
+thumbnail: /assets/images/kajaki24-3.jpg
 date: 2023-03-12
 ---
 
@@ -24,26 +25,6 @@ Spływ kajakowy Pilicą trasą z Lechanic do Warki pozwoli nam odkryć niezwykł
 
 Po kilku godzinach pływania dotrzemy do urokliwej Warki, która będzie miejscem zakończenia naszego spływu. Warka jest znana ze swojej bogatej historii, urokliwych zabytków oraz przyjaznej atmosfery. Po wyczerpującym spływie będziemy mieć okazję odpocząć, zrelaksować się i skosztować regionalnych specjałów w jednej z lokalnych restauracji.
 
-Spływ kajakowy Pilicą trasą z Lechanic do Warki to niezapomniana przygoda, która pozwala na cieszenie się pięknem natury i aktywnym spędzaniu czasu na świeżym powietrzu. Ta malownicza trasa oferuje niepowtarzalne widoki, bliski kontakt z dziką przyrodą oraz możliwość zrelaksowania się w otoczeniu spokojnej rzeki. Niezależnie od tego, czy jesteś początkującym kajakarzem, czy doświadczonym miłośnikiem wodnych przygód, spływ kajakowy Pilicą zapewni Ci niezapomniane wrażenia i piękne chwile.
+Spływ kajakowy Pilicą trasą z Lechanic do Warki to niezapomniana przygoda, która pozwala na cieszenie się pięknem natury i aktywnym spędzaniu czasu na świeżym powietrzu. Ta malownicza trasa oferuje niepowtarzalne widoki, bliski kontakt z dziką przyrodą oraz możliwość zrelaksowania się w otoczeniu spokojnej rzeki. 
 
-## Najczęściej zadawane pytania (FAQs)
-
-1. Czy potrzebuję doświadczenia w kajakarstwie, aby wziąć udział w spływie?
-
-Nie, trasa jest odpowiednia zarówno dla początkujących, jak i dla osób bez wcześniejszego doświadczenia. Instruktorzy udzielą niezbędnych wskazówek i zapewnią krótkie szkolenie przed rozpoczęciem spływu.
-
-2. Jak długo trwa spływ kajakowy Pilicą z Lechanic do Warki?
-
-Czas trwania spływu zależy od tempa pływania, warunków pogodowych i innych czynników. Przeciętnie spływ trwa około 4-6 godzin.
-
-3. Czy muszę mieć własny sprzęt kajakowy?
-
-Nie, można wynająć kajaki w miejscach startowych lub skorzystać z usług organizatorów spływów, którzy zapewniają kompletny sprzęt niezbędny do spływu.
-
-4. Czy spływ jest odpowiedni dla dzieci?
-
-Tak, spływ kajakowy Pilicą jest odpowiedni dla dzieci powyżej 10 lat pod opieką osoby dorosłej. Ważne jest, aby dzieci miały umiejętność pływania i były odpowiednio zabezpieczone kamizelkami asekuracyjnymi.
-
-5. Czy na trasie są miejsca postojowe?
-
-Tak, na trasie spływu znajdują się wyznaczone miejsca postojowe, gdzie można odpocząć, zjeść posiłek i napić się wody.
+**Niezależnie od tego, czy jesteś początkującym kajakarzem, czy doświadczonym miłośnikiem wodnych przygód, spływ kajakowy Pilicą zapewni Ci niezapomniane wrażenia i piękne chwile.**
