@@ -11,7 +11,7 @@ Spływ kajakowy jest wspaniałym sposobem na aktywne spędzanie czasu na śwież
 
 ## Przygotowania do spływu kajakowego
 
-Przed rozpoczęciem przygody na kajakach należy odpowiednio się przygotować. Ważne jest zapoznanie się z zasadami bezpieczeństwa i przepisami dotyczącymi korzystania z kajaków. Należy również zadbać o odpowiedni sprzęt, takie jak kajaki, wiosła, kamizelki asekuracyjne oraz inne niezbędne akcesoria.
+Przed rozpoczęciem przygody na kajakach należy odpowiednio się przygotować. Ważne jest zapoznanie się z zasadami bezpieczeństwa i przepisami dotyczącymi korzystania z kajaków. 
 
 ## Białobrzegi - Początek przygody
 

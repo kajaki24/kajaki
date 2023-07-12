@@ -13,7 +13,7 @@ Trasa spływu kajakowego Pilicą z Warki do Mniszew oferuje niezapomniane widoki
 
 ## Przygotowania do spływu kajakowego
 
-Przed rozpoczęciem spływu kajakowego Pilicą, należy odpowiednio się przygotować. Ważne jest zapoznanie się z przepisami dotyczącymi pływania kajakiem oraz zasadami bezpieczeństwa. Należy również zadbać o odpowiedni sprzęt, tak jak kajak, wiosło, kamizelkę asekuracyjną i inne niezbędne akcesoria.
+Przed rozpoczęciem spływu kajakowego Pilicą, należy odpowiednio się przygotować. Ważne jest zapoznanie się z przepisami dotyczącymi pływania kajakiem oraz zasadami bezpieczeństwa. 
 
 ## Warka - Początek przygody
 

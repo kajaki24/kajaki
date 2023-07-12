@@ -11,7 +11,7 @@ Spływ kajakowy Pilicą to wspaniała przygoda dla miłośników aktywnego spęd
 
 ## Przygotowania do spływu kajakowego
 
-Zanim wyruszymy na spływ kajakowy, istotne jest odpowiednie przygotowanie się do tej przygody. Przede wszystkim, należy zapoznać się z zasadami bezpieczeństwa i przepisami dotyczącymi korzystania z kajaków. Ważne jest również zaopatrzenie się w niezbędny sprzęt, tak jak kajak, wiosło, kamizelkę asekuracyjną oraz niezbędne akcesoria.
+Zanim wyruszymy na spływ kajakowy, istotne jest odpowiednie przygotowanie się do tej przygody. Przede wszystkim, należy zapoznać się z zasadami bezpieczeństwa i przepisami dotyczącymi korzystania z kajaków.
 
 ## Lechanice - Początek przygody
 

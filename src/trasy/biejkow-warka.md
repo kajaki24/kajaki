@@ -9,7 +9,7 @@ date: 2023-02-02
 
 ## Przygotowania do spływu z Biejkowa do Warki
 
-Przed rozpoczęciem spływu kajakowego Pilicą ważne jest odpowiednie przygotowanie się do tej aktywności. Należy zapoznać się z przepisami dotyczącymi korzystania z kajaków oraz zasadami bezpieczeństwa na wodzie. Warto również zadbać o odpowiedni sprzęt, tak jak kajak, wiosło, kamizelkę asekuracyjną i inne niezbędne akcesoria.
+Przed rozpoczęciem spływu kajakowego Pilicą ważne jest odpowiednie przygotowanie się do tej aktywności. Należy zapoznać się z przepisami dotyczącymi korzystania z kajaków oraz zasadami bezpieczeństwa na wodzie. 
 
 ## Biejków - Początek przygody
 

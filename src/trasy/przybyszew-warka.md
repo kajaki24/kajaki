@@ -11,7 +11,7 @@ Spływ kajakowy Pilicą to doskonały sposób na aktywny wypoczynek i odkrywanie
 
 ## Przygotowania do spływu kajakowego
 
-Przed rozpoczęciem spływu kajakowego Pilicą należy zadbać o odpowiednie przygotowanie. Ważne jest zapoznanie się z zasadami bezpieczeństwa na wodzie oraz przepisami dotyczącymi korzystania z kajaków. Należy również zadbać o odpowiedni sprzęt, tak jak kajak, wiosło, kamizelkę asekuracyjną i inne niezbędne akcesoria.
+Przed rozpoczęciem spływu kajakowego Pilicą należy zadbać o odpowiednie przygotowanie. Ważne jest zapoznanie się z zasadami bezpieczeństwa na wodzie oraz przepisami dotyczącymi korzystania z kajaków. 
 
 ## Przybyszew - Początek przygody
 
