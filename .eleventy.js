@@ -53,46 +53,57 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/galeria/**/*.md').reverse();
   });
 
-  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className) => {
+  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className, maxWidth = 800) => {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
-
+  
     let stats = await Image(src, {
       widths: [25, 320, 640, 960, 1200, 1800, 2400],
       formats: ['jpeg', 'webp'],
       urlPath: '/assets/images/',
       outputDir: './public/assets/images/',
     });
-
-    let lowestSrc = stats['jpeg'][0];
-
+  
+    let format = 'webp';
+  
+    if (maxWidth > 0) {
+      let images = stats[format];
+      let filteredImages = images.filter((image) => image.width <= maxWidth);
+      if (filteredImages.length > 0) {
+        stats[format] = filteredImages;
+      } else {
+        // Jeśli brak obrazków o szerokości mniejszej lub równej maksymalnej szerokości, wybierz najbliższy większy obrazek
+        let closestImage = images.reduce((prev, curr) => (Math.abs(curr.width - maxWidth) < Math.abs(prev.width - maxWidth) ? curr : prev));
+        stats[format] = [closestImage];
+      }
+    }
+  
+    let lowestSrc = stats[format][0];
+  
     const srcset = Object.keys(stats).reduce(
       (acc, format) => ({
         ...acc,
-        [format]: stats[format].reduce(
-          (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-          '',
-        ),
+        [format]: stats[format].reduce((_acc, curr) => `${_acc} ${curr.srcset},`, ''),
       }),
       {},
     );
-
+  
     const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-
+  
     const img = `<img
       loading="lazy"
       alt="${alt}"
       src="${lowestSrc.url}"
       sizes='(min-width: 1024px) 1024px, 100vw'
-      srcset="${srcset['jpeg']}"
+      srcset="${srcset[format]}"
       width="${lowestSrc.width}"
       height="${lowestSrc.height}"
       class="${className}">`;
-
+  
     return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
-});
-
+  });
+  
 
     return {
       dir: {
