@@ -1742,3 +1742,6 @@ fieldset {
     margin-left: 0
 }
 
+.w-100 {
+    width: 100%;
+  }
