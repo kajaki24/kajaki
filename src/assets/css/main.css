@@ -707,6 +707,10 @@ li {
     font-weight: 600;
 }
 
+.menu-fb-icon {
+    margin-left: 1em;
+}
+
 @media(min-width:767px) {
     .fixed-phone:hover .fixed-phone-number {
         transform: translateY(-50%) scale(1);
