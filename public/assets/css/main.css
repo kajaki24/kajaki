@@ -719,7 +719,7 @@ li {
 
 @media(min-width:1400px) {
     .logo-wrapper {
-        padding-left: 20%;
+        padding-right: 20%;
     }
     .desktop-menu ul li a {
         padding: 65px 30px 25px;
