@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDPJ9K8L11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZDPJ9K8L11');
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Przemek Miros">
     <meta name="google-site-verification" content="I86vpo9DDssdamfyQUbpHH2cr6g2YvSezT6Rk95VjUs" />
-
     <title>{{ title }} - Kajaki Warka</title>
     <meta name="description" content="{{ description }}">
-
     <meta property="og:title" content="Kajaki Warka">
     <meta property="og:site_name" content="Spływy kajakowe Pilicą - Warka">
     <meta property="og:url" content="https://kajaki24.com.pl">
@@ -17,19 +22,13 @@
         content="Kajaki24 to wypożyczalnia kajaków która kompleksowo zorganizuje wypoczynek na rzece i nie tylko. Przeżyj wspaniałą przygodę nad Pilicą">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://kajaki24.com.pl/assets/images/opengraph.jpg">
-
-    <!-- Favicon Icon -->
     <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800" rel="stylesheet">
-    <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/vendor.css">
     <link rel="stylesheet" href="/assets/css/main.css">
-
     <link rel="stylesheet" href="/assets/css/glightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css">
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
-
     <style>
     body {
 	opacity: 0;
@@ -39,9 +38,7 @@
 	opacity: 1;
     }
     </style>
-
 </head>
-
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     <div class="fixed-button">
         <a href="tel:{{ collections.settings[0].data.site_phone }}" class="fixed-phone no-trans" title="Zadzwoń">
@@ -64,7 +61,6 @@
         <button class="modal-link" data-modal="modal-one">Voucher</button>
     </div> 
     <div class="page fade-no-duration">
-
         <header class="site-header">
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -116,7 +112,6 @@
                 </div>
             </div>
         </header>
- 
         <section class="fullpage-menu">
             <div class="fullpage-menu-inner">
                 <div class="menu-bg"></div>
