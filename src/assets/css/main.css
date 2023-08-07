@@ -555,6 +555,9 @@ li {
 .color-blue {
     color: var(--color-accent-2);
 }
+.color-orange {
+    color: var(--color-accent-4);
+}
 
 .bg-light-1 {
     background-color: var(--color-light-1);
