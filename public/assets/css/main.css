@@ -142,6 +142,14 @@ article ul li {
     }
 }
 
+.border {
+    border-radius: 5px;
+}
+
+.breadcrumbs {
+    font-size: 15px;
+}
+
 /* List
 ------------------------------------------------ */
 
@@ -400,7 +408,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 h1,
 .h1 {
     font-size: 38px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h2,
@@ -1256,6 +1264,11 @@ li {
     overflow: hidden;
 }
 
+.about-image .img-sm-right {
+    right: auto;
+    left: -18%;
+}
+
 .about-content .big-paragraph {
     font-weight: 600;
 }
@@ -1267,7 +1280,7 @@ li {
     aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
-    border-radius: 8px
+    border-radius: 5px
 }
 
 /* Feedback 
