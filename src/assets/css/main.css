@@ -1091,6 +1091,7 @@ li {
     .reveal-image {
         height: auto;
         width: 100%;
+        border-radius: 5px;
         transform-origin: left;
         object-fit: cover;
         object-position: center

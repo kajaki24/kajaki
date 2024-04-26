@@ -7,7 +7,7 @@ fadeIn.forEach(element =>{
    gsap.from(element, {
        autoAlpha: 0,
        opacity: 0,
-       yPercent: 100,
+       yPercent: 10,
        duration: 1,
        ease: Power3. easeInOut,
        scrollTrigger: { 
