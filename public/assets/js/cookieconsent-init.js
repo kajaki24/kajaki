@@ -38,16 +38,78 @@ cc.run({
         }
     },
 
-    onFirstAction: function(){
-        console.log('onFirstAction fired');
+    onFirstAction: function(user_preferences, cookie){
+
     },
 
     onAccept: function (cookie) {
-        console.log('onAccept fired ...');
+        if (cc.allowedCategory('analytics')) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+        if (cc.allowedCategory('advertising')) {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted'
+            });
+fbq('consent', 'grant');
+        }
+        if (cc.allowedCategory('personalization')) {
+            gtag('consent', 'update', {
+                'personalization_storage': 'granted',
+            });
+        }
+        if (cc.allowedCategory('security')) {
+            gtag('consent', 'update', {
+                'security_storage': 'granted'
+            });
+        }
     },
 
-    onChange: function (cookie, changed_preferences) {
-        console.log('onChange fired ...');
+    onChange: function (cookie, changed_categories) {
+        // callback triggered when user changes preferences after consent has already been given
+       if (cc.allowedCategory('analytics')) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+        if (!cc.allowedCategory('analytics')) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        if (cc.allowedCategory('advertising')) {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted'
+            });
+fbq('consent', 'grant');
+        }
+        if (!cc.allowedCategory('advertising')) {
+            gtag('consent', 'update', {
+                'ad_storage': 'denied'
+            });
+fbq('consent', 'revoke');
+        }
+        if (cc.allowedCategory('personalization')) {
+            gtag('consent', 'update', {
+                'personalization_storage': 'granted',
+            });
+        }
+        if (!cc.allowedCategory('personalization')) {
+            gtag('consent', 'update', {
+                'personalization_storage': 'denied',
+            });
+        }
+        if (cc.allowedCategory('security')) {
+            gtag('consent', 'update', {
+                'security_storage': 'granted'
+            });
+        }
+        if (!cc.allowedCategory('security')) {
+            gtag('consent', 'update', {
+                'security_storage': 'denied'
+            });
+        }
     },
 
     languages: {
@@ -129,3 +191,6 @@ cc.run({
     }
 
 });
+
+<noscript><iframe src="https://www.googletagmanager.com/gtag/js?id=G-ZDPJ9K8L11" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
