@@ -192,5 +192,3 @@ fbq('consent', 'revoke');
 
 });
 
-<noscript><iframe src="https://www.googletagmanager.com/gtag/js?id=G-ZDPJ9K8L11" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
