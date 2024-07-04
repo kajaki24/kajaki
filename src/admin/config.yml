@@ -45,7 +45,6 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: Title, name: title, widget: string, tagname: h1}
       - name: images
         label: images
         widget: list
@@ -60,7 +59,6 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: Title, name: title, widget: string, tagname: h1}
       - name: images
         label: images
         widget: list
@@ -75,7 +73,6 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: Title, name: title, widget: string, tagname: h1}
       - name: images
         label: images
         widget: list
