@@ -9,6 +9,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/static/img");
   eleventyConfig.addPassthroughCopy("src/galeria/img");
+  eleventyConfig.addPassthroughCopy("src/galeria-szkoly/img");
+  eleventyConfig.addPassthroughCopy("src/galeria-firmy/img");
   eleventyConfig.addPassthroughCopy("src/admin");
 
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
