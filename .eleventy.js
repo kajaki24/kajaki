@@ -48,9 +48,19 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/settings/**/*.md').reverse();
   });  
 
-  // Gallery
+  // Gallery Main
   eleventyConfig.addCollection('galeria', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/galeria/**/*.md').reverse();
+  });
+
+  // Gallery School
+    eleventyConfig.addCollection('galeria_szkoly', function(collectionApi) {
+      return collectionApi.getFilteredByGlob('src/galeria-szkoly/**/*.md').reverse();
+    });
+
+  // Gallery Business
+  eleventyConfig.addCollection('galeria_firmy', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/galeria-firmy/**/*.md').reverse();
   });
 
   eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className, maxWidth = 800) => {

@@ -1,8 +1,7 @@
 ---
-title: Moja Galeria
+title: Galeria - Firmy
 images:
   - image: /galeria/img/20230723_181827(0).jpg
-
   - image: /assets/images/gallery/k-2.jpg
   - image: /assets/images/gallery/k-3.jpg
   - image: /galeria/img/003.jpg

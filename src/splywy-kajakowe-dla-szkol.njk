@@ -226,9 +226,9 @@ layout: "templates/base.njk"
   <div class="container">
     <h2 class="text-md-center split-text-lines">Zdjęcia ze spływów</h2>
     <div class="gallery-wrap pt-xsmall">
-      {% for item in collections.galeria %}
+      {% for item in collections.galeria_szkoly %}
       <div class="row g-3">
-        {% for image in item.data.images.slice(0, 6) %}
+        {% for image in item.data.images %}
         <div class="col-6 col-md-4">
           <a href="{{ image.image }}" class="glightbox no-trans">
             <img
