@@ -1,22 +1,13 @@
 ---
 title: Galeria - Firmy
 images:
-  - image: /galeria/img/20230723_181827(0).jpg
-  - image: /assets/images/gallery/k-2.jpg
-  - image: /assets/images/gallery/k-3.jpg
-  - image: /galeria/img/003.jpg
-  - image: /galeria/img/k-4.jpg
-  - image: /galeria/img/k-5.jpg
-  - image: /galeria/img/455.jpg
-  - image: /galeria/img/456.jpg
-  - image: /galeria/img/457.jpg
-  - image: /galeria/img/20210620_191313.jpg
-  - image: /galeria/img/20230608_172151.jpg
-  - image: /galeria/img/mot2.jpg
-  - image: /galeria/img/mot1.jpg
-  - image: /galeria/img/k-1.jpg
-  - image: /galeria/img/ognisko-4.jpg
-  - image: /galeria/img/ognisko-3.jpg
-  - image: /galeria/img/ognisko-2.jpg
-  - image: /galeria/img/20230708_114815.jpg
+  - image: /galeria-firmy/img/1.jpg
+  - image: /galeria-firmy/img/18.jpg
+  - image: /galeria-firmy/img/2.jpg
+  - image: /galeria-firmy/img/28.jpg
+  - image: /galeria-firmy/img/3.jpg
+  - image: /galeria-firmy/img/34.jpg
+  - image: /galeria-firmy/img/7.jpg
+  - image: /galeria-firmy/img/36.jpg
+  - image: /galeria-firmy/img/38.jpg
 ---
