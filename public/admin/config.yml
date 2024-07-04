@@ -38,7 +38,7 @@ collections:
       - { label: "Data", name: "date", widget: "date" }
 # Galeria główna
   - label: "Galeria"
-    name: gallery
+    name: galeria
     folder: "src/galeria"
     media_folder: "img/"
     public_folder: "/galeria/img/"
@@ -51,8 +51,8 @@ collections:
         fields:
           - {label: Name, name: image, widget: image}
 # Galeria szkoły
-  - label: "Galeria"
-    name: gallery2
+  - label: "Galeria - Szkoły"
+    name: galeria_szkoly
     folder: "src/galeria-szkoly"
     media_folder: "img/"
     public_folder: "/galeria-szkoly/img/"
@@ -66,7 +66,7 @@ collections:
           - {label: Name, name: image, widget: image}
 # Galeria firmy
   - label: "Galeria - Firmy"
-    name: gallery3
+    name: galeria_firmy
     folder: "src/galeria-firmy"
     media_folder: "img/"
     public_folder: "/galeria-firmy/img/"
