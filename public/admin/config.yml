@@ -36,16 +36,43 @@ collections:
       - { label: "Cena", name: "price", widget: "string", required: false }
       - { label: "Pod ceną", name: "price_descrition", widget: "string", required: false }
       - { label: "Data", name: "date", widget: "date" }
-# Galeria
+# Galeria główna
   - label: "Galeria"
-    name: gallery
+    name: galeria
     folder: "src/galeria"
     media_folder: "img/"
     public_folder: "/galeria/img/"
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: Title, name: title, widget: string, tagname: h1}
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}
+# Galeria szkoły
+  - label: "Galeria - Szkoły"
+    name: galeria_szkoly
+    folder: "src/galeria-szkoly"
+    media_folder: "img/"
+    public_folder: "/galeria-szkoly/img/"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}
+# Galeria firmy
+  - label: "Galeria - Firmy"
+    name: galeria_firmy
+    folder: "src/galeria-firmy"
+    media_folder: "img/"
+    public_folder: "/galeria-firmy/img/"
+    slug: "{{slug}}"
+    create: true
+    fields:
       - name: images
         label: images
         widget: list

@@ -1,8 +1,9 @@
 ---
-title: Moja Galeria
+title: Galeria - Główna
 images:
+  - image: /galeria/img/37.jpg
   - image: /galeria/img/20230723_181827(0).jpg
-
+  - image: /galeria/img/ognisko-2.jpg
   - image: /assets/images/gallery/k-2.jpg
   - image: /assets/images/gallery/k-3.jpg
   - image: /galeria/img/003.jpg
@@ -18,6 +19,7 @@ images:
   - image: /galeria/img/k-1.jpg
   - image: /galeria/img/ognisko-4.jpg
   - image: /galeria/img/ognisko-3.jpg
-  - image: /galeria/img/ognisko-2.jpg
   - image: /galeria/img/20230708_114815.jpg
+  - image: /galeria/img/14.jpg
+  - image: /galeria/img/49.jpg
 ---

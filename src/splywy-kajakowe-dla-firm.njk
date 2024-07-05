@@ -43,7 +43,7 @@ layout: "templates/base.njk"
       <div class="offset-md-1 col-md-5">
         <div class="about-image">
           <div class="reveal-wrap">
-            {% Image "src/assets/images/trip/trasa-3.png", "Spływy kajakami
+            {% Image "src/assets/images/gallery/31.jpg", "Spływy kajakami
             Warka", "reveal-image", 1200 %}
           </div>
           <div class="image-small img-sm-right d-none d-md-block">
@@ -206,9 +206,9 @@ layout: "templates/base.njk"
   <div class="container">
     <h2 class="text-md-center split-text-lines">Zdjęcia ze spływów</h2>
     <div class="gallery-wrap pt-xsmall">
-      {% for item in collections.galeria %}
+      {% for item in collections.galeria_firmy %}
       <div class="row g-3">
-        {% for image in item.data.images.slice(0, 6) %}
+        {% for image in item.data.images %}
         <div class="col-6 col-md-4">
           <a href="{{ image.image }}" class="glightbox no-trans">
             <img
