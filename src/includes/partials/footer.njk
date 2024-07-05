@@ -159,30 +159,7 @@
       <span class="modal-close modal-exit">X</span>
     </div>
   </div>
-  <div id="fb-root"></div>
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
-  <script>
-    const transWrap = document.querySelector("body");
-    setTimeout(function () {
-      return transWrap.classList.add('render');
-    }, 60);
-    var navlinks = Array.from(document.querySelectorAll('a:not(.no-trans)'));
-    var navigate = function navigate(linkEl) {
-      transWrap.classList.remove('render');
-      transWrap.addEventListener('transitionend', function () {
-        if (linkEl.href) {
-          window.location = linkEl.href;
-        }
-      });
-    };
-    navlinks.forEach(function (link) {
-      return link.addEventListener('click', function (ev) {
-        ev.preventDefault();
-        navigate(ev.target);
-      });
-    });
-  </script>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",

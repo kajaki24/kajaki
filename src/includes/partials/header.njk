@@ -50,16 +50,131 @@
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
     
     <style>
-    body {
-	opacity: 0;
-	transition: opacity .2s;
-    }
-    body.render {
-	opacity: 1;
-    }
-    </style>
+        .preloader {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 100vw;
+          height: 100vh;
+          background: var(--color-accent-1);
+          transition: all 0.25s ease-out;
+          overflow: hidden;
+          pointer-events: none;
+          z-index: 10000000;
+        }
+        .preloader_inner {
+          position: absolute;
+          top: 48%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          z-index: 10000000;
+        }
+        .scrollContainer {
+          opacity: 0;
+          transition: opacity 0.25s ease-out;
+        }
+  
+        .circle-loader {
+          position: relative;
+          width: auto;
+          height: auto;
+        }
+  
+        .circle-loader div {
+          height: 10px;
+          width: 10px;
+          background-color: var(--color-light-1);
+          border-radius: 50%;
+          position: absolute;
+          -webkit-animation: 0.8s opaque ease-in-out infinite both;
+          animation: 0.8s opaque ease-in-out infinite both;
+        }
+  
+        .circle-loader div:nth-child(1) {
+          top: -25px;
+          left: 0;
+        }
+        .circle-loader div:nth-child(2) {
+          top: -17px;
+          left: 17px;
+          -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+        }
+        .circle-loader div:nth-child(3) {
+          top: 0;
+          left: 25px;
+          -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+        }
+        .circle-loader div:nth-child(4) {
+          top: 17px;
+          left: 17px;
+          -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+        }
+        .circle-loader div:nth-child(5) {
+          top: 25px;
+          left: 0;
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+        .circle-loader div:nth-child(6) {
+          top: 17px;
+          left: -17px;
+          -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+        }
+        .circle-loader div:nth-child(7) {
+          top: 0;
+          left: -23px;
+          -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+        }
+        .circle-loader div:nth-child(8) {
+          top: -17px;
+          left: -17px;
+          -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+        }
+  
+        @keyframes opaque {
+          0% {
+            opacity: 0.1;
+          }
+          40% {
+            opacity: 1;
+          }
+          80% {
+            opacity: 0.1;
+          }
+          100% {
+            opacity: 0.1;
+          }
+        }
+      </style>
+
 </head>
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+    <div class="h-100h">
+        <div class="preloader">
+          <div class="preloader_inner">
+            <div class="circle-loader">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+    </div>
     <div class="fixed-button">
         <a href="tel:{{ collections.settings[0].data.site_phone }}" class="fixed-phone no-trans" title="Zadzwoń">
             <span class="fixed-phone-icon">
@@ -80,7 +195,16 @@
     <div class="modal-link-wrap d-none d-md-block">
         <button class="modal-link" data-modal="modal-one">Voucher</button>
     </div> 
-    <div class="page fade-no-duration">
+    <div class="page fade-no-duration" id="wrapper">
+        <script>
+            var obj = document.querySelector('.preloader'),
+              page = document.querySelector('#wrapper');
+    
+            window.addEventListener("load", function () {
+              obj.style.opacity = "0";
+              page.style.opacity = "1";
+            });
+          </script>
         <header class="site-header">
             <div class="container-fluid">
                 <div class="row align-items-center">
