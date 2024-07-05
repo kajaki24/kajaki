@@ -96,7 +96,45 @@ img {
 
 .image-wrapper {
     height: 100%;
+    overflow: hidden;
 }
+
+
+.blur-load {
+    position: relative
+  }
+  
+  .blur-load .placeholder {
+    height: inherit;
+    width: 100%;
+    filter: blur(5px);
+    transition: opacity .5s cubic-bezier(.79,0,.07,.88);
+    object-fit: cover;
+    z-index: 1
+  }
+  
+  .blur-load.loaded .placeholder {
+    opacity: 0
+  }
+  
+  .blur-load picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: opacity .5s cubic-bezier(.79,0,.07,.88);
+    opacity: 0
+  }
+  
+  .blur-load.loaded picture img {
+    opacity: 1
+  } 
+  
+  .reveal-wrap .placeholder {
+    opacity: 0;
+  }
 
 a {
     color: inherit;
@@ -979,13 +1017,13 @@ li {
 
 .circ-small-image {
     position: absolute;
-    width: 60%;
+    width: 33%;
     top: 51.5%;
-    left: 21%;
+    left: 33.5%;
     transform: translateY(-42%)
 }
 
-.circ-big-image img {
+.circ-big-image picture img {
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -993,7 +1031,7 @@ li {
     opacity: .25
 }
 
-.circ-small-image img {
+.circ-small-image picture img {
     position: absolute;
     width: 100%;
     top: 0;

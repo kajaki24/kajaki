@@ -112,7 +112,7 @@ gsap.to(".kayak", {
 let revealContainers = document.querySelectorAll(".reveal-wrap");
 
 revealContainers.forEach((element) => {
-  let image = element.querySelector(".reveal-image");
+  let image = element.querySelector(".reveal-wrap picture img");
   gsap.set(element, { autoAlpha: 1 }); 
 
   gsap.from(element, 1.5, {
@@ -304,3 +304,20 @@ circleContent0.addEventListener("mouseenter", () => {
         });
 }
 }
+
+
+  // Lazy blur images
+  if (document.querySelector(".blur-load")) {
+    const blurImgWrap = document.querySelectorAll(".blur-load");
+    blurImgWrap.forEach((item) => {
+      const img = item.querySelector("picture img");
+      function loaded() {
+        item.classList.add("loaded");
+      }
+      if (img.complete) {
+        loaded();
+      } else {
+        img.addEventListener("load", loaded);
+      }
+    });
+  }
