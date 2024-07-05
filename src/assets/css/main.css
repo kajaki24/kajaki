@@ -96,7 +96,6 @@ img {
 
 .image-wrapper {
     height: 100%;
-    overflow: hidden;
 }
 
 
@@ -1024,16 +1023,19 @@ li {
 }
 
 .circ-big-image picture img {
+    height: auto!important;
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
-    opacity: .25
+    transform: translateY(-18%);
+    opacity: .25!important
 }
 
 .circ-small-image picture img {
     position: absolute;
     width: 100%;
+    height: auto;
     top: 0;
     left: 0;
     border-radius: 50%;
