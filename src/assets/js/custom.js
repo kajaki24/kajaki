@@ -249,59 +249,26 @@ start: "top 98%",
 // Circle
 if(document.querySelector(".circ-flex-col")) {
 if (window.matchMedia("(min-width: 767px)").matches) {
-const circleContent0 = document.querySelector(".hover0");
-const circleContent1 = document.querySelector(".hover1");
-const circleContent2 = document.querySelector(".hover2");
-const circleContent3 = document.querySelector(".hover3");
-
-const circleImage0 = document.querySelector(".circ-img-0");
-const circleImage1 = document.querySelector(".circ-img-1");
-const circleImage2 = document.querySelector(".circ-img-2");
-const circleImage3 = document.querySelector(".circ-img-3");
-
-circleContent0.addEventListener("mouseenter", () => {
-  circleImage0.classList.add("active");
-  circleImage1.classList.remove("active");
-  circleImage2.classList.remove("active");
-  circleImage3.classList.remove("active");
-  circleContent0.classList.add("active");
-  circleContent1.classList.remove("active");
-  circleContent2.classList.remove("active");
-  circleContent3.classList.remove("active");
-  });
-
-  circleContent1.addEventListener("mouseenter", () => {
-    circleImage1.classList.add("active");
-    circleImage0.classList.remove("active");
-    circleImage2.classList.remove("active");
-    circleImage3.classList.remove("active");
-    circleContent1.classList.add("active");
-    circleContent0.classList.remove("active");
-    circleContent2.classList.remove("active");
-    circleContent3.classList.remove("active");
-    });
+  const rotateImages = document.querySelectorAll('.center-rotate-image .image-wrapper');
+  const hoverColumns = document.querySelectorAll('.hover-col');
   
-    circleContent2.addEventListener("mouseenter", () => {
-      circleImage2.classList.add("active");
-      circleImage0.classList.remove("active");
-      circleImage1.classList.remove("active");
-      circleImage3.classList.remove("active");
-      circleContent2.classList.add("active");
-      circleContent0.classList.remove("active");
-      circleContent1.classList.remove("active");
-      circleContent3.classList.remove("active");
+  hoverColumns.forEach((hoverCol, index) => {
+    hoverCol.addEventListener("mouseenter", () => {
+  
+      hoverColumns.forEach((col) => {
+        col.classList.remove("active");
       });
-    
-      circleContent3.addEventListener("mouseenter", () => {
-        circleImage3.classList.add("active");
-        circleImage0.classList.remove("active");
-        circleImage1.classList.remove("active");
-        circleImage2.classList.remove("active");
-        circleContent3.classList.add("active");
-        circleContent0.classList.remove("active");
-        circleContent1.classList.remove("active");
-        circleContent2.classList.remove("active");
-        });
+  
+      rotateImages.forEach((img) => {
+        img.classList.remove("active");
+      });
+  
+      hoverCol.classList.add("active");
+      rotateImages[index].classList.add("active");
+    });
+  });
+  
+  
 }
 }
 
