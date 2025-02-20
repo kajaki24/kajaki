@@ -1811,3 +1811,8 @@ fieldset {
 .w-100 {
     width: 100%;
   }
+
+  .fade-in, .fade, .split-text-letters, .reveal-wrap picture img {
+    will-change: transform, opacity;
+  }
+  

@@ -1,20 +1,19 @@
 gsap.registerPlugin(ScrollTrigger);
 if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
-let fadeIn = [...document.querySelectorAll('.fade-in')];
+let fadeIn = gsap.utils.toArray('.fade-in');
 
-fadeIn.forEach(element =>{
+fadeIn.forEach(element => {
    gsap.from(element, {
        autoAlpha: 0,
        opacity: 0,
        yPercent: 100,
        duration: 1,
-       ease: Power3. easeInOut,
+       ease: "power3.inOut",
        scrollTrigger: { 
          trigger: element,
-         //toggleActions: 'restart pause reverse pause',
        },
-   })
+   });
 });
 
 // Fade --------------------------------------------------------------
@@ -32,6 +31,7 @@ splitTextChars.forEach(element =>{
        },
    })
 });
+
 
 // Handwrite --------------------------------------------------------------
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
@@ -109,30 +109,15 @@ gsap.to(".kayak", {
 };
   
 // Reveal image --------------------------------------------------------------
-let revealContainers = document.querySelectorAll(".reveal-wrap");
+gsap.utils.toArray(".reveal-wrap").forEach(container => {
+  let image = container.querySelector("picture img");
+  gsap.set(container, { autoAlpha: 1 });
 
-revealContainers.forEach((element) => {
-  let image = element.querySelector(".reveal-wrap picture img");
-  gsap.set(element, { autoAlpha: 1 }); 
+  gsap.fromTo(container, { xPercent: -100 }, { xPercent: 0, duration: 0.7, ease: "power3.inOut", scrollTrigger: { trigger: container } });
 
-  gsap.from(element, 1.5, {
-    xPercent: -100,
-    duration: .7,
-    ease: Power3. easeInOut,
-    scrollTrigger: {
-      trigger: element
-    }
-  });
-  gsap.from(image, 1.5, {
-    xPercent: 100,
-    duration: .7,
-    scale: 1.3,
-    ease: Power3. easeInOut,
-    scrollTrigger: {
-      trigger: element
-    }
-  });
+  gsap.fromTo(image, { xPercent: 100, scale: 1.3 }, { xPercent: 0, scale: 1, duration: 0.7, ease: "power3.inOut", scrollTrigger: { trigger: container } });
 });
+
 
 // parallax 
     gsap.utils.toArray(".parallax-wrap").forEach(function(container) {
@@ -141,7 +126,7 @@ revealContainers.forEach((element) => {
       let tl = gsap.timeline({
           scrollTrigger: {
             trigger: container,
-            scrub: true,
+            scrub: 0.5,
             pin: false,
           },
         }); 
@@ -168,55 +153,23 @@ gsap.to(".image-small", {
 
 // Navigation
 
-var menuToggle = document.getElementById("menuToggle");
+let menuBar = gsap.timeline({ paused: true })
+.to('.bar-1', { attr: { d: "M8,2 L2,8" }, x: 1, duration: 1, ease: "power2.inOut" }, "start")
+.to('.bar-2', { autoAlpha: 0, duration: 1 }, "start")
+.to('.bar-3', { attr: { d: "M8,8 L2,2" }, x: 1, duration: 1, ease: "power2.inOut" }, "start")
+.reverse();
 
-var menuBar = gsap.timeline({ paused: true});
+let navTl = gsap.timeline({ paused: true })
+.set('.fullpage-menu', { display: "block" }) // zamiast `.to` od razu ustaw
+.to('.menu-bg', { opacity: 1, duration: 1.2, ease: "expo.inOut" }, "<")
+.to('.menu li a', { y: 0, stagger: 0.05, duration: 1, ease: "expo.inOut" }, "-=0.6")
+.reverse();
 
-menuBar.to('.bar-1', 1,{
-	attr:{d: "M8,2 L2,8"},
-	x: 1,
-	ease: Power2.easeInOut
-}, 'start')
-
-menuBar.to('.bar-2', 1,{
-	autoAlpha: 0
-}, 'start')
-
-menuBar.to('.bar-3', 1,{
-	attr:{d: "M8,8 L2,2"},
-	x: 1,
-	ease: Power2.easeInOut
-}, 'start')
-
-menuBar.reverse();
-
-var navTl = gsap.timeline({ paused:true });
-
-navTl.to('.fullpage-menu', {
-	duration: 0,
-	display: "block",
-	ease: Expo.easeInOut
-}, "<");
-
-navTl.to('.menu-bg', {
-	duration: 1.2,
-	opacity: 1,
-	ease: Expo.easeInOut
-}, "<");
-
-navTl.to('.menu li a', {
-	y: 0,
-	stagger: 0.05,
-  duration: 1,
-  ease: Expo.easeInOut
-}, "-=0.6");
-
-navTl.reverse();
-
-menuToggle.addEventListener('click', function(){
-	menuBar.reversed(!menuBar.reversed());
-	navTl.reversed(!navTl.reversed());
+menuToggle.addEventListener('click', () => {
+  menuBar.reversed(!menuBar.reversed());
+  navTl.reversed(!navTl.reversed());
 });
+
 
 // Accordion
 if (document.querySelector(".accordion")) {
