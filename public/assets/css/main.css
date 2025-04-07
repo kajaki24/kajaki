@@ -1243,8 +1243,8 @@ li {
     position: absolute;
     left: 0;
     right: 0;
-    top: 44px;
-    font-size: 12px;
+    top: 30px;
+    font-size: 17px;
     color: var(--color-accent-2);
     transition: all .55s cubic-bezier(.7, .1, .2, 1);
 }
