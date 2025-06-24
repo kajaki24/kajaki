@@ -58,6 +58,98 @@ layout: "templates/base.njk"
   </div>
 </section>
 
+
+<section class="bg-light-2 pt-xsmall pb-medium">
+  <div class="container">
+    <h2 class="text-md-center split-text-lines">Cennik zestawów grillowych</h2>
+    <div class="row g-3 pt-xsmall">
+      <div class="col-md-6">
+        <div class="p-3 py-5 p-md-5 bg-light-1 border">
+
+          <h3 class="h5 mt-3 split-text-lines">
+            Zestaw nr 1
+          </h3>
+          <p class="fade">
+            Kiełbaski + ogórki kiszone+dodatki (pieczywo, ketchup, musztarda talerzyki)
+          </p>
+          <h4 class="h5 mt-4 split-text-lines">
+            19zł / osobę
+          </h4>
+          
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 py-5 p-md-5 bg-light-1 border">
+
+          <h3 class="h5 mt-3 split-text-lines">
+            Zestaw nr 2
+          </h3>
+                    <p class="fade">
+           Kiełbaski + karkówka + ogórki kiszone+ dodatki (pieczywo, ketchup musztarda, talerzyki) 
+                    </p>
+                              <h4 class="h5 mt-4 split-text-lines">
+            38zł / osobę
+          </h4>
+          
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 py-5 p-md-5 bg-light-1 border">
+          <h3 class="h5 mt-3 split-text-lines">
+            Zestawnr 3
+          </h3>
+                    <p class="fade">
+                      Kiełbaski + karkówka + kaszanka + arbuz + ogórki kiszone+dodatki (pieczywo, ketchup, musztarda, talerzyki) 
+                    </p>
+                              <h4 class="h5 mt-4 split-text-lines">
+            57zł / osobę
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 py-5 p-md-5 bg-light-1 border">
+
+          <h3 class="h5 mt-3 split-text-lines">
+           Zestaw nr 4
+          </h3>
+                    <p class="fade">
+                       Kiełbaski + karkówka + kaszanka + szparagi w boczku + deska serów + arbuz + dodatki (pieczywo, ketchup, musztarda, talerzyki) + niespodzianki 
+                    </p>
+                              <h4 class="h5 mt-4 split-text-lines">
+            95zł / osobę
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-light-1 pt-xsmall pb-large">
+  <div class="container">
+    <h2 class="text-md-center split-text-lines">Zdjęcia ze spływów dla firm</h2>
+    <div class="gallery-wrap pt-xsmall">
+      {% for item in collections.galeria_firmy %}
+      <div class="row g-3">
+        {% for image in item.data.images %}
+        <div class="col-6 col-md-4">
+          <a href="{{ image.image }}" class="glightbox no-trans">
+            <img
+              src="{{ image.image }}"
+              alt="{{ image.alt }}"
+              class="gallery-item fade"
+              sizes="(max-width: 400px) 100vw, 400px"
+            />
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
 <section class="bg-light-2 pt-xsmall pb-medium">
   <div class="container">
     <h2 class="text-md-center split-text-lines">Korzyści ze spływu kajakowego dla firm</h2>
@@ -170,9 +262,11 @@ layout: "templates/base.njk"
   </div>
 </section>
 
+
+
 <section class="bg-light-1 pt-xsmall pb-medium">
   <div class="container">
-    <h2 class="text-md-center split-text-lines">Dodatkowe atrakcje dla firm</h2>
+    <h2 class="text-md-center split-text-lines">Dodatkowe atrakcje</h2>
     <div class="row g-md-3 pt-xsmall">
       <div class="col-md-4">
         <div class="p-3 p-md-5 bg-light-2 border">
@@ -198,30 +292,6 @@ layout: "templates/base.njk"
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-light-2 pt-xsmall pb-large">
-  <div class="container">
-    <h2 class="text-md-center split-text-lines">Zdjęcia ze spływów dla firm</h2>
-    <div class="gallery-wrap pt-xsmall">
-      {% for item in collections.galeria_firmy %}
-      <div class="row g-3">
-        {% for image in item.data.images %}
-        <div class="col-6 col-md-4">
-          <a href="{{ image.image }}" class="glightbox no-trans">
-            <img
-              src="{{ image.image }}"
-              alt="{{ image.alt }}"
-              class="gallery-item fade"
-              sizes="(max-width: 400px) 100vw, 400px"
-            />
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-      {% endfor %}
     </div>
   </div>
 </section>
