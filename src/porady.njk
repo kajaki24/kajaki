@@ -1,0 +1,54 @@
+--- 
+layout: "templates/base.njk"
+title: Poradnik kajakarza
+permalink: /porady/
+description: Praktyczne wskazówki, listy rzeczy i sprawdzone rady, które pomogą Ci przygotować się do spływu kajakowego malowniczą rzeką Pilicą. 
+pagination: 
+    data: collections.posts 
+    size: 12 
+    alias: blog
+--- 
+
+<section class="pt-medium pb-xxsmall pb-md-small bg-light-1" data-scroll-section>
+    <div class="container"> 
+        <div class="row gx-4">  
+          {% for post in blog %} 
+              <div class="col-sm-6 col-lg-4 pb-xsmall">
+                <div class="post-card">
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <div class="post-thumb">
+                            <div class="hover-img-wrap aspect-9-6"> {% blogImage "src/" + post.data.thumbnail, post.data.title %} </div>
+                        </div>
+                    </a>
+                    <div class="post-card-content">
+                        <p class="archive-category uppercase mt-3 mb-2">
+                            {{ post.data.tags }}
+                        </p>
+                        <a href="{{ post.url }}" title="{{ post.data.title }}">
+                            <h3 class="h5 line-clamp-2 mt-0 mb-3">
+                                {{ post.data.title }}
+                            </h3>
+                        </a>
+                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic mt-3" data-strength="100" data-strength-text="50">
+                            <span>Czytaj dalej</span>
+                            <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+              </div> 
+          {% endfor %} 
+        </div>
+        <div class="row gx-4">
+            <div class="col-md-6">
+                <nav>
+                    <ul class="pagination d-flex"> {%- for pageEntry in pagination.pages %} <li class="pagination-item">
+                            <a class="pagination-link magnetic" data-strength="60" title="Paginacja" href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="active" {% endif %}>{{ loop.index }}</a>
+                        </li> {%- endfor %} </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>

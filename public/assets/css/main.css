@@ -179,6 +179,13 @@ article ul li {
     }
 }
 
+.sticky {
+  position: sticky;
+  top: 80px;
+  transition: .25s ease-in-out;
+  z-index: 9
+}
+
 .border {
     border-radius: 5px;
 }
@@ -1122,6 +1129,10 @@ li {
     aspect-ratio: 6/6;
 }
 
+.aspect-9-6 {
+    aspect-ratio: 9/6;
+}
+
 @media(min-width:767px) {
     .reveal-wrap {
         visibility: hidden;
@@ -1773,10 +1784,12 @@ fieldset {
     }
   }
 
+  hr,
   .line-x {
     width: 100%;
     height: 1px;
-    background-color: rgba(116, 116, 116, 0.4)
+    background-color: rgba(116, 116, 116, 0.4);
+    border: none;
 }
 
 /* Archive Post

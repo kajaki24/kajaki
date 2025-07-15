@@ -1,0 +1,138 @@
+{% include "partials/header.njk" %}
+
+<section class="pb-xxsmall" data-scroll-section>
+
+    <div class="hero-post pt-xlarge pt-md-xxlarge pb-small pb-md-large">
+        <div class="hero-post-image-wrap"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="p-relative col-md-8">
+                    <div class="single-post-title-wrap">
+                        <div class="breadcrumbs small color-light-2 fade-in">
+                            <a href="/" title="strona główna">
+                            Główna
+                        </a>
+                            <span>
+                            |
+                        </span>
+                            <a href="/blog" title="blog">
+                            Blog
+                        </a>
+                            <span>
+                            |
+                        </span>
+                            <span>
+                                {{ title }}
+                            </span>
+                        </div>
+                        <h1 class="single-post-title h2 color-light-1 split-lines mt-3 mb-4">
+                            {{ title }}
+                        </h1>
+                        <div class="breadcrumbs small color-light-2 fade-in">
+                            <span> 
+                                Opublikowano: 
+                            </span>
+                            <span>
+                                {{ date | dateDisplay }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-xsmall pt-md-medium pb-medium bg-light-1">
+        <div class="container">
+            <div class="content row g-3 g-md-5">
+                <div class="col-md-3">
+                    <div class="post-sidebar bg-light-2 sticky mb-md-5">
+                        <div class="post-list-items p-3 p-md-4 mb-4 border">
+                            <h3 class="h5 mt-3 mb-4">Spis treści</h3>
+                            <div class="line-x lx-1"></div>
+                            <ol class="without-dot mt-4">
+                                {% set headers = content | extractHeaders %}
+                                {% for header in headers %}
+                                    {% set anchor = header | slugify %}
+                                    <li class="subheading mb-3 mb-md-2">
+                                        <a href="#{{ anchor }}" class="line-clamp-2">{{ header }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-4 border overflow-hidden p-relative">
+                        {% blogImage "src/" + thumbnail, title, "single-post-image" %}
+                    </div>
+                    {{ content | safe}}
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="post-sidebar bg-light-2 sticky mb-5">
+                        <div class="related-posts p-3 p-md-4 border">
+                            <h3 class="h5 mt-3 mb-4">Zobacz również</h3>
+                            <div class="line-x lx-1"></div>
+                            <div class="mb-4">
+                                {% for post in collections
+                                    .posts
+                                    .slice(0, 8) %}
+                                    {%- if post.url != page.url -%}
+                                        <ul class="without-dot mt-4">
+                                            <li class="mb-3">
+                                                <a href="{{ post.url }}" class="line-clamp-2 subheading" title="{{ post.data.title }}">
+                                                    {{ post.data.title }}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="line-x lx-1"></div>
+                                    {%- endif -%}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-xsmall pt-md-medium fade-in">
+                <div class="line-x lx-op-2"></div>
+            </div>
+
+                    <div class="post-navigation pt-xxsmall pt-md-xsmall">
+                        {%- if collections.posts %}
+                            {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+                            {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                            {%- if nextPost or previousPost %}
+                                <ul class="row fade-in">
+                                    {%- if previousPost %}
+                                        <li class="col-md-6 prev d-none d-md-block">
+                                            <p class="mb-4 color-accent-1 bold">                         
+                                Poprzedni:
+                            </p>
+                                            <a href="{{ previousPost.url | url }}" title="{{ previousPost.data.client }}"
+                                class="h3">{{ previousPost.data.title }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                    {%- if nextPost %}
+                                        <li class="col-md-6 next">
+                                            <p class="mb-4 color-accent-1 bold">
+                                    Kolejny:
+                            </p>
+                                            <a href="{{ nextPost.url | url }}" title="{{ nextPost.data.client }}"
+                                class="h3">{{ nextPost.data.title }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            {%- endif %}
+                        {%- endif %}
+                    </div>
+
+        </div>
+    </div>
+
+</section>
+
+{% include "partials/footer.njk" %}

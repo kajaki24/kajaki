@@ -1,0 +1,4 @@
+{
+    "layout": "templates/post-full.njk",  
+    "permalink": "/porady/{{ title | slugify }}/"
+}

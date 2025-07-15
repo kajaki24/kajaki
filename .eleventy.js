@@ -1,5 +1,10 @@
 const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const Image = require('@11ty/eleventy-img');
+const { parse } = require('node-html-parser');
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const slugify = require("slugify"); 
+const blogImage = require('./src/shortcodes/blogImage.js');
 
 module.exports = function(eleventyConfig) {
     
@@ -8,6 +13,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/static/img");
+  eleventyConfig.addPassthroughCopy("src/posts/img");
   eleventyConfig.addPassthroughCopy("src/galeria/img");
   eleventyConfig.addPassthroughCopy("src/galeria-szkoly/img");
   eleventyConfig.addPassthroughCopy("src/galeria-firmy/img");
@@ -15,11 +21,24 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
 
+      eleventyConfig.addFilter("extractHeaders", function(content) {
+      const root = parse(content);
+      const headers = root.querySelectorAll('h2');
+      return headers.map(header => header.innerText);
+    });
+
+
   // get the current year 
   eleventyConfig.addShortcode("getYear", function() {
     const year = new Date().getFullYear();
       return `${year}`;
   });
+  eleventyConfig.addNunjucksAsyncShortcode("blogImage", blogImage);
+
+          // Date
+        eleventyConfig.addFilter('dateDisplay', require('./src/filters/date-display.js'));
+        eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
 
   // Collections 
 eleventyConfig.addCollection('cennik', function(collectionApi) {
@@ -44,6 +63,12 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
   eleventyConfig.addCollection('trasy', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/trasy/**/*.md').reverse();
   });
+
+  // Blog
+  eleventyConfig.addCollection('posts', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/posts/**/*.md').reverse();
+  });
+
 
   // Settings
   eleventyConfig.addCollection('settings', function(collectionApi) {
@@ -105,6 +130,23 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
     return `<div class="image-wrapper blur-load" >
               <img class="placeholder" src="${lowestSrc.url}" loading="lazy" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
   });
+
+
+        let md = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true
+    }).use(markdownItAnchor, {
+        level: 2, 
+        slugify: function(str) {
+            return slugify(str, {
+                lower: true,  
+                strict: true 
+            });
+        }
+    });
+
+    eleventyConfig.setLibrary("md", md);
 
     return {
       dir: {
