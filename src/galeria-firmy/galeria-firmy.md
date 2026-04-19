@@ -13,4 +13,13 @@ images:
   - image: /galeria-firmy/img/bF6hRitl.jpg
   - image: /galeria-firmy/img/HeIZ70WQ.jpg
   - image: /galeria-firmy/img/iD7VP4Hv.jpg
+  - image: /galeria-firmy/img/cat-1.jpg
+  - image: /galeria-firmy/img/cat-2.jpg
+  - image: /galeria-firmy/img/cat-3.jpg
+  - image: /galeria-firmy/img/cat-4.jpg
+  - image: /galeria-firmy/img/cat-5.jpg
+  - image: /galeria-firmy/img/cat-6.jpg
+  - image: /galeria-firmy/img/cat-7.jpg
+  - image: /galeria-firmy/img/cat-8.jpg
+  - image: /galeria-firmy/img/cat-9.jpg
 ---
