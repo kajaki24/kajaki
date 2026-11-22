@@ -10,7 +10,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-944548171');
+  gtag('config', 'AW-944548171', {
+    cookie_domain: /(^|\.)kajaki24\.com\.pl$/.test(window.location.hostname)
+      ? 'kajaki24.com.pl'
+      : 'auto'
+  });
 </script>
 <script>
   function gtag_report_conversion(url) {

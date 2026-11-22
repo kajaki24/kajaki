@@ -15,7 +15,7 @@
         /**
          * CHANGE THIS FLAG FALSE TO DISABLE console.log()
          */
-        var ENABLE_LOGS = true;
+        var ENABLE_LOGS = false;
 
         var _config = {
             'mode': 'opt-in',                         // 'opt-in', 'opt-out'
@@ -1225,7 +1225,8 @@
          * @param {Object} [optional_param]
          */
         var _log = function(print_msg, optional_param, error){
-            ENABLE_LOGS && (!error ? console.log(print_msg, optional_param !== undefined ? optional_param : ' ') : console.error(print_msg, optional_param || ""));
+            if (error) console.error(print_msg, optional_param || "");
+            else if (ENABLE_LOGS) console.log(print_msg, optional_param !== undefined ? optional_param : ' ');
         }
 
         /**

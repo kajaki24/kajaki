@@ -145,6 +145,7 @@ gsap.utils.toArray(".reveal-wrap").forEach(container => {
     });
 
 // About parallax img
+if (document.querySelector(".image-small") && document.querySelector(".section-about")) {
 gsap.to(".image-small", {
   yPercent: 30,
   scrollTrigger: {
@@ -152,6 +153,7 @@ gsap.to(".image-small", {
     scrub: 1
   }
 });
+}
 
 
 };
