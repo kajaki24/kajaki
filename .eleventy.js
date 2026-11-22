@@ -90,7 +90,7 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
   eleventyConfig.addCollection('galeria_firmy', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/galeria-firmy/**/*.md').reverse();
   });
-  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className = '') => {
+  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className = '', displayWidth = 1024) => {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
@@ -116,14 +116,15 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
       {},
     );
  
-    const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+    const sizes = `(min-width: ${Number(displayWidth)}px) ${Number(displayWidth)}px, 100vw`;
+    const source = `<source type="image/webp" sizes="${sizes}" srcset="${srcset['webp']}" >`;
 
     const img = `<img
       decoding="async"
       loading="lazy"
       alt="${alt}"
       src="${lowestSrc.url}"
-      sizes='(min-width: 1024px) 1024px, 100vw'
+      sizes="${sizes}"
       srcset="${srcset['jpeg']}"
       width="${largestSrc.width}"
       height="${largestSrc.height}">`;

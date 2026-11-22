@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Poppins';
-    font-display: fallback;
+    font-display: optional;
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-regular.woff2') format('woff2'), 
@@ -9,7 +9,7 @@
   }
   @font-face {
     font-family: 'Poppins';
-    font-display: fallback;
+    font-display: optional;
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-500.woff2') format('woff2'), 
@@ -17,7 +17,7 @@
   }
   @font-face {
     font-family: 'Poppins';
-    font-display: fallback;
+    font-display: optional;
     font-style: normal; 
     font-weight: 600;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-600.woff2') format('woff2'), 
@@ -25,7 +25,7 @@
   }
   @font-face {
     font-family: 'Poppins';
-    font-display: fallback;
+    font-display: optional;
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-700.woff2') format('woff2'), 
@@ -33,7 +33,7 @@
   }
   @font-face {
     font-family: 'Poppins';
-    font-display: fallback;
+    font-display: optional;
     font-style: normal;
     font-weight: 800;
     src: url('/assets/fonts/poppins-v20-latin_latin-ext-800.woff2') format('woff2'), 
@@ -517,9 +517,9 @@ h5,
     text-shadow: 0 2px 15px #1111118f
 }
 
-.big-text .char-wrap:nth-child(1),
-.big-text .char-wrap:nth-child(3),
-.big-text .char-wrap:nth-child(5) {
+.big-text .char-wrap:nth-child(2),
+.big-text .char-wrap:nth-child(4),
+.big-text .char-wrap:nth-child(6) {
     position: relative;
     z-index: 2;
 }
@@ -652,8 +652,8 @@ li {
 .desktop-menu ul li a {
     display: inline-block;
     padding: 65px 20px 25px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--color-light-1);
@@ -958,17 +958,17 @@ li {
 }
 
 .kayak-wrap {
-    position: absolute;
-    z-index: 1;
-    top: 9%;
-    left: 19%;
-    width: 65%
+position: absolute;
+  z-index: 1;
+  top: 2%;
+  left: 15%;
+  width: 71%;
 }
 
 /* Hero page
 ------------------------------------------- */
 .hero-page {
-    background: url("/assets/images/hero-main-2.jpg");
+    background: url("/assets/images/hero-main-2.webp");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -976,7 +976,7 @@ li {
 }
 
 .hero-post {
-    background: url("/assets/images/hero-main-2.jpg");
+    background: url("/assets/images/hero-main-2.webp");
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 -60px 60px var(--color-accent-2);
@@ -1427,6 +1427,20 @@ li {
 	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* Reserve space while the offscreen carousel and weather widget initialize. */
+.feedback-slider .glide:not(.glide--carousel) .glide__slides {
+    display: flex;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+.feedback-slider .glide:not(.glide--carousel) .glide__slide {
+    flex: 0 0 100%;
+}
+#inpl-weather-main {
+    min-height: 320px;
 }
 
 .feedback-slider .feedback-wrapper .feedback-single {

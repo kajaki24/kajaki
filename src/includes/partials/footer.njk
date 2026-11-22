@@ -109,29 +109,11 @@
     </div>
   </footer>
   </div>
-  <script src="/assets/js/vendor/split.js"></script>
-  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script src="/assets/js/custom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-  <script>
-    if (document.querySelector("#glide1")) {
-      new Glide('#glide1', {
-        type: 'carousel',
-        perView: 1,
-        autoplay: 3000,
-        hoverpause: true
-      }).mount();
-    }
-  </script>
-  <script src="/assets/js/glightbox.min.js"></script>
-  <script>
-    const lightbox = GLightbox({
-      touchNavigation: true,
-      loop: false,
-      autoplayVideos: true
-    });
-  </script>
+  <script defer src="/assets/js/vendor/gsap.min.js"></script>
+  <script defer src="/assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="/assets/js/vendor/split.js"></script>
+  <script defer src="/assets/js/custom.js"></script>
+  <script defer src="/assets/js/deferred-widgets.js"></script>
   <script defer src="/assets/js/cookieconsent.js"></script>
   <script defer src="/assets/js/cookieconsent-init.js"></script>
 
@@ -155,7 +137,7 @@
   <div class="modal" id="modal-one">
     <div class="modal-bg modal-exit"></div>
     <div class="modal-container">
-      <img src="{{ collections.settings[0].data.voucher | url }}" alt="Kajaki24 - Voucher">
+      <img src="{{ collections.settings[0].data.voucher | url }}" alt="Kajaki24 - Voucher" loading="lazy" decoding="async">
       <span class="modal-close modal-exit">X</span>
     </div>
   </div>

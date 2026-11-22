@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-if (window.matchMedia("(min-width: 767px)").matches) {
+if (window.matchMedia("(min-width: 767px) and (prefers-reduced-motion: no-preference)").matches) {
 // Fade in --------------------------------------------------------------
 let fadeIn = gsap.utils.toArray('.fade-in');
 
@@ -52,7 +52,7 @@ splitTextLetters.forEach(element =>{
   });
   }
 
-  gsap.set(".char-wrap", {overflow: "hidden"});
+  gsap.set(element.querySelectorAll(".char-wrap"), {overflow: "hidden"});
   
    gsap.from(mySplitText.chars, {
        yPercent: 105,
@@ -79,7 +79,7 @@ splitTextLines.forEach(element => {
      charsClass: "chars"
    });
 
-   gsap.set(".words", {overflow: "hidden"}),
+   gsap.set(element.querySelectorAll(".words"), {overflow: "hidden"});
    
     gsap.from(mySplitText.chars, {
       autoAlpha: 0,
@@ -98,11 +98,21 @@ splitTextLines.forEach(element => {
 
 // Kayak  --------------------------------------------------------------------
 if(document.querySelector(".kayak-wrap")) {
-gsap.from(".kayak-wrap", {
-  xPercent: 120,
+const heroKayak = document.querySelector('.kayak');
+gsap.set('.kayak-wrap', { xPercent: 120 });
+const enterKayak = () => gsap.to('.kayak-wrap', {
+  xPercent: 0,
   delay: .1,
-  duration: 2
-})
+  duration: 2,
+  ease: 'power1.out'
+});
+// Start when the image is available, so loading cannot hide the entrance.
+if (heroKayak.complete) {
+  enterKayak();
+} else {
+  heroKayak.addEventListener('load', enterKayak, { once: true });
+  heroKayak.addEventListener('error', enterKayak, { once: true });
+}
 gsap.to(".kayak", {
   xPercent: -20,
   scrollTrigger: {

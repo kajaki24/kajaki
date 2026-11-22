@@ -50,119 +50,19 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://kajaki24.com.pl/assets/images/opengraph.jpg">
     <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
+    <link rel="preload" href="/assets/fonts/poppins-v20-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-v20-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+    {% if page.url == "/" %}
+    <link rel="preload" href="/assets/fonts/poppins-v20-latin_latin-ext-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/images/hero-main-2.webp" as="image" type="image/webp" fetchpriority="high">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/vendor.css">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/glightbox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css">
+
+    {% if page.url == "/" %}<link rel="stylesheet" href="/assets/css/glide.core.min.css" media="print" onload="this.media='all'">{% endif %}
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
     
-    <style>
-        .preloader {
-          display: block;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          margin: auto;
-          width: 100vw;
-          height: 100vh;
-          background: var(--color-accent-1);
-          transition: all 0.25s ease-out;
-          overflow: hidden;
-          pointer-events: none;
-          z-index: 10000000;
-        }
-        .preloader_inner {
-          position: absolute;
-          top: 48%;
-          left: 50%;
-          transform: translateY(-50%) translateX(-50%);
-          z-index: 10000000;
-        }
-        .scrollContainer {
-          opacity: 0;
-          transition: opacity 0.25s ease-out;
-        }
-  
-        .circle-loader {
-          position: relative;
-          width: auto;
-          height: auto;
-        }
-  
-        .circle-loader div {
-          height: 10px;
-          width: 10px;
-          background-color: var(--color-light-1);
-          border-radius: 50%;
-          position: absolute;
-          -webkit-animation: 0.8s opaque ease-in-out infinite both;
-          animation: 0.8s opaque ease-in-out infinite both;
-        }
-  
-        .circle-loader div:nth-child(1) {
-          top: -25px;
-          left: 0;
-        }
-        .circle-loader div:nth-child(2) {
-          top: -17px;
-          left: 17px;
-          -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-        }
-        .circle-loader div:nth-child(3) {
-          top: 0;
-          left: 25px;
-          -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-        }
-        .circle-loader div:nth-child(4) {
-          top: 17px;
-          left: 17px;
-          -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-        }
-        .circle-loader div:nth-child(5) {
-          top: 25px;
-          left: 0;
-          -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-        }
-        .circle-loader div:nth-child(6) {
-          top: 17px;
-          left: -17px;
-          -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-        }
-        .circle-loader div:nth-child(7) {
-          top: 0;
-          left: -23px;
-          -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-        }
-        .circle-loader div:nth-child(8) {
-          top: -17px;
-          left: -17px;
-          -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-        }
-  
-        @keyframes opaque {
-          0% {
-            opacity: 0.1;
-          }
-          40% {
-            opacity: 1;
-          }
-          80% {
-            opacity: 0.1;
-          }
-          100% {
-            opacity: 0.1;
-          }
-        }
-      </style>
+
 
 </head>
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
@@ -170,22 +70,6 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2KGXL9N"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <div class="h-100h">
-        <div class="preloader">
-          <div class="preloader_inner">
-            <div class="circle-loader">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-    </div>
     <div class="fixed-button">
         <a href="tel:{{ collections.settings[0].data.site_phone }}" class="fixed-phone no-trans" title="Zadzwoń">
             <span class="fixed-phone-icon">
@@ -206,16 +90,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-link-wrap d-none d-md-block">
         <button class="modal-link" data-modal="modal-one">Voucher</button>
     </div> 
-    <div class="page fade-no-duration" id="wrapper">
-        <script>
-            var obj = document.querySelector('.preloader'),
-              page = document.querySelector('#wrapper');
-    
-            window.addEventListener("load", function () {
-              obj.style.opacity = "0";
-              page.style.opacity = "1";
-            });
-          </script>
+    <div class="page" id="wrapper">
+
         <header class="site-header">
             <div class="container-fluid">
                 <div class="row align-items-center">
