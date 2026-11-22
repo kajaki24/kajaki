@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/static/img"
+public_folder: "/static/img"
+local_backend: true
+
+# Ustawienia
+collections:
+  - label: "Ustawienia"
+    name: "settings"
+    folder: "src/settings"
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Logo", name: "site_logo", widget: "image" }
+      - { label: "Numer telefonu", name: "site_phone", widget: "string" }
+      - { label: "Adres email", name: "site_mail", widget: "string" }
+      - { label: "Voucher", name: "voucher", widget: "image" }
+# Cennik
+  - label: "Cennik" 
+    name: "cennik"
+    folder: "src/cennik" 
+    create: true 
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Typ trasy", name: "category", widget: "string" }
+      - { label: "Czas spływu", name: "rafting_time", widget: "string" }
+      - { label: "Długość trasy", name: "route_length", widget: "string" }
+      - { label: "Cena", name: "price", widget: "string", required: false }
+      - { label: "Pod ceną", name: "price_descrition", widget: "string", required: false }
+      - { label: "Data", name: "date", widget: "date" }
+# Galeria główna
+  - label: "Galeria"
+    name: galeria
+    folder: "src/galeria"
+    media_folder: "img/"
+    public_folder: "/galeria/img/"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}
+# Galeria szkoły
+  - label: "Galeria - Szkoły"
+    name: galeria_szkoly
+    folder: "src/galeria-szkoly"
+    media_folder: "img/"
+    public_folder: "/galeria-szkoly/img/"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}
+# Galeria firmy
+  - label: "Galeria - Firmy"
+    name: galeria_firmy
+    folder: "src/galeria-firmy"
+    media_folder: "img/"
+    public_folder: "/galeria-firmy/img/"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - name: images
+        label: images
+        widget: list
+        fields:
+          - {label: Name, name: image, widget: image}

@@ -7,6 +7,7 @@ const slugify = require("slugify");
 const blogImage = require('./src/shortcodes/blogImage.js');
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.on('eleventy.after', require('./scripts/build-agent-content.cjs'));
     
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");
@@ -89,7 +90,7 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
   eleventyConfig.addCollection('galeria_firmy', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/galeria-firmy/**/*.md').reverse();
   });
-  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
+  eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt, className = '') => {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
@@ -127,7 +128,8 @@ eleventyConfig.addCollection('cennik', function(collectionApi) {
       width="${largestSrc.width}"
       height="${largestSrc.height}">`;
 
-    return `<div class="image-wrapper blur-load" >
+    const imageClasses = String(className).replace(/[^a-zA-Z0-9_ -]/g, '');
+    return `<div class="image-wrapper blur-load ${imageClasses}" >
               <img class="placeholder" src="${lowestSrc.url}" loading="lazy" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
   });
 

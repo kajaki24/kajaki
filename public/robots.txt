@@ -1,5 +1,7 @@
 
 User-agent: * 
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: / 
 Sitemap: https://kajaki24.com.pl/sitemap.xml
+Agentmap: https://kajaki24.com.pl/.well-known/ai-catalog.json
 

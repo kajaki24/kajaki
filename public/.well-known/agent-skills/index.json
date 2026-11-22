@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "kajaki-trip-planning",
+      "type": "skill-md",
+      "description": "Find published Kajaki24 routes, prices and contact details for a kayaking trip on the Pilica near Warka. Use for trip research, not live availability or booking confirmation.",
+      "url": "https://kajaki24.com.pl/.well-known/agent-skills/kajaki-trip-planning/SKILL.md",
+      "digest": "sha256:c7e6b3252a8c0ca3b3c47be63cfc4fffacece0d351eb5a5b3dbd0a01a97de80e"
+    }
+  ]
+}

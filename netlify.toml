@@ -1,0 +1,45 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[[edge_functions]]
+  function = "agent-content"
+  path = "/*"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '</llms.txt>; rel="describedby"; type="text/markdown"'
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
+
+# DNS-AID is not an HTML setting. No A2A/MCP service exists in this project.
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/.well-known/agent-skills/*/SKILL.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+
+# JSON files use Netlify's application/json MIME mapping.
+# DNS-AID is not an HTML setting. No A2A/MCP service exists in this project.
+# Do not advertise a fictional service just to satisfy a scanner.
+# Current nameservers: dns1..4.p09.nsone.net (Netlify DNS).
+# Netlify DNS does not support DNSSEC:
+# https://docs.netlify.com/manage/domains/troubleshooting-tips/
+# A future DNS-AID rollout needs a real agent endpoint and an authoritative
+# DNS provider supporting SVCB/HTTPS and DNSSEC, plus a registrar DS record.
+# Re-evaluate the current DNS-AID draft before publishing experimental keys:
+# https://datatracker.ietf.org/doc/draft-mozleywilliams-dawn-dnsaid/
+# After deployment: npm run verify:agents -- https://kajaki24.com.pl
+# Then POST {"url":"https://kajaki24.com.pl"} to
+# https://isitagentready.com/api/scan and inspect the three requested checks.
+# Run verification after each deploy and periodically in external monitoring.

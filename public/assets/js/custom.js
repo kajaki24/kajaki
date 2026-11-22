@@ -37,15 +37,20 @@ splitTextChars.forEach(element =>{
 let splitTextLetters = [...document.querySelectorAll('.split-text-letters')];
 
 splitTextLetters.forEach(element =>{
+  let mySplitText;
+  if (element.classList.contains('hero-main-title')) {
+    mySplitText = { chars: element.querySelectorAll('.char') };
+  } else {
   new SplitText(element, { 
     type: "words, chars",
     wordsClass: "word",
     charsClass: "char-wrap" 
   });
-  let mySplitText = new SplitText(element, {
+  mySplitText = new SplitText(element, {
     type:"chars",
     charsClass: "char"
   });
+  }
 
   gsap.set(".char-wrap", {overflow: "hidden"});
   

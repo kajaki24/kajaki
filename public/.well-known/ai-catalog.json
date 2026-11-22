@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Kajaki24 — Kajaki Warka",
+    "identifier": "https://kajaki24.com.pl"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:kajaki24.com.pl:skill:kajaki-trip-planning",
+      "displayName": "Planowanie spływu Pilicą z Kajaki24",
+      "type": "text/markdown",
+      "url": "https://kajaki24.com.pl/.well-known/agent-skills/kajaki-trip-planning/SKILL.md",
+      "representativeQueries": [
+        "Jak zaplanować spływ Pilicą w okolicy Warki?",
+        "Gdzie sprawdzić ceny i trasy Kajaki24?",
+        "Jak skontaktować się w sprawie rezerwacji kajaków?"
+      ]
+    },
+    {
+      "identifier": "urn:air:kajaki24.com.pl:document:website-summary",
+      "displayName": "Informacje o ofercie Kajaki24",
+      "type": "text/markdown",
+      "url": "https://kajaki24.com.pl/llms.txt",
+      "representativeQueries": [
+        "Co oferuje wypożyczalnia Kajaki24 w Warce?",
+        "Gdzie znaleźć informacje o spływach kajakowych Pilicą?"
+      ]
+    }
+  ]
+}

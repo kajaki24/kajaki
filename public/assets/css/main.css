@@ -521,7 +521,7 @@ h5,
 .big-text .char-wrap:nth-child(3),
 .big-text .char-wrap:nth-child(5) {
     position: relative;
-    z-index: 999;
+    z-index: 2;
 }
 
 p {
@@ -921,7 +921,7 @@ li {
 ------------------------------------------- */
 
 .hero-main {
-    background: url("/assets/images/hero-main-2.jpg");
+    background: url("/assets/images/kajak2.png");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -930,11 +930,11 @@ li {
 }
 
 .light .hero-main {
-    background: url("/assets/images/hero-main-2.jpg");
+    background: url("/assets/images/kajak2.png");
 }
 
 .dark .hero-main {
-    background: url("/assets/images/baner-red.png");
+    background: url("/assets/images/kajak2.png");
 }
 
 .hero-main h1,
@@ -944,10 +944,22 @@ li {
 
 .hero-main-wrap {
     position: relative;
+    isolation: isolate;
+}
+
+.hero-main .hero-main-title {
+    /* Let individual letters stack on either side of the kayak. */
+    will-change: auto;
+}
+
+.hero-main-title .char-wrap,
+.hero-main-title .char {
+    display: inline-block;
 }
 
 .kayak-wrap {
     position: absolute;
+    z-index: 1;
     top: 9%;
     left: 19%;
     width: 65%
@@ -1048,7 +1060,16 @@ li {
   
   .center-rotate-image .image-wrapper {
     position: absolute;
-    width: 100%
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+
+  .center-rotate-image .image-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
   }
   
   .center-rotate-image .image-wrapper picture img {
@@ -1425,6 +1446,13 @@ li {
 	margin-top: -65px;
 	padding: 3px;
 	background-color: #ffffff;
+}
+
+.review-stars {
+    color: #e6a000;
+    font-size: 26px;
+    line-height: 1;
+    letter-spacing: 4px;
 }
 
 .feedback-slider .feedback-wrapper .feedback-single .feedback-txt {
