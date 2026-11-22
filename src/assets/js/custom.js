@@ -1,7 +1,3 @@
-function initializePageAnimations() {
-if (window.pageAnimationsInitialized) return;
-window.pageAnimationsInitialized = true;
-const entranceDelay = window.pageReady ? 0 : 0.25;
 gsap.registerPlugin(ScrollTrigger);
 if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
@@ -56,26 +52,18 @@ splitTextLetters.forEach(element =>{
   });
   }
 
-  gsap.set(element.querySelectorAll(".char-wrap"), {overflow: "hidden"});
+  gsap.set(".char-wrap", {overflow: "hidden"});
   
-   gsap.set(mySplitText.chars, {
+   gsap.from(mySplitText.chars, {
        yPercent: 105,
-       autoAlpha: 0,
-       lazy: false
-   });
-   gsap.to(mySplitText.chars, {
-       yPercent: 0,
-       autoAlpha: 1,
        duration: 1,
        ease: Power3.easeOut,
-       delay: entranceDelay,
        stagger: {
          amount: 0.3,
          from: "0"
        },
        scrollTrigger: { 
          trigger: element,
-         once: true,
          //toggleActions: 'restart pause reverse pause',
        },
    })
@@ -84,68 +72,37 @@ splitTextLetters.forEach(element =>{
 // Split text lines --------------------------------------------------------------
 let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
-function animateText(element) {
+splitTextLines.forEach(element => {
    let mySplitText = new SplitText(element, {
      type:"words, chars",
      wordsClass: "words",
      charsClass: "chars"
    });
 
-   gsap.set(element.querySelectorAll(".words"), {overflow: "hidden"});
+   gsap.set(".words", {overflow: "hidden"}),
    
-    gsap.set(mySplitText.chars, {
-        autoAlpha: 0,
-        yPercent: 105,
-        lazy: false
-    });
-    gsap.set(element, { visibility: 'visible' });
-    gsap.to(mySplitText.chars, {
-        autoAlpha: 1,
-        yPercent: 0,
+    gsap.from(mySplitText.chars, {
+      autoAlpha: 0,
+        opacity: 0,
         duration: 0.6,
-        delay: element.closest('.hero-main') ? entranceDelay + .1 : 0,
+        delay: .1,
         stagger: 0.005,
+        yPercent: 105,
         ease: "sine.out",
+        scrollTrigger: { 
+          trigger: element,
+          //toggleActions: 'restart pause reverse pause',
+        },
     })
-}
-
-// Split only the hero now. Prepare other text when it approaches the viewport,
-// so hundreds of offscreen characters do not freeze the loader's first frames.
-const textObserver = 'IntersectionObserver' in window
-  ? new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        textObserver.unobserve(entry.target);
-        animateText(entry.target);
-      });
-    }, { rootMargin: '80px' })
-  : null;
-splitTextLines.forEach(element => {
-  if (element.closest('.hero-main') || !textObserver) {
-    animateText(element);
-  } else {
-    gsap.set(element, { visibility: 'hidden' });
-    textObserver.observe(element);
-  }
 });
 
 // Kayak  --------------------------------------------------------------------
 if(document.querySelector(".kayak-wrap")) {
-const heroKayak = document.querySelector('.kayak');
-gsap.set('.kayak-wrap', { xPercent: 120 });
-const enterKayak = () => gsap.to('.kayak-wrap', {
-  xPercent: 0,
-  delay: entranceDelay + .1,
-  duration: 2,
-  ease: 'power1.out'
-});
-// Start when the image is available, so loading cannot hide the entrance.
-if (heroKayak.complete) {
-  enterKayak();
-} else {
-  heroKayak.addEventListener('load', enterKayak, { once: true });
-  heroKayak.addEventListener('error', enterKayak, { once: true });
-}
+gsap.from(".kayak-wrap", {
+  xPercent: 120,
+  delay: .1,
+  duration: 2
+})
 gsap.to(".kayak", {
   xPercent: -20,
   scrollTrigger: {
@@ -156,10 +113,6 @@ gsap.to(".kayak", {
 });
 };
   
-// All entrance states are set before making their containers visible.
-clearTimeout(window.animationFallback);
-document.documentElement.classList.remove('animations-pending');
-
 // Reveal image --------------------------------------------------------------
 gsap.utils.toArray(".reveal-wrap").forEach(container => {
   let image = container.querySelector("picture img");
@@ -293,7 +246,3 @@ if (window.matchMedia("(min-width: 767px)").matches) {
       }
     });
   }
-
-}
-if (window.pagePreparing || window.pageReady) initializePageAnimations();
-else window.addEventListener('page-prepare', initializePageAnimations, { once: true });
