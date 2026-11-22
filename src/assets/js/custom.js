@@ -84,7 +84,7 @@ splitTextLetters.forEach(element =>{
 // Split text lines --------------------------------------------------------------
 let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
 
-splitTextLines.forEach(element => {
+function animateText(element) {
    let mySplitText = new SplitText(element, {
      type:"words, chars",
      wordsClass: "words",
@@ -98,19 +98,35 @@ splitTextLines.forEach(element => {
         yPercent: 105,
         lazy: false
     });
+    gsap.set(element, { visibility: 'visible' });
     gsap.to(mySplitText.chars, {
         autoAlpha: 1,
         yPercent: 0,
         duration: 0.6,
-        delay: entranceDelay + .1,
+        delay: element.closest('.hero-main') ? entranceDelay + .1 : 0,
         stagger: 0.005,
         ease: "sine.out",
-        scrollTrigger: { 
-          trigger: element,
-          once: true,
-          //toggleActions: 'restart pause reverse pause',
-        },
     })
+}
+
+// Split only the hero now. Prepare other text when it approaches the viewport,
+// so hundreds of offscreen characters do not freeze the loader's first frames.
+const textObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        textObserver.unobserve(entry.target);
+        animateText(entry.target);
+      });
+    }, { rootMargin: '80px' })
+  : null;
+splitTextLines.forEach(element => {
+  if (element.closest('.hero-main') || !textObserver) {
+    animateText(element);
+  } else {
+    gsap.set(element, { visibility: 'hidden' });
+    textObserver.observe(element);
+  }
 });
 
 // Kayak  --------------------------------------------------------------------

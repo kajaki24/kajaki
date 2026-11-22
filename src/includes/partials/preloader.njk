@@ -9,7 +9,12 @@
     transition: opacity .25s ease-out;
   }
   .preloader.is-loaded { opacity: 0; pointer-events: none; }
-  .circle-loader { position: relative; width: 60px; height: 60px; }
+  .circle-loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    animation: preloader-spin 1s linear infinite;
+  }
   .circle-loader span {
     position: absolute;
     inset: 0;
@@ -27,9 +32,7 @@
     animation-delay: calc(var(--i) * .1s);
   }
   @keyframes preloader-pulse { 0%, 80%, 100% { opacity: .1; } 40% { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) {
-    .circle-loader span::before { animation: none; }
-  }
+  @keyframes preloader-spin { to { transform: rotate(360deg); } }
 </style>
 <div class="preloader" role="status" aria-label="Ładowanie strony">
   <div class="circle-loader" aria-hidden="true">
@@ -56,8 +59,8 @@
       }, 250);
     }
     // A failed external resource must not leave the page covered indefinitely.
-    var fallback = setTimeout(finish, 6000);
-    if (document.readyState === 'complete') finish();
-    else window.addEventListener('load', finish, { once: true });
+    var fallback = setTimeout(finish, 1500);
+    if (document.readyState !== 'loading') finish();
+    else document.addEventListener('DOMContentLoaded', finish, { once: true });
   })();
 </script>
