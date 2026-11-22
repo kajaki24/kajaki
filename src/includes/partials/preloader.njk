@@ -1,0 +1,63 @@
+<style>
+  .preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 10000000;
+    display: grid;
+    place-items: center;
+    background: var(--color-accent-1, #0027e6);
+    transition: opacity .25s ease-out;
+  }
+  .preloader.is-loaded { opacity: 0; pointer-events: none; }
+  .circle-loader { position: relative; width: 60px; height: 60px; }
+  .circle-loader span {
+    position: absolute;
+    inset: 0;
+    transform: rotate(calc(var(--i) * 45deg));
+  }
+  .circle-loader span::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #fff;
+    animation: preloader-pulse .8s ease-in-out infinite;
+    animation-delay: calc(var(--i) * .1s);
+  }
+  @keyframes preloader-pulse { 0%, 80%, 100% { opacity: .1; } 40% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .circle-loader span::before { animation: none; }
+  }
+</style>
+<div class="preloader" role="status" aria-label="Ładowanie strony">
+  <div class="circle-loader" aria-hidden="true">
+    {% for i in range(0, 8) %}<span style="--i: {{ i }}"></span>{% endfor %}
+  </div>
+</div>
+<noscript><style>.preloader { display: none; }</style></noscript>
+<script>
+  (function () {
+    var loader = document.querySelector('.preloader');
+    var closing = false;
+    function finish() {
+      if (closing) return;
+      closing = true;
+      clearTimeout(fallback);
+      // Prepare hidden characters before the overlay starts fading.
+      window.pagePreparing = true;
+      window.dispatchEvent(new Event('page-prepare'));
+      loader.classList.add('is-loaded');
+      setTimeout(function () {
+        loader.remove();
+        window.pageReady = true;
+        window.dispatchEvent(new Event('page-ready'));
+      }, 250);
+    }
+    // A failed external resource must not leave the page covered indefinitely.
+    var fallback = setTimeout(finish, 6000);
+    if (document.readyState === 'complete') finish();
+    else window.addEventListener('load', finish, { once: true });
+  })();
+</script>

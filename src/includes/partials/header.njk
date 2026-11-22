@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+<script>
+  if (window.matchMedia('(min-width: 767px)').matches) {
+    document.documentElement.classList.add('animations-pending');
+    // Keep content readable if animation scripts fail to load.
+    window.animationFallback = setTimeout(function () {
+      document.documentElement.classList.remove('animations-pending');
+    }, 10000);
+    window.addEventListener('page-ready', function () {
+      clearTimeout(window.animationFallback);
+      document.documentElement.classList.remove('animations-pending');
+    }, { once: true });
+  }
+</script>
+<style>
+  @media (min-width: 767px) {
+    .animations-pending .split-text-lines,
+    .animations-pending .split-text-lines *,
+    .animations-pending .split-text-letters,
+    .animations-pending .split-text-letters *,
+    .animations-pending .kayak-wrap { visibility: hidden !important; }
+  }
+</style>
 <link rel="ai-catalog" href="/.well-known/ai-catalog.json">
 <script src="/assets/js/agent-tools.js" defer></script>
 <!-- Google tag (gtag.js) -->
@@ -66,6 +88,7 @@
 
 </head>
 <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+{% include "partials/preloader.njk" %}
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2KGXL9N"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

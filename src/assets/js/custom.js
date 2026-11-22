@@ -1,5 +1,9 @@
+function initializePageAnimations() {
+if (window.pageAnimationsInitialized) return;
+window.pageAnimationsInitialized = true;
+const entranceDelay = window.pageReady ? 0 : 0.25;
 gsap.registerPlugin(ScrollTrigger);
-if (window.matchMedia("(min-width: 767px) and (prefers-reduced-motion: no-preference)").matches) {
+if (window.matchMedia("(min-width: 767px)").matches) {
 // Fade in --------------------------------------------------------------
 let fadeIn = gsap.utils.toArray('.fade-in');
 
@@ -54,16 +58,24 @@ splitTextLetters.forEach(element =>{
 
   gsap.set(element.querySelectorAll(".char-wrap"), {overflow: "hidden"});
   
-   gsap.from(mySplitText.chars, {
+   gsap.set(mySplitText.chars, {
        yPercent: 105,
+       autoAlpha: 0,
+       lazy: false
+   });
+   gsap.to(mySplitText.chars, {
+       yPercent: 0,
+       autoAlpha: 1,
        duration: 1,
        ease: Power3.easeOut,
+       delay: entranceDelay,
        stagger: {
          amount: 0.3,
          from: "0"
        },
        scrollTrigger: { 
          trigger: element,
+         once: true,
          //toggleActions: 'restart pause reverse pause',
        },
    })
@@ -81,16 +93,21 @@ splitTextLines.forEach(element => {
 
    gsap.set(element.querySelectorAll(".words"), {overflow: "hidden"});
    
-    gsap.from(mySplitText.chars, {
-      autoAlpha: 0,
-        opacity: 0,
-        duration: 0.6,
-        delay: .1,
-        stagger: 0.005,
+    gsap.set(mySplitText.chars, {
+        autoAlpha: 0,
         yPercent: 105,
+        lazy: false
+    });
+    gsap.to(mySplitText.chars, {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 0.6,
+        delay: entranceDelay + .1,
+        stagger: 0.005,
         ease: "sine.out",
         scrollTrigger: { 
           trigger: element,
+          once: true,
           //toggleActions: 'restart pause reverse pause',
         },
     })
@@ -102,7 +119,7 @@ const heroKayak = document.querySelector('.kayak');
 gsap.set('.kayak-wrap', { xPercent: 120 });
 const enterKayak = () => gsap.to('.kayak-wrap', {
   xPercent: 0,
-  delay: .1,
+  delay: entranceDelay + .1,
   duration: 2,
   ease: 'power1.out'
 });
@@ -123,6 +140,10 @@ gsap.to(".kayak", {
 });
 };
   
+// All entrance states are set before making their containers visible.
+clearTimeout(window.animationFallback);
+document.documentElement.classList.remove('animations-pending');
+
 // Reveal image --------------------------------------------------------------
 gsap.utils.toArray(".reveal-wrap").forEach(container => {
   let image = container.querySelector("picture img");
@@ -256,3 +277,7 @@ if (window.matchMedia("(min-width: 767px)").matches) {
       }
     });
   }
+
+}
+if (window.pagePreparing || window.pageReady) initializePageAnimations();
+else window.addEventListener('page-prepare', initializePageAnimations, { once: true });

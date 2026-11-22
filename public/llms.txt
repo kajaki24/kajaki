@@ -1,3 +1,5 @@
+.preloader{display:none}
+
 [+48 733 240 024](<tel:+48 733 240 024> "Zadzwoń")
 
 Voucher

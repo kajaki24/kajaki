@@ -552,9 +552,12 @@ li {
 
 .split-text-lines .words,
 .split-text-lines .chars {
-    margin-bottom: -0.1em;
-    margin-top: -0.1em;
-    line-height: 1.25;
+    line-height: inherit;
+}
+
+.split-text-lines .words {
+    padding-bottom: .12em;
+    margin-bottom: -.12em;
 }
 
 @media(min-width:767px) {
