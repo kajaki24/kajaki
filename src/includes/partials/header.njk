@@ -68,7 +68,7 @@
           width: 100vw;
           height: 100vh;
           background: var(--color-accent-1);
-          transition: all 0.25s ease-out;
+          transition: opacity 0.25s ease-out;
           overflow: hidden;
           pointer-events: none;
           z-index: 10000000;
@@ -208,13 +208,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div> 
     <div class="page fade-no-duration" id="wrapper">
         <script>
-            var obj = document.querySelector('.preloader'),
-              page = document.querySelector('#wrapper');
-    
-            window.addEventListener("load", function () {
-              obj.style.opacity = "0";
-              page.style.opacity = "1";
-            });
+            (function () {
+              var loader = document.querySelector('.preloader');
+              var page = document.querySelector('#wrapper');
+
+              function dismissPreloader() {
+                page.style.opacity = "1";
+                loader.style.opacity = "0";
+                // Remove the overlay and stop its animations after the fade.
+                window.setTimeout(function () {
+                  loader.remove();
+                }, 250);
+              }
+
+              // Page scripts are ready here; unrelated images and widgets need
+              // not keep the page covered until the window load event.
+              if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", dismissPreloader, { once: true });
+              } else {
+                dismissPreloader();
+              }
+            })();
           </script>
         <header class="site-header">
             <div class="container-fluid">

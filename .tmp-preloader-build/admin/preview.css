@@ -1,0 +1,17 @@
+.css-yilgkd-WidgetPreviewContainer:first-child:not(.css-yilgkd-WidgetPreviewContainer div) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.css-yilgkd-WidgetPreviewContainer img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
