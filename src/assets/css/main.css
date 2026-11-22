@@ -921,7 +921,7 @@ li {
 ------------------------------------------- */
 
 .hero-main {
-    background: url("/assets/images/kajak2.png");
+    background: url("/assets/images/kajak22.png");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -930,11 +930,11 @@ li {
 }
 
 .light .hero-main {
-    background: url("/assets/images/kajak2.png");
+    background: url("/assets/images/kajak22.png");
 }
 
 .dark .hero-main {
-    background: url("/assets/images/kajak2.png");
+    background: url("/assets/images/kajak22.png");
 }
 
 .hero-main h1,
